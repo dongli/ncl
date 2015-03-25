@@ -1,5 +1,3 @@
-<p><markdown>
-#Markdown Live Editor#
 #Main feature#
 
 This configure is specified for [NCL](http://www.ncl.ucar.edu/) users, which provide:
@@ -11,7 +9,7 @@ This configure is specified for [NCL](http://www.ncl.ucar.edu/) users, which pro
 
 ***
 #Screen-Shot
- ![alt text](https://github.com/fanghuan/ncl_help_res/screen-shot.png/480x300)
+ ![alt text](https://github.com/fanghuan/ncl_help_res/screen-shot.png)
 ***
 ##Installation##
 
@@ -35,5 +33,5 @@ This configure is specified for [NCL](http://www.ncl.ucar.edu/) users, which pro
  - when the cursor is located in [NCL functions(precedures)](http://www.ncl.ucar.edu/Document/Functions/list_alpha.shtml) or [NCL resources](http://www.ncl.ucar.edu/Document/Graphics/Resources/list_alpha_res.shtml) text, press **g ]** in **normal model**, the cursor will jump to the document of the functions or resources
  - example
 
- ![alt text](https://github.com/fanghuan/ncl_help_res/useage.gif/480x300)
+ ![alt text](https://github.com/fanghuan/ncl_help_res/useage.gif)
 ***
