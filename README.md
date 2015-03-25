@@ -30,11 +30,16 @@ This configure is specified for [NCL](http://www.ncl.ucar.edu/) users, which pro
 
 
 ###Useage###
- - when the cursor is located in [NCL functions(precedures)](http://www.ncl.ucar.edu/Document/Functions/list_alpha.shtml) or [NCL resources](http://www.ncl.ucar.edu/Document/Graphics/Resources/list_alpha_res.shtml) text, press **g ]** in **normal model**, the cursor will jump to the document of the functions or resources
- - example
+- when the cursor is located in [NCL functions(precedures)](http://www.ncl.ucar.edu/Document/Functions/list_alpha.shtml) or [NCL resources](http://www.ncl.ucar.edu/Document/Graphics/Resources/list_alpha_res.shtml) text, press **g ]** in 
+   **normal model**, the cursor will jump to the document of the functions or resources.
+  - If the function(precedure) has more than tags,you need to select it by typing the number of tags.
+  - ![alt text][3]
+- press **Ctrl** + **t** in **normal model**, the cursor reture to the original file.
+- example
 
  ![alt text][2]
 ### Bug Report###
- - If you have found any bug ,Please report it to <904139381@qq.com>
+ - If you have found any Bug, Please report it to <904139381@qq.com>.
  [1]: /screen-shot.png
  [2]: /useage.gif
+ [3]: /tags-select.png
