@@ -5,19 +5,21 @@ This configure is specified for [NCL](http://www.ncl.ucar.edu/) users, which pro
  - NCL syntax highlight(as discribed in the [official editor enhancement](http://http://www.ncl.ucar.edu/Applications/editor.shtml) pages)
  -  View the official [**function**](http://www.ncl.ucar.edu/Document/Functions/list_alpha.shtml), [**precedure**](http://www.ncl.ucar.edu/Document/Functions/list_alpha.shtml), [**resource**](http://www.ncl.ucar.edu/Document/Graphics/Resources/list_alpha_res.shtml) manual through tags jump(Shortcut: **g]**)! 
  
- - It can work in Uinx-Like System, I test it in mac OS X and Linux.The compatibility is Windows(Gvim) in unkonw.
+ - It can work in Uinx-Like System, I test it in mac OS X and Linux.The compatibility in Windows(Gvim) is unkonwn.
 
 #Screen-Shot
+
  ![alt text][1]
 
 ##Installation##
 
 - Download this package and unzip it into $HOME/.vim
+- Only the bundle folder is necessary,the others are just for explaination in Website
 
  - cd $HOME/.vim/
- - gti clone https://github.com/fanghuan/ncl\_help\_res
+ - gti clone https://github.com/fanghuan/ncl_help_res
 
-- After that, the flod tree is $HOME/.vim/ncl\_res\_help/bundle/... 
+- After that, the floder tree is $HOME/.vim/ncl\_res\_help/bundle/... 
 
 - Add those command lines in your .vimrc
 
@@ -33,8 +35,8 @@ This configure is specified for [NCL](http://www.ncl.ucar.edu/) users, which pro
 - when the cursor is located in [NCL functions(precedures)](http://www.ncl.ucar.edu/Document/Functions/list_alpha.shtml) or [NCL resources](http://www.ncl.ucar.edu/Document/Graphics/Resources/list_alpha_res.shtml) text, press **g ]** in 
    **normal model**, the cursor will jump to the document of the functions or resources.
   - If the function(precedure) has more than tags,you need to select it by typing the number of tags.
-  - ![alt text][3]
-- press **Ctrl** + **t** in **normal model**, the cursor reture to the original file.
+  ![alt text][3]
+- press **Ctrl** + **t** in **normal model**, the cursor returns to the original file.
 - example
 
  ![alt text][2]
