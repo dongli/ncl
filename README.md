@@ -36,5 +36,5 @@ This configure is specified for [NCL](http://www.ncl.ucar.edu/) users, which pro
  ![alt text][2]
 ### Bug Report###
  - If you have found any bug ,Please report it to me<fanghuan_nju@163.com>
- [1]: https://github.com/fanghuan/ncl_help_res/screen-shot.png
- [2]: https://github.com/fanghuan/ncl_help_res/useage.gif
+ [1]: /screen-shot.png
+ [2]: /useage.gif
