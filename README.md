@@ -2,7 +2,7 @@
 
 This configure is specified for [NCL](http://www.ncl.ucar.edu/) users, which provide:
 
- - NCL syntax highlight(as discribed in the [official editor enhancement](http://http://www.ncl.ucar.edu/Applications/editor.shtml) pages)
+ - NCL syntax highlight(as discribed in the [official editor enhancement](http://www.ncl.ucar.edu/Applications/editor.shtml) pages)
  -  View the official [**function**](http://www.ncl.ucar.edu/Document/Functions/list_alpha.shtml), [**precedure**](http://www.ncl.ucar.edu/Document/Functions/list_alpha.shtml), [**resource**](http://www.ncl.ucar.edu/Document/Graphics/Resources/list_alpha_res.shtml) manual through tags jump(Shortcut: **g]**)! 
  
  - It can work in Uinx-Like System, I test it in mac OS X and Linux.The compatibility in Windows(Gvim) is unkonwn.
@@ -23,12 +23,16 @@ This configure is specified for [NCL](http://www.ncl.ucar.edu/) users, which pro
 
 - Add those command lines in your .vimrc
 
+ - set complete-=k complete+=k " Add dictionary search (as per dictionary option)
+ - set wildmode=list:full
+ - set wildmenu
+ - au Bufread,BufNewfile *.ncl set dictionary=$HOME/.vim/bundle/ncl/dict/ncl.dic
+
  - au Bufread,BufNewfile *.ncl set filetype=ncl tags=tags
  - au! Syntax newlang source $HOME/.vim/bundle/ncl/syntax/ncl.vim
- - au Bufread,BufNewfile *.ncl set dictionary=$HOME/.vim/bundle/ncl/dict/ncl.dic.
- - au Bufread,BufNewfile *.ncl set tags+=$HOME/.vim/bundle/ncl/exec/nclstd.tags.
+ - au Bufread,BufNewfile *.ncl set tags+=$HOME/.vim/bundle/ncl/exec/nclstd.tags
  - au Bufread,BufNewfile *.ncl set tags+=$HOME/.vim/bundle/ncl/exec/ncl\_func\_help.tags
- - au Bufread,BufNewfile *.ncl set tags+=$HOME/.vim/bundle/ncl/exec/ncl\_res\_help.tags 
+ - au Bufread,BufNewfile *.ncl set tags+=$HOME/.vim/bundle/ncl/exec/ncl\_res\_help.tags
 
 
 ###Useage###
