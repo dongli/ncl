@@ -28,6 +28,7 @@ This configure is specified for [NCL](http://www.ncl.ucar.edu/) users, which pro
  - set wildmenu
  - au Bufread,BufNewfile *.ncl set dictionary=$HOME/.vim/bundle/ncl/dict/ncl.dic
 
+
  - au Bufread,BufNewfile *.ncl set filetype=ncl tags=tags
  - au! Syntax newlang source $HOME/.vim/bundle/ncl/syntax/ncl.vim
  - au Bufread,BufNewfile *.ncl set tags+=$HOME/.vim/bundle/ncl/exec/nclstd.tags
