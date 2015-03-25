@@ -1,14 +1,14 @@
-#Main feature#
+hhMain feature#
 
 This configure is specified for [NCL](http://www.ncl.ucar.edu/) users, which provide:
 
  - NCL syntax highlight(as discribed in the [official editor enhancement](http://http://www.ncl.ucar.edu/Applications/editor.shtml) pages)
  -  View the official [**function**](http://www.ncl.ucar.edu/Document/Functions/list_alpha.shtml), [**precedure**](http://www.ncl.ucar.edu/Document/Functions/list_alpha.shtml), [**resource**](http://www.ncl.ucar.edu/Document/Graphics/Resources/list_alpha_res.shtml) manual through tags jump(Shortcut: **g]**)! 
  
- - It can work in Uinx-Like System, I test it in mac OS X and Linux.The compatibility in Windows(Gvim) in unkonw.
+ - It can work in Uinx-Like System, I test it in mac OS X and Linux.The compatibility is Windows(Gvim) in unkonw.
 
 #Screen-Shot
- ![alt text](https://github.com/fanghuan/ncl_help_res/screen-shot.png)
+ ![alt text][1]
 
 ##Installation##
 
@@ -33,4 +33,8 @@ This configure is specified for [NCL](http://www.ncl.ucar.edu/) users, which pro
  - when the cursor is located in [NCL functions(precedures)](http://www.ncl.ucar.edu/Document/Functions/list_alpha.shtml) or [NCL resources](http://www.ncl.ucar.edu/Document/Graphics/Resources/list_alpha_res.shtml) text, press **g ]** in **normal model**, the cursor will jump to the document of the functions or resources
  - example
 
- ![alt text](https://github.com/fanghuan/ncl_help_res/useage.gif)
+ ![alt text][2]
+### Bug Report###
+ - If you have found any bug ,Please report it to me<fanghuan_nju@163.com>
+ [1]: https://github.com/fanghuan/ncl_help_res/screen-shot.png
+ [2]: https://github.com/fanghuan/ncl_help_res/useage.gif
