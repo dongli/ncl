@@ -17,18 +17,18 @@ This configure is specified for [NCL](http://www.ncl.ucar.edu/) users, which pro
 - Only the bundle folder is necessary,the others are just for explaination in Website
 
  - cd $HOME/.vim/
- - gti clone https://github.com/fanghuan/ncl_help_res
+ - gti clone https://github.com/fanghuan/bundle
 
-- After that, the floder tree is $HOME/.vim/ncl\_res\_help/bundle/... 
+- After that, the floder tree is $HOME/.vim/bundle/... 
 
 - Add those command lines in your .vimrc
 
  - au Bufread,BufNewfile *.ncl set filetype=ncl tags=tags
- - au! Syntax newlang source $HOME/.vim/ncl\_help\_res/bundle/ncl/syntax/ncl.vim
- - au Bufread,BufNewfile *.ncl set dictionary=$HOME/.vim/ncl\_help\_res/bundle/ncl/dict/ncl.dic.
- - au Bufread,BufNewfile *.ncl set tags+=$HOME/.vim/ncl\_help\_res/bundle/ncl/exec/nclstd.tags.
- - au Bufread,BufNewfile *.ncl set tags+=$HOME/.vim/ncl\_help\_res/bundle/ncl/exec/ncl\_func\_help.tags
- - au Bufread,BufNewfile *.ncl set tags+=$HOME/.vim/ncl\_help\_res/bundle/ncl/exec/ncl\_res\_help.tags 
+ - au! Syntax newlang source $HOME/.vim/bundle/ncl/syntax/ncl.vim
+ - au Bufread,BufNewfile *.ncl set dictionary=$HOME/.vim/bundle/ncl/dict/ncl.dic.
+ - au Bufread,BufNewfile *.ncl set tags+=$HOME/.vim/bundle/ncl/exec/nclstd.tags.
+ - au Bufread,BufNewfile *.ncl set tags+=$HOME/.vim/bundle/ncl/exec/ncl\_func\_help.tags
+ - au Bufread,BufNewfile *.ncl set tags+=$HOME/.vim/bundle/ncl/exec/ncl\_res\_help.tags 
 
 
 ###Useage###
