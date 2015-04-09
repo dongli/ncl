@@ -1,24 +1,24 @@
-THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/dspnt3s.shtml
-THE_TITLE:dspnt3s
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/dspnt3d.shtml
+THE_TITLE:dspnt3d
    NCL Home > Documentation > Functions > Interpolation, Ngmath routines
 
-dspnt3s
+dspnt3d
 
-   Interpolates 3D float data at specified points. (Deprecated version.)
+   Interpolates 3D double data at specified points. (Deprecated version.)
 
 Prototype
 
-        function dspnt3 (
-                x  [*] : float,
-                y  [*] : float,
-                z  [*] : float,
-                u      : float,
-                xo [*] : float,
-                yo [*] : float,
-                zo [*] : float
+        function dspnt3d (
+                x  [*] : double,
+                y  [*] : double,
+                z  [*] : double,
+                u      : double,
+                xo [*] : double,
+                yo [*] : double,
+                zo [*] : double
         )
 
-        return_val [dimsizes(xo) * dimsizes(yo) * dimsizes(zo)] :  float
+        return_val [dimsizes(xo) * dimsizes(yo) * dimsizes(zo)] :  double
 
 Arguments
 
@@ -50,7 +50,7 @@ Arguments
 
 Return value
 
-   Returns a floating point array dimensioned as N x m x m x m, where N represents all but the last dimension of u.
+   Returns a double array dimensioned as N x m x m x m, where N represents all but the last dimension of u.
 
 Description
 
@@ -79,15 +79,15 @@ begin
   NZ  = 21
   RAND_MAX = 32767.0
 
-  xi = new((/NUM/), float)
-  yi = new((/NUM/), float)
-  zi = new((/NUM/), float)
-  u  = new((/NUM/), float)
+  xi = new((/NUM/), double)
+  yi = new((/NUM/), double)
+  zi = new((/NUM/), double)
+  u  = new((/NUM/), double)
 
-  xo = new((/NX/), float)
-  yo = new((/NY/), float)
-  zo = new((/NZ/), float)
-  output = new((/NX, NY, NZ/), float)
+  xo = new((/NX/), double)
+  yo = new((/NY/), double)
+  zo = new((/NZ/), double)
+  output = new((/NX, NY, NZ/), double)
 
   xmin = -2.0
   ymin = -2.0
@@ -99,9 +99,9 @@ begin
 ;
 ; Create random data in three space and define a function.
 ;
-  rand1 = new((/NUM/), float)
-  rand2 = new((/NUM/), float)
-  rand3 = new((/NUM/), float)
+  rand1 = new((/NUM/), double)
+  rand2 = new((/NUM/), double)
+  rand3 = new((/NUM/), double)
   srand(1)
   do i = 0, NUM - 1
     rand1(i) = rand
@@ -124,7 +124,7 @@ begin
   do i = 0, NX - 1
     do j = 0, NY - 1
       do k = 0, NZ - 1
-        dspnt3s(xi, yi, zi, u, xo(i), yo(j), zo(k), u(i, j, k))
+        dspnt3d(xi, yi, zi, u, xo(i), yo(j), zo(k), u(i, j, k))
       end do
     end do
   end do

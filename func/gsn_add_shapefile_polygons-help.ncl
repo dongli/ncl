@@ -10,7 +10,7 @@ Prototype
 
 load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/gsn_code.ncl"
 
-        function gsn_add_shapefile_polylines (
+        function gsn_add_shapefile_polygons (
                 wks      [1] : graphic,
                 plot     [*] : graphic,
                 shp_name [1] : string,

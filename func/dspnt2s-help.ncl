@@ -1,22 +1,22 @@
-THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/dspnt2d.shtml
-THE_TITLE:dspnt2d
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/dspnt2s.shtml
+THE_TITLE:dspnt2s
    NCL Home > Documentation > Functions > Interpolation, Ngmath routines
 
-dspnt2d
+dspnt2s
 
-   Interpolates 2D data at specified points. (Deprecated version.)
+   Interpolates 2D float data at specified points. (Deprecated version.)
 
 Prototype
 
-        function dspnt2 (
-                x  [*] : double,
-                y  [*] : double,
-                z      : double,
-                xo [*] : double,
-                yo [*] : double
+        function dspnt2s (
+                x  [*] : float,
+                y  [*] : float,
+                z      : float,
+                xo [*] : float,
+                yo [*] : float
         )
 
-        return_val  :  double
+        return_val  :  float
 
 Arguments
 
@@ -41,7 +41,7 @@ Arguments
 
 Return value
 
-   Returns a double array dimensioned as N x m, where N represents all but the last dimension of z.
+   Returns a floating point array dimensioned as N x m, where N represents all but the last dimension of z.
 
 Description
 
@@ -72,11 +72,11 @@ begin
 
   RAND_MAX = 32767.0
 
-  xi = new((/NUM/), double)
-  yi = new((/NUM/), double)
-  zi = new((/NUM/), double)
+  xi = new((/NUM/), float)
+  yi = new((/NUM/), float)
+  zi = new((/NUM/), float)
 
-  output2 = new((/NX, NY/), double)
+  output2 = new((/NX, NY/), float)
 
   xminin = -0.2
   yminin = -0.2
@@ -93,8 +93,8 @@ begin
 ;
 ; Create random data in three space and define a function.
 ;
-  rand1 = new((/NUM/), double)
-  rand2 = new((/NUM/), double)
+  rand1 = new((/NUM/), float)
+  rand2 = new((/NUM/), float)
   srand(1)
   do i = 0,NUM - 1
     rand1(i) = rand
@@ -112,13 +112,13 @@ begin
   yo = yminot + ( ii / (NY - 1)) * (ymaxot - yminot)
 
 ;
-; Interpolate using both dsgrid2d and dspnt2d.
+; Interpolate using both dsgrid2s and dspnt2s.
 ;
-  output2 = dsgrid2d(xi, yi, zi, xo, yo)
+  output2 = dsgrid2s(xi, yi, zi, xo, yo)
 
   do i = 0, NX - 1
     do j = 0, NY - 1
-      dspnt2d(xi, yi, zi, xo(i), yo(j), output2(i,j))
+      dspnt2s(xi, yi, zi, xo(i), yo(j), output2(i,j))
     end do
   end do
 end
@@ -135,9 +135,9 @@ begin
 
   RAND_MAX = 32767.0
 
-  xi = new((/NUM/), double)
-  yi = new((/NUM/), double)
-  zi = new((/NUM/), double)
+  xi = new((/NUM/), float)
+  yi = new((/NUM/), float)
+  zi = new((/NUM/), float)
 
   xminin = -0.2
   yminin = -0.2
@@ -154,8 +154,8 @@ begin
 ;
 ; Create random data in three space and define a function.
 ;
-  rand1 = new((/NUM/), double)
-  rand2 = new((/NUM/), double)
+  rand1 = new((/NUM/), float)
+  rand2 = new((/NUM/), float)
   srand(1)
   do i = 0, NUM - 1
     rand1(i) = rand
@@ -184,7 +184,7 @@ begin
   xo1d = ndtooned(xo2d)                        ; Convert to 1D
   yo1d = ndtooned(yo2d)
 
-  output_1d = dspnt2d(xi, yi, zi, xo1d, yo1d)   ; Interpolate using dspnt2d.
+  output_1d = dspnt2s(xi, yi, zi, xo1d, yo1d)   ; Interpolate using dspnt2s.
   output_2d = onedtond(output_1d, (/NX, NY/))   ; Convert to NX x NY
 end
 

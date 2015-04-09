@@ -10,7 +10,7 @@ Prototype
 
 load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/contributed.ncl"
 
-        function eofunc_ts (
+        function eofunc_ts_Wrap (
                 data    : numeric,
                 evec    : numeric,
                 optETS  : logical

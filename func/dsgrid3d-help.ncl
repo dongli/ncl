@@ -1,14 +1,15 @@
-THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/dspnt3d.shtml
-THE_TITLE:dspnt3d
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/dsgrid3d.shtml
+THE_TITLE:dsgrid3d
    NCL Home > Documentation > Functions > Interpolation, Ngmath routines
 
-dspnt3d
+dsgrid3d
 
-   Interpolates 3D double data at specified points. (Deprecated version.)
+   Interpolates double data from an unstructured (randomly-spaced) grid to a 3D grid using inverse distance weighted
+   interpolation. (Deprecated version.)
 
 Prototype
 
-        function dspnt3 (
+        function dsgrid3d (
                 x  [*] : double,
                 y  [*] : double,
                 z  [*] : double,
@@ -18,47 +19,48 @@ Prototype
                 zo [*] : double
         )
 
-        return_val [dimsizes(xo) * dimsizes(yo) * dimsizes(zo)] :  double
+        return_val [dimsizes(x) * dimsizes(y) * dimsizes(z)] :  double
 
 Arguments
 
    x
 
-   A 1D array of length npts containing the X coordinates of the points where interpolation is desired
+   A 1D array of length npts containing the X coordinates of the input data.
    y
 
-   A 1D array of length npts containing the Y coordinates of the points where interpolation is desired
+   A 1D array of length npts containing the Y coordinates of the input data.
    z
 
-   A 1D array of length npts containing the Z coordinates of the points where interpolation is desired
+   A 1D array of length npts containing the Z coordinates of the input data.
    u
 
    An array of any dimensionality (last dimension must be npts) containing the functional values of the input data. Element
-   u(...,i) is the value of the input function at coordinate (x(i), y(i), z(i)) for i = 0, npts - 1.
+   u(...,i) is the value of the input function at coordinate (x(i), y(i), z(i)) for i = 0, npts - 1).
    xo
 
-   A 1D array of length m containing the X coordinates of the output data grid. The values in xo may be in any order and m
-   can be equal to one.
+   A 1D array of any length (numxout) containing the X coordinates of the output data grid. The values in xo must be
+   increasing, but need not be equally spaced.
    yo
 
-   A 1D array of length m containing the Y coordinates of the output data grid. The values in yo may be in any order and m
-   can be equal to one.
+   A 1D array of any length (numyout) containing the Y coordinates of the output data grid. The values in yo must be
+   increasing, but need not be equally spaced.
    zo
 
-   A 1D array of length m containing the Z coordinates of the output data grid. The values in zo may be in any order and m
-   can be equal to one.
+   A 1D array of any length (numzout) containing the Z coordinates of the output data grid. The values in zo must be
+   increasing, but need not be equally spaced.
 
 Return value
 
-   Returns a double array dimensioned as N x m x m x m, where N represents all but the last dimension of u.
+   Returns a double array dimensioned as N x numxout x numyout x numzout, where N represents all but the last dimension of
+   u.
 
 Description
 
-   [Deprecated: use dspnt3 instead.]
+   [Deprecated: use dsgrid3 instead.]
 
-   This function performs interpolation from sets of 3D data at a list of specified points.
+   This function interpolates double data from an unstructured (randomly-spaced) grid to a 3D grid.
 
-   This function must allocate its output arrays in advance.
+   This function requires that desired values for control parameters have been set using the procedure dssetp.
 
    This function is part of the Dsgrid package which implements a simple inverse distance weighted interpolation algorithm.
    No missing values are allowed.
@@ -68,8 +70,6 @@ See Also
    dsgrid2 dsgrid3 dspnt2 dspnt3 dsgetp dssetp
 
 Examples
-
-   Example 1
 
 begin
 
@@ -87,7 +87,6 @@ begin
   xo = new((/NX/), double)
   yo = new((/NY/), double)
   zo = new((/NZ/), double)
-  output = new((/NX, NY, NZ/), double)
 
   xmin = -2.0
   ymin = -2.0
@@ -103,7 +102,7 @@ begin
   rand2 = new((/NUM/), double)
   rand3 = new((/NUM/), double)
   srand(1)
-  do i = 0, NUM - 1
+  do i = 0,NUM - 1
     rand1(i) = rand
     rand2(i) = rand
     rand3(i) = rand
@@ -112,7 +111,7 @@ begin
   yi = ymin + (ymax - ymin) * (rand2 / RAND_MAX)
   zi = zmin + (zmax - zmin) * (rand3 / RAND_MAX)
 
-  u = (xi * xi) + (yi * yi) + (zi * zi)
+  u = (xi * xi) + (yi * yi) + (zi  *zi)
 ;
 ; Create the output grid.
 ;
@@ -121,13 +120,11 @@ begin
   yo = ymin + (ii / (NY - 1)) * (ymax - ymin)
   zo = zmin + (ii / (NZ - 1)) * (zmax - zmin)
 
-  do i = 0, NX - 1
-    do j = 0, NY - 1
-      do k = 0, NZ - 1
-        dspnt3d(xi, yi, zi, u, xo(i), yo(j), zo(k), u(i, j, k))
-      end do
-    end do
-  end do
+;
+; Interpolate.
+;
+  u = dsgrid3d(xi, yi, zi, u, xo, yo, zo)
+
 end
 
 
