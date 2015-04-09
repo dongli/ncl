@@ -46,6 +46,6 @@ This configure is specified for [NCL](http://www.ncl.ucar.edu/) users, which pro
   ![alt text][2]
 #Bug Report#
  - If you have found any Bug, Please report it to <904139381@qq.com>.
- [1]: ./ncl/doc/screen-shot.png
- [2]: ./ncl/doc/useage.gif
- [3]: ./ncl/doc/tags-select.png
+ [1]: ./doc/screen-shot.png
+ [2]: ./doc/useage.gif
+ [3]: ./doc/tags-select.png
