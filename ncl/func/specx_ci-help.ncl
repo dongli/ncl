@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Shea_util/specx_ci.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Shea_util/specx_ci.shtml
 THE_TITLE:specx_ci
    NCL Home > Documentation > Functions > General applied math
 
@@ -139,4 +139,4 @@ end
     plot = gsn_csm_xy(wks, df@frq, splt ,res)      ; create plot
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

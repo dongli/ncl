@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/max.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/max.shtml
 THE_TITLE:max
    NCL Home > Documentation > Functions > General applied math
 
@@ -42,4 +42,4 @@ Examples
   print(max_f)        ; Should be 9.8
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

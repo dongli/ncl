@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/wgt_areasum2.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/wgt_areasum2.shtml
 THE_TITLE:wgt_areasum2
    NCL Home > Documentation > Functions > General applied math
 
@@ -94,4 +94,4 @@ Examples
    qSumc = wgt_areasum2(q({-20:20}), {110:270}), wgt({-20:20}), {110:270}), opt)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

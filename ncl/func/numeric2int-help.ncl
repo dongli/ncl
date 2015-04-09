@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/numeric2int.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/numeric2int.shtml
 THE_TITLE:numeric2int
    NCL Home > Documentation > Functions > Type converters
 
@@ -88,4 +88,4 @@ load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/contributed.ncl"
 (2,3)   -6.53602    -6  -7
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

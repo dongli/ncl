@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/rtest.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/rtest.shtml
 THE_TITLE:rtest
    NCL Home > Documentation > Functions > Unclassified routines
 
@@ -157,4 +157,4 @@ Examples
    will yield prob dimensioned nlat x mlon at each lag.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

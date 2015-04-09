@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/nameDim.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/nameDim.shtml
 THE_TITLE:nameDim
    NCL Home > Documentation > Functions > Metadata routines
 
@@ -43,4 +43,4 @@ Description
    This function assigns the given named dimensions, long_name, and units to the input variable.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

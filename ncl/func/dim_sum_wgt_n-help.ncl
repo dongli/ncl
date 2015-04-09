@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/dim_sum_wgt_n.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/dim_sum_wgt_n.shtml
 THE_TITLE:dim_sum_wgt_n
    NCL Home > Documentation > Functions > General applied math
 
@@ -26,12 +26,12 @@ Arguments
    A variable of numeric type and any dimensionality. Missing values are indicated by the _FillValue attribute.
    w
 
-   A one dimensional of weights. The length must the same as the dim-th dimension of x
+   A one dimensional array of weights. The length must be the same as the dim-th dimension of x.
    opt
 
    A scalar: (a) opt=0 means compute the weighted sum only if all values are not missing; (b) opt=1 means compute the
    weighted sum of all non-missing values; (c) opt>1 means to return the sum only if the number of non-missing values is
-   greater-then or equal to opt.
+   greater-than or equal to opt.
    dim
 
    A scalar, the dimension of "x" of which to do the weighted sum across.
@@ -60,7 +60,7 @@ Description
 
 See Also
 
-   dim_sum_wgt_n_Wrap , dim_avg_wgt_Wrap , dim_avg_wgt_n_Wrap , dim_sum, dim_sum_n, avg, dim_avg, dim_median, dim_stddev,
+   dim_sum_wgt_n_Wrap, dim_avg_wgt_Wrap, dim_avg_wgt_n_Wrap, dim_sum, dim_sum_n, avg, dim_avg, dim_median, dim_stddev,
    dim_num, dim_product, dim_rmsd, dim_rmvmean, dim_rmvmed, dim_standardize, dim_stat4, dim_stddev, dim_variance
 
 Examples
@@ -80,9 +80,9 @@ Examples
    Example 2
 
    Let T(time,lev,lat,lon). Compute the weighted vertical sum total at each time/lat/lon point.
-    delp = (/50,50,100,100,100,50,25,10/) ; same size as dimension "lev"
+    wgt = (/50,50,100,100,100,50,25,10/) ; same size as dimension "lev"
 
     Tsum = dim_sum_wgt_n( T, wgt, 0, 1 )   ; ==> Tsum(time,lat,lon)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

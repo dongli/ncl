@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/eofcov_pcmsg.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/eofcov_pcmsg.shtml
 THE_TITLE:eofcov_pcmsg
    NCL Home > Documentation > Functions > Empirical orthogonal functions
 
@@ -160,4 +160,4 @@ Examples
   evec= eofcov_pcmsg(ptw,neval,93)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

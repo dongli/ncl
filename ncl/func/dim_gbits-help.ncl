@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/dim_gbits.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/dim_gbits.shtml
 THE_TITLE:dim_gbits
    NCL Home > Documentation > Functions > Array manipulators
 
@@ -91,4 +91,4 @@ Examples
    will continue N times. The return array xchunk will be the same type and shape as x.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

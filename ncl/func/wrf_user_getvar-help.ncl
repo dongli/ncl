@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/WRF_arw/wrf_user_getvar.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/WRF_arw/wrf_user_getvar.shtml
 THE_TITLE:wrf_user_getvar
    NCL Home > Documentation > Functions > WRF, File IO
 
@@ -12,7 +12,7 @@ load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/gsn_code.ncl"
 load "$NCARG_ROOT/lib/ncarg/nclscripts/wrf/WRFUserARW.ncl"
 
         function wrf_user_getvar (
-                file_handle  : file or list [list added in V6.0.0],
+                file_handle  : file or list,
                 variable     : string,
                 time         : integer
         )
@@ -44,17 +44,20 @@ Description
    For WRF variable names and their definitions, you can easily check them by using "ncl_filedump":
   ncl_filedump wrfout_d01_2000-01-24_12:00:00.nc
 
-   Available diagnostics (some diagnostics - marked in red below - are only available since version 6.1.0):
+   Available diagnostics (some diagnostics - marked in red below - are only available in version 6.3.0 or later):
+
    avo                absolute vorticity [10-5 s-1]
    eth                Equivalent PotentialTtemperature [K]
    cape_2d            Returns 2D fields mcape/mcin/lcl/lfc
    cape_3d            Returns 3D fields cape and cin
+   ctt                Cloud Top Temperature [K]
    dbz                Reflectivity [dBZ]
    mdbz               Maximum reflectivity [dBZ]
    geopt/geopotential Full model geopotential [m2 s-2]
    helicity           Storm Relative Helicity [m-2/s-2]
    lat                latitude
    lon                longitude
+   omg                Omega [C]
    p/pres             Full model pressure [Pa]
    pressure           Full model pressure [hPa]
    pvo                potential vorticity [PVU]
@@ -70,6 +73,8 @@ Description
    tk                 Temperature [K]
    times              Times in file (return strings - recommended)
    Times              Times in file (return characters)
+   tv                 Virtual temperature [K]
+   twb                Wet bulb temperature [K]
    updraft_helicity   Updraft helicity [m-2/s-2]
    ua                 U component of wind on mass points
    va                 V component of wind on mass points
@@ -154,4 +159,4 @@ Examples
   slp = wrf_user_getvar(a,"slp",-1)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

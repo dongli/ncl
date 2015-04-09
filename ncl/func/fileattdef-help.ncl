@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/fileattdef.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/fileattdef.shtml
 THE_TITLE:fileattdef
    NCL Home > Documentation > Functions > File IO
 
@@ -87,4 +87,4 @@ netcdf myfile {
 }
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

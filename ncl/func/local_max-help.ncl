@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/local_max.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/local_max.shtml
 THE_TITLE:local_max
    NCL Home > Documentation > Functions > General applied math
 
@@ -98,4 +98,4 @@ Examples
     180.00    104.00    -47.80
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

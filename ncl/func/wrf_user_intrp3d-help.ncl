@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/WRF_arw/wrf_user_intrp3d.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/WRF_arw/wrf_user_intrp3d.shtml
 THE_TITLE:wrf_user_intrp3d
    NCL Home > Documentation > Functions > WRF, Interpolation
 
@@ -146,4 +146,4 @@ Examples
      http://www.mmm.ucar.edu/wrf/OnLineTutorial/Graphics/NCL/
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

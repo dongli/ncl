@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Shea_util/ShadeGeLeContour.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Shea_util/ShadeGeLeContour.shtml
 THE_TITLE:ShadeGeLeContour
    NCL Home > Documentation > Functions > Graphics routines
 
@@ -62,4 +62,4 @@ Examples
      * "panel_7.ncl" (view example)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

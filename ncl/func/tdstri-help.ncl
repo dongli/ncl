@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/tdstri.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/tdstri.shtml
 THE_TITLE:tdstri
    NCL Home > Documentation > Functions > Graphics routines
 
@@ -78,4 +78,4 @@ Examples
    See example 4 on the three-dimensional graphics applications page.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

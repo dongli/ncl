@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/isdimnamed.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/isdimnamed.shtml
 THE_TITLE:isdimnamed
    NCL Home > Documentation > Functions > Metadata routines
 
@@ -62,4 +62,4 @@ Examples
   isname = isdimnamed(w,(/1,0/))
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

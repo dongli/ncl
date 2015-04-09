@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/NhlGetNamedColorIndex.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/NhlGetNamedColorIndex.shtml
 THE_TITLE:NhlGetNamedColorIndex
    NCL Home > Documentation > Functions > Color routines
 
@@ -87,4 +87,4 @@ end
    then i will be equal to (/(/2,5,4,3,6,7/),(/62,38,16,31,24,6/)/).
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

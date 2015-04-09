@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Shea_util/plt_pdfxy.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Shea_util/plt_pdfxy.shtml
 THE_TITLE:plt_pdfxy
    NCL Home > Documentation > Functions > Lat/Lon functions
 
@@ -53,4 +53,4 @@ Examples
      * See the Probability Distribution Functions Example 6.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

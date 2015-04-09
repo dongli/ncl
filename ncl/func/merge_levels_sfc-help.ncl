@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/merge_levels_sfc.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/merge_levels_sfc.shtml
 THE_TITLE:merge_levels_sfc
    NCL Home > Documentation > Functions > Array manipulators, Variable manipulators
 
@@ -60,4 +60,4 @@ Examples
    See Example 4 at hydro. This illustrates one use of the merge_levels_sfc function.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

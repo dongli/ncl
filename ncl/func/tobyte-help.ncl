@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/tobyte.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/tobyte.shtml
 THE_TITLE:tobyte
    NCL Home > Documentation > Functions > Type converters
 
@@ -46,7 +46,7 @@ Description
 
 See Also
 
-   tochar toshort toushort toint touint tolong toulong toint64 touint64 tostring
+   tochar toshort toushort toint touint tolong toulong toint64 touint64 tostring totype
 
 Examples
 
@@ -192,4 +192,4 @@ Coordinates:
 (1,1)   0xff
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

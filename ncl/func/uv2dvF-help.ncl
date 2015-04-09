@@ -1,19 +1,18 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/uv2dvF-1.shtml
-THE_TITLE:uv2dvF
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/uv2dvf.shtml
+THE_TITLE:uv2dvf
    NCL Home > Documentation > Functions > Spherical harmonic routines
 
-uv2dvF
+uv2dvf
 
    Computes the divergence using spherical harmonics given the u and v wind components on a fixed grid.
 
 Prototype
 
-        function uv2dvF (
-                u  : numeric,
-                v  : numeric
+        procedure uv2dvf (
+                u   : numeric,
+                v   : numeric,
+                dv  : float or double
         )
-
-        return_val [dimsizes(u)] :  float or double
 
 Arguments
 
@@ -24,16 +23,16 @@ Arguments
      * input values must be in ascending latitude order
      * input array must be on a global grid
 
-Return value
+   dv
 
-   This function returns a double array if u or v are double; a float array otherwise. Divergence is returned in an array
-   dimensioned dimsizes (u)
+   divergence (output, same dimensions as u and v, values will be in ascending latitude order)
 
 Description
 
-   Given wind components u and v, uv2dvF computes the divergence. This function operates on a fixed grid.
+   Given wind components u and v,uv2dvf computes the divergence and returns it in the array dv. uv2dvf operates on a fixed
+   grid.
 
-   This function does not allow for missing data (defined by the _FillValue attribute) to be present. If any missing values
+   This procedure does not allow for missing data (defined by the _FillValue attribute) to be present. If any missing values
    are encountered in a particular 2D input grid, then all of the values in the corresponding output grid will be set to the
    default missing value appropriate to the type of the output.
 
@@ -46,14 +45,12 @@ Description
    Arrays which have dimensions N x nlat x nlon should not include the cyclic (wraparound) points when invoking the
    procedures and functions which use spherical harmonics (Spherepack).
 
-   If the input arrays u and v are on a gaussian grid, uv2dvG should be used. Also, note that uv2dvF is the function version
-   of uv2dvf.
-
-   Use uv2dvF_Wrap if retention of metadata is desired.
+   If the input arrays u and v are on a gaussian grid, uv2dvg should be used. Also, note that uv2dvf is the procedural
+   version of uv2dvF.
 
 See Also
 
-   uv2dvG, uv2dvf, uv2dvg, uv2dv_cfd, dv2uvF
+   uv2dvg, uv2dvF, uv2dvG, uv2dv_cfd, dv2uvf
 
 Examples
 
@@ -62,11 +59,34 @@ Examples
    Calculate the divergence from the wind components u,v, and then calculate the divergent wind components. u and v are on a
    fixed grid.
 begin
-   a = addfile("/cgd/cas/shea/MURPHYS/ATMOS/example.nc","r")
-   u = a->U(:,0,:,:)
-   v = a->V(:,0,:,:)
-   dv    = uv2dvF (u,v)               ; u,v ==> divergence
-   uvd   = dv2uvF (dv)                ; dv  ==> divergent  wind components
+  nlat  = 90                                       ; dimensions
+  mlon  = 180
+  mlon1 = mlon+1
+  fbfile = "uv300.hs"
+                                       ; Generic Workstation setup
+  nrec  = fbinnumrec(fbfile)           ; total number of records in the file
+  ntim  = nrec/2                       ; number of time steps in dataset
+
+  uvmsg = 1e+36
+
+  dv    = new ( (/nlat,mlon /), float, uvmsg )  ; divergence
+  ud    = new ( (/nlat,mlon /), float, uvmsg )
+  vd    = new ( (/nlat,mlon /), float, uvmsg )
+
+  do i = 0,nrec-1,2
+   month = 1                         ; january
+   if (i .ge. 2) then
+       month = 7                     ; july
+   end if
+
+   work = fbinrecread(fbfile,i  ,(/nlat,mlon1/),"float")
+   u    = work(:,0:mlon-1)
+   work = fbinrecread(fbfile,i+1,(/nlat,mlon1/),"float")
+   v    = work(:,0:mlon-1)
+
+   uv2dvf   (u,v,dv)                 ; u,v ==> divergence
+   dv2uvf   (dv,  ud,vd)             ; dv  ==> divergent  wind components
+  end do
 end
 
 Errors
@@ -78,4 +98,4 @@ Errors
      4 : error in the specification of N (jer only)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

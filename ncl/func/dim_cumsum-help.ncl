@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/dim_cumsum.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/dim_cumsum.shtml
 THE_TITLE:dim_cumsum
    NCL Home > Documentation > Functions > General applied math
 
@@ -42,7 +42,7 @@ Description
 
 See Also
 
-   cumsum, dim_cumsum_n, dim_cumsum_Wrap, dim_cumsum_n_Wrap, dim_rmvmean, dim_rmvmed
+   dim_acumrun_n, cumsum, dim_cumsum_n, dim_cumsum_Wrap, dim_cumsum_n_Wrap, dim_rmvmean, dim_rmvmed
 
 Examples
 
@@ -64,9 +64,9 @@ Examples
    Example 3: Let p(time,lat,lon), use dimension reordering to make "time" the rightmost dimension and calculate cumulative
    sums at each time. The opt argument can be set by the user.
 
-  p_cumsum = dim_cumsum(p(lat|:,lon:,time|:), opt)  ; (nlat,mlon,ntim)
+  p_cumsum = dim_cumsum(p(lat|:,lon|:,time|:), opt)  ; (nlat,mlon,ntim)
 or, to retain meta data
-  p_cumsum = dim_cumsum_Wrap(p(lat|:,lon:,time|:), opt)
+  p_cumsum = dim_cumsum_Wrap(p(lat|:,lon|:,time|:), opt)
 
    Note: in V5.1.1, you will be able to use dim_cumsum_n to avoid having to reorder your data.
 
@@ -74,4 +74,4 @@ or, to retain meta data
   p_cumsum = dim_cumsum_n_Wrap(p, opt, 0)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

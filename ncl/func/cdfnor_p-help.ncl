@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/cdfnor_p.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/cdfnor_p.shtml
 THE_TITLE:cdfnor_p
    NCL Home > Documentation > Functions > Cumulative distribution functions
 
@@ -36,7 +36,8 @@ Return value
 
 Description
 
-   Calculates the intergral of a cumulative normal distribution function.
+   Calculates the integral of a cumulative normal distribution function.
+
    The source code is from source routine "CDFNOR" from DCDFLIB (Double precision Cumulative Distribution Function LIBrary)
 
 See Also
@@ -56,8 +57,8 @@ Examples
 
    Example 2
 
-   Let x be a multidimensional array and the mean and sd be scalars. Use conform to propogate the scalars to the shape of x
+   Let x be a multidimensional array and the mean and sd be scalars. Use conform to propagate the scalars to the shape of x.
      P = cdfnor_p(x,conform(x,mean,-1),conform(x,sd,-1) )
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

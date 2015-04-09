@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/pslec.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/pslec.shtml
 THE_TITLE:pslec
    NCL Home > Documentation > Functions > Meteorology
 
@@ -117,4 +117,4 @@ load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/contributed.ncl"
    plot  = gsn_csm_contour_map_ce(wks,slp(nt,:,:),res) ; create a default plot
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

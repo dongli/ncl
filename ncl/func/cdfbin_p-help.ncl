@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/cdfbin_p.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/cdfbin_p.shtml
 THE_TITLE:cdfbin_p
    NCL Home > Documentation > Functions > Cumulative distribution functions
 
@@ -36,8 +36,9 @@ Return value
 
 Description
 
-   Calculates the binomial density of a cumulative distribution function. The probability of s or fewer successes in xn
-   trials each with probability of success pr (input/output range: [0,1]).
+   Calculates the binomial density of a cumulative distribution function. The binomial density is the probability of s or
+   fewer successes in xn trials each with probability of success pr (input/output range: [0,1]).
+
    The source code is from source routine "CDFBIN" from DCDFLIB (Double precision Cumulative Distribution Function LIBrary)
 
 See Also
@@ -56,4 +57,4 @@ Examples
      print("P="+P)               ; P = 0.95
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

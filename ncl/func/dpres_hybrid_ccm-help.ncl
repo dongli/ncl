@@ -1,6 +1,6 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/dpres_hybrid_ccm.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/dpres_hybrid_ccm.shtml
 THE_TITLE:dpres_hybrid_ccm
-   NCL Home > Documentation > Functions > unknown
+   NCL Home > Documentation > Functions > CESM
 
 dpres_hybrid_ccm
 
@@ -95,7 +95,7 @@ load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/contributed.ncl"
 ;;IE   = dim_sum_Wrap( Tdp(time|:,lat|:,lon|:,lev|:) ; pre 5.1.1
   IE   = dim_sum_n_Wrap( Tdp, 1)
                    ; Internal Energy (time,lat,lon)
-  IE   = cp*Tint/g                         ; kg/s2
+  IE   = cp*IE/g                             ; kg/s2
   IE@long_name = "Vertically Integrated Internal Energy"
   IE@units     = "kg/s2"
 
@@ -111,4 +111,4 @@ load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/contributed.ncl"
   delete(Tdp)    ; no longer needed
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

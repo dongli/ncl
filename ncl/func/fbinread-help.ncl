@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/fbinread.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/fbinread.shtml
 THE_TITLE:fbinread
    NCL Home > Documentation > Functions > File IO
 
@@ -80,4 +80,4 @@ Examples
      z    = onedtond( xyz(499:) , (/64,128/) )
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

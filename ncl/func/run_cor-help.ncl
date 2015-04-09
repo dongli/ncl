@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/User_contributed/run_cor.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/User_contributed/run_cor.shtml
 THE_TITLE:run_cor
    NCL Home > Documentation > Functions > General applied math
 
@@ -77,4 +77,4 @@ Examples
     cor_21 = run_cor(x,y,time,21)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

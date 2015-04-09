@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Wind_rose/WindRoseThickLine.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Wind_rose/WindRoseThickLine.shtml
 THE_TITLE:WindRoseThickLine
    NCL Home > Documentation > Functions > Graphics routines
 
@@ -69,4 +69,4 @@ Examples
    See: Example 2 of the wind rose examples.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

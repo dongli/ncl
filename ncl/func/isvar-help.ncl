@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/isvar.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/isvar.shtml
 THE_TITLE:isvar
    NCL Home > Documentation > Functions > Variable query
 
@@ -37,4 +37,4 @@ Examples
     isvars = isvar((/"x","z","title"/))
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

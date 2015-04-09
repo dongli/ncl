@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/pattern_cor.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/pattern_cor.shtml
 THE_TITLE:pattern_cor
    NCL Home > Documentation > Functions > General applied math
 
@@ -47,6 +47,11 @@ Return value
 
 Description
 
+   The pattern correlation is the Pearson product-moment coefficient of linear correlation between two variables that are
+   respectively the values of the same variables at corresponding locations on two different maps. The two different maps
+   can be for different times, for different levels in the vertical direction, for forecast and observed values, etc. The
+   anomaly correlation is a special case of pattern correlation.
+
    Pattern correlations can be computed directly (uncentered) or by computing anomalies from a central mean (centered). For
    diagnostic studies (eg, Taylor Diagrams) the centered pattern correlation is most commonly used. However, as discussed in
    the "IPCC Third Assessment Report - Climate Change 2001" The centered pattern correlation should not be used for climate
@@ -61,6 +66,11 @@ Description
 
    Note: If all of either x or y are missing (ie, all equal_FillValue) then the _FillValue associated with x or y will be
    returned.
+
+   pattern correlation The Pearson product-moment coefficient of linear correlation between two variables that are
+   respectively the values of the same variables at corresponding locations on two different maps. The two different maps
+   can be for different times, for different levels in the vertical direction, for forecast and observed values, etc.
+   Occasionally referred to as map correlation. See anomaly correlation, a special case of pattern correlation.
 
 See Also
 
@@ -104,4 +114,4 @@ Examples
            rd = pattern_cor(x, y,w, 1)      ; weighting, uncentered; rd(time,lev)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

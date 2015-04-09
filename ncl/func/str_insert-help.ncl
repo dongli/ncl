@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/str_insert.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/str_insert.shtml
 THE_TITLE:str_insert
    NCL Home > Documentation > Functions > String manipulation
 
@@ -164,4 +164,4 @@ Examples
 (20)    [BEGIN         procedures.]
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

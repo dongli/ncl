@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/isfilevarcoord.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/isfilevarcoord.shtml
 THE_TITLE:isfilevarcoord
    NCL Home > Documentation > Functions > File IO
 
@@ -46,7 +46,7 @@ Examples
 
 ; check to see if the variable "TEMP" has a coordinate array named "lev"
 
-    print( isfilevarcoord) f, "TEMP", "lev") )
+    print( isfilevarcoord( f, "TEMP", "lev") )
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/fourier_info.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/fourier_info.shtml
 THE_TITLE:fourier_info
    NCL Home > Documentation > Functions > General applied math
 
@@ -99,4 +99,4 @@ Examples
   finfo = fourier_info (x(lev|:,lat|:,lon|:,time|:), 3, 1.)   =>  finfo(3,klev,nlat,mlon,3)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

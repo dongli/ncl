@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/wavelet_default.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/wavelet_default.shtml
 THE_TITLE:wavelet_default
    NCL Home > Documentation > Functions > General applied math
 
@@ -58,4 +58,4 @@ Description
    Please see the wavelet documentation for a full description of how this function works.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

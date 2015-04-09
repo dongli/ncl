@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/fbindirwrite.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/fbindirwrite.shtml
 THE_TITLE:fbindirwrite
    NCL Home > Documentation > Functions > File IO
 
@@ -10,7 +10,7 @@ Prototype
 
         procedure fbindirwrite (
                 path [1] : string,
-                var
+                var      : numeric
         )
 
 Arguments
@@ -20,7 +20,7 @@ Arguments
    Pathname to binary file
    var
 
-   A variable of any dimensionality and type.
+   A numeric variable of any dimensionality.
 
 Description
 
@@ -53,4 +53,4 @@ Examples
      open(..., form="unformatted", access="direct", recl= )   ; recl is system dependent
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

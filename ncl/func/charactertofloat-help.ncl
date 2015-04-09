@@ -1,10 +1,10 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/charactertofloat.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/charactertofloat.shtml
 THE_TITLE:charactertofloat
    NCL Home > Documentation > Functions > Type converters
 
 charactertofloat
 
-   Coerces values of type character to values of type float.
+   Coerces values of type character to values of type float (deprecated; use tofloat).
 
 Prototype
 
@@ -29,6 +29,8 @@ Description
    This function converts an ASCII character (or characters) to its decimal equivalent and returns that as a float. For
    example, conversion of the ASCII character 'a' yields the float value 97.
 
+   Note: this function and other xxxtofloat functions have been superceded by tofloat.
+
    This function performs coercion that is not automatically available through the NCL grammar. See the section on coercion
    of types for details on NCL's automatic type conversions.
 
@@ -41,7 +43,7 @@ Description
 
 See Also
 
-   charactertodouble, charactertointeger, charactertoshort, charactertolong
+   totype, tofloat, tolong, todouble
 
 Examples
 
@@ -111,4 +113,4 @@ begin
 end
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

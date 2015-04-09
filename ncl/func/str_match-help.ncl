@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/str_match.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/str_match.shtml
 THE_TITLE:str_match
    NCL Home > Documentation > Functions > String manipulation
 
@@ -11,26 +11,26 @@ str_match
 Prototype
 
         function str_match (
-                string_val [*] : string,
-                expression [1] : string
+                string_array [*] : string,
+                sub_string   [1] : string
         )
 
         return_val [*] :  string
 
 Arguments
 
-   string_val
+   string_array
 
    A string array of any dimensionality.
-   expression
+   sub_string
 
-   The string expression to be matched.
+   The substring to be matched.
 
 Description
 
-   This function returns an array of strings with every occurrence of expression matched in string_val.
+   This function returns an array of strings with every occurrence of sub_string matched in string_array.
 
-   If there is no expression matched in string_val, the default string missing value ("missing") will be returned.
+   If there is no sub_string matched in string_array, the default string missing value ("missing") will be returned.
 
    Please note, str_match is case SENSITIVE as of version 6.0.0. There's a bug in versions 6.0.0-beta and earlier in which
    this function is not case sensitive.
@@ -39,7 +39,8 @@ Description
 
 See Also
 
-   str_index_of_substr, str_sub_str, str_match_ic, str_match_ind, str_match_ind_ic
+   str_index_of_substr, str_sub_str, str_match_ic, str_match_ind, str_match_ind_ic, str_match_regex, str_match_ic_regex,
+   str_match_ind_regex, str_match_ind_ic_regex
 
 Examples
 
@@ -81,4 +82,4 @@ Examples
 (23)    cnConstFUseInfoLabelRes
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

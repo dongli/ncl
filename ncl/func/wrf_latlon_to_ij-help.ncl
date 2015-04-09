@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/wrf_latlon_to_ij.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/wrf_latlon_to_ij.shtml
 THE_TITLE:wrf_latlon_to_ij
    NCL Home > Documentation > Functions > WRF, Lat/Lon functions
 
@@ -105,4 +105,4 @@ Examples
   print("X/Y location is: " +loc)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

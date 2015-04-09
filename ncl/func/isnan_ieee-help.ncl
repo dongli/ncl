@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/isnan_ieee.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/isnan_ieee.shtml
 THE_TITLE:isnan_ieee
    NCL Home > Documentation > Functions > Variable query
 
@@ -51,4 +51,4 @@ Examples
   end if
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

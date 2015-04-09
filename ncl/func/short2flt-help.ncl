@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/short2flt.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/short2flt.shtml
 THE_TITLE:short2flt
    NCL Home > Documentation > Functions > Type converters
 
@@ -95,9 +95,9 @@ Number Of Attributes: 18
   end if
 
    NOTE 2: The above file's time units are "hours since 1800-1-1 00:00:0.0". Many people find these units rather cumbersome
-   to use. To convert to more 'human readable' time units the ut_calendar function can be used:
-   ymdh = ut_calendar(time, 0)          ; ymdh(:,0:5)
-   yyyymmddhh = ut_calendar(time, -3)   ; integer
+   to use. To convert to more 'human readable' time units the cd_calendar function can be used:
+   ymdh = cd_calendar(time, 0)          ; ymdh(:,0:5)
+   yyyymmddhh = cd_calendar(time, -3)   ; integer
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

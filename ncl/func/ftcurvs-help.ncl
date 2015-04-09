@@ -1,6 +1,6 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/ftcurvs.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/ftcurvs.shtml
 THE_TITLE:ftcurvs
-   NCL Home > Documentation > Functions > Interpolation
+   NCL Home > Documentation > Functions > Interpolation, Ngmath routines
 
 ftcurvs
 
@@ -93,4 +93,4 @@ Errors
           = 5 if a d-value is non-positive.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

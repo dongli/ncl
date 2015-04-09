@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/stdatmus_p2tdz.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/stdatmus_p2tdz.shtml
 THE_TITLE:stdatmus_p2tdz
    NCL Home > Documentation > Functions > Meteorology
 
@@ -52,4 +52,4 @@ Examples
    tdz = stdatmus_p2tdz(p)    ; ===> tdz(3,6)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/relhum.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/relhum.shtml
 THE_TITLE:relhum
    NCL Home > Documentation > Functions > Meteorology
 
@@ -212,4 +212,4 @@ end
    rh = where(rh.gt.MaxRh, MaxRh, rh)  ; MaxRh=105   (user specified)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

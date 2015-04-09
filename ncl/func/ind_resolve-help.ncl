@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/ind_resolve.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/ind_resolve.shtml
 THE_TITLE:ind_resolve
    NCL Home > Documentation > Functions > Array manipulators
 
@@ -44,7 +44,9 @@ Examples
 
    Example 1
 
-   The following example demonstrates the usefulness of the ind_resolve function in conjunction with the ind function:
+   The following example demonstrates the usefulness of the ind_resolve function in conjunction with the ind function. Note
+   that this code can be simplified to two lines of code by the use of the where function, which will be demonstrated below.
+
 ;
 ; Create sample multi-dimensioned array.
 ; The following creates a 3D array of size 2 x 2 x 4.
@@ -139,6 +141,11 @@ Coordinates:
 (1,1,2) 5
 (1,1,3) 4
 
+   The above code can be drastically simplified by the use of the where function:
+
+  a@_FillValue = -999
+  a = where(a.gt.5,a,a@_FillValue)
+
    Example 2
 
    Determine all locations of a multi-dimensional array (x) where the elements match the minimum or maximum values. This is
@@ -168,4 +175,4 @@ Coordinates:
   end if
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

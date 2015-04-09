@@ -1,10 +1,10 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/cdfgam_x.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/cdfgam_x.shtml
 THE_TITLE:cdfgam_x
    NCL Home > Documentation > Functions > Cumulative distribution functions
 
 cdfgam_x
 
-   Calculates the upper limit of intergration of a cumulative gamma distribution function.
+   Calculates the upper limit of integration of a cumulative gamma distribution function.
 
 Prototype
 
@@ -23,10 +23,10 @@ Arguments
    A multi-dimensional array or scalar value equal to the integral from 0 to return_val [0,1].
    shape
 
-   A multi-dimensional array or scalar value equal to the scale parameter of the gamma density (shape > 0.0)
+   A multi-dimensional array or scalar value equal to the shape parameter of the gamma density (shape > 0.0)
    scale
 
-   A multi-dimensional array or scalar value equal to the shape parameter of the gamma density (scale > 0.0)
+   A multi-dimensional array or scalar value equal to the scale parameter of the gamma density (scale > 0.0)
 
 Return value
 
@@ -34,7 +34,7 @@ Return value
 
 Description
 
-   Calculates the upper limit of intergration of a cumulative gamma distribution function.
+   Calculates the upper limit of integration of a cumulative gamma distribution function.
 
    This is equivalent to Matlab's gaminv function but the scale argument must be be inverted.
 
@@ -66,4 +66,4 @@ Examples
      X = cdfgam_x(P,q,1./r)      ; X=> 1, 2, 3, 4, 5
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

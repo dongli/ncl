@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/conform_dims.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/conform_dims.shtml
 THE_TITLE:conform_dims
    NCL Home > Documentation > Functions > Array manipulators
 
@@ -38,7 +38,7 @@ Description
    This function will create a new variable that has dimensions dims and the same type as r. The values of r will be copied
    to all of the other dimensions.
 
-   If r is a scalar and ndims is -1, then the scalar value will be copied to all elements of a new array of the same size as
+   If r is a scalar and ndim is -1, then the scalar value will be copied to all elements of a new array of the same size as
    indicated by dims.
 
    One use of this function is to create a new (and often temporary) variable so that it can be used for something like
@@ -92,10 +92,10 @@ Examples
 
    Example 3
 
-   Assume T is a 4D array with dimensions ntim x klvl x nlat x mlon and dp is an array of length klvl. If you want to
+   Assume T is a 4D array with dimensions ntim x klev x nlat x mlon and dp is an array of length klev. If you want to
    compute the column pressure weighted mean temperature at all times, then use:
-  dpC = conform_dims(dimsizes(T), dp, 1)  ; => (ntim,klvl,nlat,mlon)
+  dpC = conform_dims(dimsizes(T), dp, 1)  ; => (ntim,klev,nlat,mlon)
   T_wgtAve = dim_sum(T*dpC)/dim_sum(dpC)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

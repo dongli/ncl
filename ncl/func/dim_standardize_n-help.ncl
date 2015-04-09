@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/dim_standardize_n.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/dim_standardize_n.shtml
 THE_TITLE:dim_standardize_n
    NCL Home > Documentation > Functions > General applied math
 
@@ -55,31 +55,36 @@ Examples
 
    Example 1: Let x be a 1-dimensional array: (a) Create a new variable, xNew, that contains standardized values; (b)
    replace the variable x with the standardized values. Use the population standard deviation.
-  xNew = dim_standardize_n(x, 0, 0)  ; new variable
-  x    = dim_standardize_n(x, 0, 0)  ; overwrite with deviations
+
+  xNew = dim_standardize_n(x, 1, 0)  ; new variable
+  x    = dim_standardize_n(x, 1, 0)  ; Or, overwrite with deviations
 
    Note: when operating across the rightmost dimension, it is simpler to use dim_standardize.
 
    Example 2: Let x be a 3-dimensional array with dimension sizes (ntim, nlat, nlon). Standardize values of the the
    rightmost (here, "nlon") dimension. Use the sample standard deviation.
-   xLon = dim_standardize_n (x,1,2)        ; new variable
-   xLon = dim_standardize_n_Wrap(x,1,2)    ; with metadata
-   x    = dim_standardize_n (x,1,2)        ; overwrite with deviations
+
+   xLon = dim_standardize_n (x,0,2)        ; new variable
+   xLon = dim_standardize_n_Wrap(x,0,2)    ; with metadata
+   x    = dim_standardize_n (x,0,2)        ; overwrite with deviations
 
    Example 3: Let x be a 3-dimensional array with named dimensions (time, lat, lon) and dimension sizes (ntim, nlat, nlon).
    Standardize the values of the time dimension at all lat/lon indices:
+
    xTime = dim_standardize_n(x, 0, 0)
    xTime = dim_standardize_n_Wrap(x, 0, 0) ; with metadata
 
-   Example 4: Let x be a 4-dimensional array with named dimensions (time, leve, lat, lon) and dimension sizes (ntim, nlev,
+   Example 4: Let x be a 4-dimensional array with named dimensions (time, lev, lat, lon) and dimension sizes (ntim, nlev,
    nlat, nlon). Standardize the values of the time and level dimension at all lat/lon indices:
+
    xstd = dim_standardize_n(x, 0, (/0,1/))
    xstd = dim_standardize_n_Wrap(x, 0, (/0,1/)) ; with metadata
 
    Example 5: Let x be as in Example 3 and let x contain monthly means for (say) 10 years of data (ntim=120). Standardized
    monthly anomalies for each month could be calculated using array subscripting (opt=0 or 1)
+
    xJan  = dim_standardize_n(x(0:ntim-1:12,:,:), opt, 0)
    xJuly = dim_standardize_n(x(6:ntim-1:12,:,:), opt, 0)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

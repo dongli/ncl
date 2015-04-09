@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/wrf_avo.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/wrf_avo.shtml
 THE_TITLE:wrf_avo
    NCL Home > Documentation > Functions > WRF
 
@@ -118,7 +118,7 @@ Examples
 
    You can see some other example scripts and their resultant images at:
 
-     http://www.mmm.ucar.edu/wrf/OnLineTutorial/Graphics/NCL/
+     http://www2.mmm.ucar.edu/wrf/OnLineTutorial/Graphics/NCL/
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

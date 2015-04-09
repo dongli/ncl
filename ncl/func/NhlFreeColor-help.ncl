@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/NhlFreeColor.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/NhlFreeColor.shtml
 THE_TITLE:NhlFreeColor
    NCL Home > Documentation > Functions > Color routines
 
@@ -103,4 +103,4 @@ end
 
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

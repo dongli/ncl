@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/triple2grid_Wrap.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/triple2grid_Wrap.shtml
 THE_TITLE:triple2grid_Wrap
    NCL Home > Documentation > Functions > Regridding
 
@@ -102,4 +102,4 @@ Examples
    grid = triple2grid_Wrap(xlon,ylat,zVal, lon,lat, opt)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

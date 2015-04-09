@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/dtrend_msg.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/dtrend_msg.shtml
 THE_TITLE:dtrend_msg
    NCL Home > Documentation > Functions > General applied math
 
@@ -33,17 +33,19 @@ Arguments
    mean.
    return_info
 
-   A logical scalar controlling whether attributes corresponding to the y-interscept and slope are attached to return_val.
+   A logical scalar controlling whether attributes corresponding to the y-intercept and slope are attached to return_val.
    True = attributes returned. False = no attributes returned.
 
 Return value
 
    An array of the same size as y. Double if y is double, float otherwise.
+
    Two attributes (slope and y_intercept) may be attached to return_val if return_info = True. These attributes will be
    one-dimensional arrays if y is one-dimensional. If y is multi-dimensional, the attributes will be the same size as y
    minus the rightmost dimension but in the form of a one-dimensional array. e.g. if y is 45 x 34, then the attributes will
-   be a one-dimensional array of size 45*34. This occurs because attributes can not be multi-dimensional. Double if
+   be a one-dimensional array of size 45*34. This occurs because attributes cannot be multi-dimensional. Double if
    return_val is double, float otherwise.
+
    You access the attributes through the @ operator:
 print(return_val@slope)
 print(return_val@y_intercept)
@@ -51,7 +53,7 @@ print(return_val@y_intercept)
 Description
 
    Estimates and removes the least squares linear trend of the rightmost dimension from all grid points. The mean is
-   optionally removed. Missing values are allowed. Optionally returns the slope (eg, linear trend per unit time interval)
+   optionally removed. Missing values are allowed. Optionally returns the slope (i.e., linear trend per unit time interval)
    and y-intercept for graphical purposes.
 
    Use dtrend_msg_n if the dimension to do the calculation on is not the rightmost dimension and reordering is not desired.
@@ -76,7 +78,7 @@ Examples
     yDtrend = dtrend_msg (x,y,True,True)
 ;   yDtrend@slope is a one-dimensional array of size nlat x nlon elements.
 
-   Since attributes can not be returned as two-dimensional arrays, the user should use onedtond to create a two-dimensional
+   Since attributes cannot be returned as two-dimensional arrays, the user should use onedtond to create a two-dimensional
    array for plotting purposes:
 
    yDtrend = dtrend_msg (x,y,False,True)
@@ -90,18 +92,18 @@ Examples
 
    Example 3
 
-   Let y be three-dimensional array with dimensions time, lat, lon. Reorder y so that time is the rightmost dimension.
+   Let y be a three-dimensional array with dimensions time, lat, lon. Reorder y so that time is the rightmost dimension.
   yDtrend = dtrend_msg(y&time,y(lat|:,lon|:,time|:),True,False)
-; yDtrend will be three-dimensional with dimension lat, lon, time.
+; yDtrend will be three-dimensional with dimensions lat, lon, time.
 
 ; In V5.2.0 or later, you can use dtrend_msg_n to avoid reordering:
 ; yDtrend = dtrend_msg_n(y&time,y,True,False,0)
-; yDtrend will be three-dimensional with dimension time, lat, lon.
+; yDtrend will be three-dimensional with dimensions time, lat, lon.
 
    Example 4
 
-   This example shows how to calculate the significance of trends by evaluating the incomplete beta function by using
-   betainc. Let z be a three-dimensional array with dimensions named lat, lon, time.
+   This example shows how to calculate the significance of trends by evaluating the incomplete beta function using betainc.
+   Let z be a three-dimensional array with dimensions named lat, lon, time.
   dimz = dimsizes(z)   ; retrieve dimension sizes of z
   zDtrend = dtrend_msg(ispan(0,dimz(2)-1,1),z,True,True)
 
@@ -127,4 +129,4 @@ Examples
                                                                ; expressed from 0 to 100%
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/simpeq.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/simpeq.shtml
 THE_TITLE:simpeq
    NCL Home > Documentation > Functions > General applied math
 
@@ -76,4 +76,4 @@ Examples
   result  = simpeq(f(lev|:,lat|:,lon|:,time|:),dt)    ; result(klev,nlat,mlon)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

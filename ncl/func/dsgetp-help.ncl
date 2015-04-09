@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/dsgetp.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/dsgetp.shtml
 THE_TITLE:dsgetp
    NCL Home > Documentation > Functions > Interpolation
 
@@ -22,7 +22,7 @@ Arguments
 
 Return value
 
-   Returns a numeric type according to the parameters for for Dsgrid routines.
+   Returns a numeric type according to the parameters for Dsgrid routines.
 
 Description
 
@@ -54,4 +54,4 @@ Coordinates:
 
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

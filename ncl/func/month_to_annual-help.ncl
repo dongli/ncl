@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/month_to_annual.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/month_to_annual.shtml
 THE_TITLE:month_to_annual
    NCL Home > Documentation > Functions > Array query
 
@@ -66,4 +66,4 @@ Examples
         TMP = month_to_annual(tmp, 1)  ; TMP(100,klev,nlat,mlon))
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

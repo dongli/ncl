@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/tdsetp.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/tdsetp.shtml
 THE_TITLE:tdsetp
    NCL Home > Documentation > Functions > Graphics routines
 
@@ -205,4 +205,4 @@ end
    Also, see the examples on the three-dimensional graphics applications page.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

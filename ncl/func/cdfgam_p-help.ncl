@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/cdfgam_p.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/cdfgam_p.shtml
 THE_TITLE:cdfgam_p
    NCL Home > Documentation > Functions > Cumulative distribution functions
 
@@ -23,10 +23,10 @@ Arguments
    A multi-dimensional array or scalar value equal to upper limit of integration of the gamma density. (x >= 0.)
    shape
 
-   A multi-dimensional array or scalar value equal to the scale parameter of the gamma density (shape > 0.0)
+   A multi-dimensional array or scalar value equal to the shape parameter of the gamma density (shape > 0.0)
    scale
 
-   A multi-dimensional array or scalar value equal to the shape parameter of the gamma density (scale > 0.0). In some
+   A multi-dimensional array or scalar value equal to the scale parameter of the gamma density (scale > 0.0). In some
    instances, it may be appropriate to use 1/scale as the input. See the Description section below for additional notes on
    usage.
 
@@ -36,13 +36,14 @@ Return value
 
 Description
 
-   Calculates the intergral of a cumulative gamma distribution function.
+   Calculates the integral of a cumulative gamma distribution function.
+
    The source code is from source routine "CDFGAM" from DCDFLIB (Double precision Cumulative Distribution Function LIBrary)
 
    NCL's cdfgam_p and the R function pgamma use the same convention for the scale and shape arguments. To compare with
    results from Excel's GAMMADIST function and Matlab's gamcdf function, the scale argument may have to be inverted.
 
-   Details: The issue comes from the convention in the parametrization.
+   Details: The issue comes from the convention in the parameterization.
 
    Some languages use as input for the two parameters that characterize a Gamma distribution a and b such that a/b is the
    mean of the distribution and a/b^2 is the variance; other languages use a and b such that a*b is the mean and a*b^2 is
@@ -110,4 +111,4 @@ pgamma(2, 100, 69)
      GAMMADIST(50.29,2,43,TRUE) = 0.32633483
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

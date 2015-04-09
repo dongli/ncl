@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Graphics/Resources/list_alpha_res.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Graphics/Resources/list_alpha_res.shtml
 THE_TITLE:Alphabetical list of NCL resources
    NCL Home > Documentation > Graphics > Resources
 
@@ -449,6 +449,18 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Note that you cannot get the value of cnConpackParams. Attempts to do so will result in an error.
 
           Default: NULL
+
+   cnConstFEnableFill
+          Available in version 6.2.0 and later.
+
+          If the boolean resource cnConstFEnableFill is set to True, then in most cases, constant or near-constant fields
+          will be rendered as a filled area, rather than having the contoured area remain blank. By default, the constant
+          field informational text box will still appear; turn it off by setting cnConstFLabelOn to False.
+
+          In the future, cnConstFEnableFill will likely default to True, with cnConstFLabelOn defaulting to False unless
+          contour line drawing is enabled.
+
+          Default: False
 
    cnConstFLabelAngleF
           This resource specifies the angle, in degrees, of the constant field label text and its surrounding box.
@@ -1654,11 +1666,13 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
 
         EqualSpacedLevels
                 For this mode, ContourPlot divides the range spanning the dataset minimum and maximum values into
-                cnMaxLevelCount+1 equally spaced intervals. cnLevelSpacingF is set to the value of this interval.
-                cnMinLevelValF is set to the value of the dataset minimum plus the value of cnLevelSpacingF. cnMaxLevelValF
-                is set to the value of the dataset maximum minus the value of cnLevelSpacingF. This results in
-                cnMaxLevelCount levels; therefore ContourPlot sets the read-only resource cnLevelCount equal to
-                cnMaxLevelCount.
+                cnMaxLevelCount+1 equally spaced intervals.
+
+                ContourPlot sets cnLevelSpacingF to the value of this interval, cnMinLevelValF to the dataset minimum plus
+                the value of cnLevelSpacingF, and cnMaxLevelValF to the value of the dataset maximum minus the value of
+                cnLevelSpacingF. You cannot set these three resources yourself.
+
+                ContourPlot also sets the read-only resource cnLevelCount equal to cnMaxLevelCount.
 
           Default: AutomaticLevels
 
@@ -2786,6 +2800,15 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
 
           Default: True
 
+   gsColors
+          Available in version 6.2.0 and later.
+
+          This resource allows you to set an array of fill or line color indexes for polygons or polyline segments being
+          drawn on or attached to a plot via the gsSegments resource, so it should have the same size as gsSegments. If it
+          contains fewer elements, then the values will be recycled as often as required to draw all segments.
+
+          Default: None
+
    gsEdgeColor
           This resource of type NhlTColorIndex specifies the color used for the edges of fill primitives associated with the
           GraphicStyle object.
@@ -3037,6 +3060,19 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
 
           Default: 1.0
 
+   gsSegments
+          Available in version 6.2.0 and later.
+
+          This resource allows you specify an array of start indexes in the x/y point arrays of the start of each new line
+          or polygon segment. Using this resource can significantly speed up code that is adding thousands of segments to a
+          plot. It is only available with polyline and polygon drawing codes like gsn_add_polyline, gsn_add_polygon,
+          NhlDataPolyline, and NhlDataPolygon.
+
+          The gsColors allows you to specify an array of color indexes associated with each line or polygon segment in
+          gsSegments.
+
+          Default: None
+
    gsTextAngleF
           This resource specifies the rotation angle around the justification point of text primitives associated with the
           GraphicStyle object.
@@ -3186,6 +3222,14 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           gsnStringFontHeightF.
 
           Default: dynamic
+
+   gsnCenterStringFuncCode
+          If gsnCenterString is set, this resource sets the function code for the string. This resource overrides
+          gsnStringFuncCode.
+
+          Available in version 6.2.0 and later.
+
+          Default: ~
 
    gsnCenterStringOrthogonalPosF
           If gsnCenterString is set, this resource allows you to move this string up or down. Use small negative or positive
@@ -3410,6 +3454,14 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           gsnStringFontHeightF.
 
           Default: dynamic
+
+   gsnLeftStringFuncCode
+          If gsnLeftString is set, this resource sets the function code for the string. This resource overrides
+          gsnStringFuncCode.
+
+          Available in version 6.2.0 and later.
+
+          Default: ~
 
    gsnLeftStringOrthogonalPosF
           If gsnLeftString is set, this resource allows you to move this string up or down. Use small negative or positive
@@ -3712,6 +3764,14 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
 
           Default: dynamic
 
+   gsnRightStringFuncCode
+          If gsnRightString is set, this resource sets the function code for the string. This resource overrides
+          gsnStringFuncCode.
+
+          Available in version 6.2.0 and later.
+
+          Default: ~
+
    gsnRightStringOrthogonalPosF
           If gsnRightString is set, this resource allows you to move this string up or down. Use small negative or positive
           values to nudge the string closer to or away from the plot boundary.
@@ -3807,6 +3867,15 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           gsnRightStringFontHeightF, or gsnCenterStringFontHeightF.
 
           Default: dynamic
+
+   gsnStringFuncCode
+          If any of gsnLeftString, gsnCenterString, or gsnRightString are set, then this resource sets the function code for
+          these strings. This resource can be overridden by setting the individual resources gsnLeftStringFuncCode,
+          gsnRightStringFuncCode, or gsnCenterStringFuncCode.
+
+          Available in version 6.2.0 and later.
+
+          Default: ~
 
    gsnTickMarksOn
           If set to False, then no tickmarks or tickmark labels will be drawn in the gsn functions where tickmarks are drawn
@@ -4221,6 +4290,14 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           lbLabelFontHeightF resource.
 
           Default: 0.33
+
+   lbBoxSeparatorLinesOn
+          Available in version 6.2.0 and later.
+
+          If this resource is set to False, it will draw a labelbar with no interior box lines (box separator lines), and
+          just a perimeter line around the "bar" of the labelbar.
+
+          Default: True
 
    lbBoxSizing
           When set to UniformSizing, all the boxes in the LabelBar have the same size. When set to ExplicitSizing, the
@@ -7212,6 +7289,20 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           have a rectangular or elliptical shape.
 
           Default: False
+
+   mpPolyMode (MapTransformation)
+          Available in version 6.2.0 and later.
+
+          This resource takes three possible values: "StandardPoly", "FastPoly", and "AutoPoly". It allows you to set which
+          method to use when adding polygons to a map plot.
+
+          The default is "AutoPoly", which means that NCL decides which type of polygon to draw based on the great circle
+          distance of each component line segment and on the polygon's GraphicStyle attributes. If the great circle distance
+          of any component line segment is greater than 10 degress or if any fill pattern other than solid is in effect,
+          then the "StandardPoly" method is used, which was always in effect in NCL versions 6.1.2 and earlier. Otherwise,
+          the "FastPoly" method is used, which was introduced in NCL version 6.2.0.
+
+          Default: AutoPoly
 
    mpProjection (MapTransformation)
           This resource of type NhlTProjection defines the projection used for the map transformation. There are several
@@ -10340,6 +10431,8 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: 1.0
 
    tmXTAutoPrecision
+          This resource is ignored unless tmXUseBottom is set to False.
+
           When True, this boolean resource causes TickMark to set the precision (number of significant digits) for the top
           tick mark labels based on the range of values used for the labels. In general, the value of tmXTPrecision is
           ignored. However, if tmXTMode is set to Manual, the precision is set such that all significant digits necessary to
@@ -10359,6 +10452,8 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: True
 
    tmXTDataLeftF
+          This resource is ignored unless tmXUseBottom is set to False.
+
           Sets the data value that maps to the left side of the top tick marks.
 
           This resource may be intercepted or disabled by:
@@ -10368,6 +10463,8 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: 0.0
 
    tmXTDataRightF
+          This resource is ignored unless tmXUseBottom is set to False.
+
           Sets the data value that maps to the right side of the top tick marks.
 
           This resource may be intercepted or disabled by:
@@ -10377,6 +10474,8 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: 0.0
 
    tmXTFormat
+          This resource is ignored unless tmXUseBottom is set to False.
+
           This string resource specifies, according to the HLU Floating Point Format Specification scheme, the format of the
           numbers used to label the major ticks along the top X Axis. It applies only when tmXTMode is set to Automatic or
           Manual. Unless set explicitly, the significant digits conversion field is set dynamically based on the values of
@@ -10397,6 +10496,8 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: "0@*+^sg"
 
    tmXTIrrTensionF
+          This resource is ignored unless tmXUseBottom is set to False.
+
           Specifies the value of the tension parameter applied to the spline approximation used to set up an irregular
           transformation based on the values in the tmXTIrregularPoints array. This resource is only used if tmXTStyle is
           Irregular. Small values (less than ~1.0) imply a relaxed approximation; large values (greater than ~5.0) imply a
@@ -10411,6 +10512,8 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: 2.0
 
    tmXTIrregularPoints
+          This resource is ignored unless tmXUseBottom is set to False.
+
           Used for Irregular style ticks only. Specifies an array of data locations spaced at equal intervals along the top
           X Axis. These points represent a discrete approximation to the desired coordinate system. These points must be
           strictly monotonically increasing or decreasing. Therefore, periodic coordinate systems can not be approximated
@@ -10425,11 +10528,15 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: NULL
 
    tmXTLabelAngleF
+          This resource is ignored unless tmXUseBottom is set to False.
+
           Sets the counterclockwise rotation of the X-Axis top labels.
 
           Default: 0.0
 
    tmXTLabelConstantSpacingF
+          This resource is ignored unless tmXUseBottom is set to False.
+
           If this resource has the value 0.0, the characters in the top X-Axis label will be proportionally spaced. If it
           has a value greater than 0.0, the distance from the beginning of one character to the beginning of the next
           character will be constant. The value of tmXTLabelConstantSpacingF sets this constant distance as a multiple of
@@ -10442,6 +10549,8 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: 0.0
 
    tmXTLabelDeltaF
+          This resource is ignored unless tmXUseBottom is set to False.
+
           Sets an offset from the default location for the top tick mark labels. This value multiplied by the
           tmXTLabelFontHeightF represents the amount, in NDC coordinates, that the top tick marks will be displaced from
           their default location in the Y direction. A positive value moves labels in the positive direction in NDC
@@ -10450,26 +10559,36 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: 0.0
 
    tmXTLabelDirection
+          This resource is ignored unless tmXUseBottom is set to False.
+
           Sets the drawing direction of the X-Axis top labels.
 
           Default: Across
 
    tmXTLabelFont
+          This resource is ignored unless tmXUseBottom is set to False.
+
           Sets the font index for the bottom X-Axis labels.
 
           Default: 0
 
    tmXTLabelFontAspectF
+          This resource is ignored unless tmXUseBottom is set to False.
+
           Sets the ratio of height/width for the top X-Axis labels.
 
           Default: 1.3125
 
    tmXTLabelFontColor
+          This resource is ignored unless tmXUseBottom is set to False.
+
           Sets the color of the top X-Axis labels.
 
           Default: 1
 
    tmXTLabelFontHeightF
+          This resource is ignored unless tmXUseBottom is set to False.
+
           Sets the font height in NDC coordinates for the top X Axis labels. This value changes proportionally to changes in
           the width of the viewport.
 
@@ -10480,11 +10599,15 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: <dynamic> -- initially 0.02 for a viewport width of 0.6
 
    tmXTLabelFontQuality
+          This resource is ignored unless tmXUseBottom is set to False.
+
           This resource of type NhlTFontQuality determines the quality of the font used to draw the top X-Axis label.
 
           Default: High
 
    tmXTLabelFontThicknessF
+          This resource is ignored unless tmXUseBottom is set to False.
+
           Sets the thickness of the lines used to draw the characters of the top X-Axis label. The value acts as a
           multiplier of a (device-dependent) unit thickness. This resource is ignored when the tmXTLabelFont specifies a
           filled font (font indexes 21-22, 25-26, 29-30, and 33-37).
@@ -10492,6 +10615,8 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: 1.0
 
    tmXTLabelFuncCode
+          This resource is ignored unless tmXUseBottom is set to False.
+
           This resource of type NhlTCharacter sets the function code character for the X-Axis top labels.
 
           This resource may be intercepted or disabled by:
@@ -10501,17 +10626,23 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: :
 
    tmXTLabelJust
+          This resource is ignored unless tmXUseBottom is set to False.
+
           Sets the justification point for all top X-Axis labels.
 
           Default: BottomCenter
 
    tmXTLabelStride
+          This resource is ignored unless tmXUseBottom is set to False.
+
           Used to skip tick mark labels. The value represents how many tick marks to skip between tick mark labels when
           drawing the tick mark labels. Will cause the tick mark object to draw first, then skip.
 
           Default: 0
 
    tmXTLabels
+          This resource is ignored unless tmXUseBottom is set to False.
+
           When tmXTMode is set to Explicit, this resource specifies an array of strings that correspond to the values in
           tmXTValues. Each element of this resource is placed under the corresponding tick location in tmXTValues. If a
           string array element is set to NULL, no label will appear at the corresponding tick mark location. If you do not
@@ -10536,9 +10667,10 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: False
 
    tmXTMajorLengthF
+          This resource is ignored unless tmXUseBottom is set to False.
+
           Sets the length of the X-Axis top major tick marks in NDC coordinates. This length scales with changes to the
-          viewport height, unless you explicitly set tmXTMajorLengthF (or tmXBMajorLengthF if tmXUseBottom is True) at the
-          same time.
+          viewport height, unless you explicitly set tmXTMajorLengthF at the same time.
 
           This resource may be intercepted or disabled by:
 
@@ -10547,11 +10679,15 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: <dynamic> -- initially 0.02 for a viewport height of 0.6
 
    tmXTMajorLineColor
+          This resource is ignored unless tmXUseBottom is set to False.
+
           Sets the line color index for the top major tick marks.
 
           Default: 1
 
    tmXTMajorOutwardLengthF
+          This resource is ignored unless tmXUseBottom is set to False.
+
           Length of the major X-Axis top tick marks that will be drawn on the outside of the tick mark border. Value is in
           NDC coordinates. This value scales proportionally to changes in height.
 
@@ -10562,6 +10698,8 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: 0.0
 
    tmXTMajorThicknessF
+          This resource is ignored unless tmXUseBottom is set to False.
+
           Sets linewidth scale factor for top major tick marks. Value is a multiple of the minimum linewidth on the current
           device.
 
@@ -10574,6 +10712,8 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: <dynamic>
 
    tmXTMaxTicks
+          This resource is ignored unless tmXUseBottom is set to False.
+
           Used for Automatic mode ticks only. Specifies the maximum allowable tick marks for the top X Axis.
 
           Default: 7
@@ -10585,12 +10725,16 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: <dynamic>
 
    tmXTMinorLengthF
+          This resource is ignored unless tmXUseBottom is set to False.
+
           Sets the length in NDC coordinates for X top tick marks. This length scales with changes to the viewport height,
-          unless you explicitly set tmXTMinorLengthF (or tmXBMinorLengthF if tmXUseBottom is True) at the same time.
+          unless you explicitly set tmXTMinorLengthF at the same time as you change the height.
 
           Default: <dynamic> -- initially 0.01 for a viewport height of 0.6
 
    tmXTMinorLineColor
+          This resource is ignored unless tmXUseBottom is set to False.
+
           Sets color index for top minor tick marks.
 
           Default: 1
@@ -10601,12 +10745,16 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: True
 
    tmXTMinorOutwardLengthF
+          This resource is ignored unless tmXUseBottom is set to False.
+
           Length of minor X-Axis top tick marks that will be drawn on the outside of the tick mark border. Value is in NDC
           coordinates. This value scales proportionally to changes in height.
 
           Default: 0.0
 
    tmXTMinorPerMajor
+          This resource is ignored unless tmXUseBottom is set to False.
+
           Sets the number of minor tick marks per major tick mark for the top X Axis. When using Log style tick marks, only
           the values 1, 4, and 8 are accepted as valid. If the Explicit mode is in effect, TickMark ignores this resource:
           you must instead specify the spacing of each minor tick individually using tmXTMinorValues. If you do not set this
@@ -10618,12 +10766,16 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: <dynamic>
 
    tmXTMinorThicknessF
+          This resource is ignored unless tmXUseBottom is set to False.
+
           Sets linewidth scale factor for top minor tick marks. Value represents a multiple of the current device's minimum
           linewidth.
 
           Default: 1.0
 
    tmXTMinorValues
+          This resource is ignored unless tmXUseBottom is set to False.
+
           When tmXTMode is set to Explicit, this resource specifies an array of data locations at which the minor tick marks
           will be drawn. If not set, minor tick marks will be absent from the top X Axis.
 
@@ -10633,8 +10785,10 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: NULL
 
    tmXTMode
+          This resource is ignored unless tmXUseBottom is set to False.
+
           This enumerated resource of type NhlTTickMarkMode determines the method for specifying the spacing of the ticks
-          and the contents of the labels along the top X Axis. It has three possible settings:
+          and the contents of the labels along the top X Axis. There are three possible settings:
 
         Automatic:
                 Based on the values of tmXTDataLeftF and tmXTDataRightF, TickMark chooses a 'nice' spacing between the major
@@ -10677,6 +10831,8 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: True
 
    tmXTPrecision
+          This resource is ignored unless tmXUseBottom is set to False.
+
           If tmXTAutoPrecision is set False and the significant digit field in the tmXTFormat string (as specified by the
           Floating Point Format Specification scheme) has the dynamic attribute set on, this resource controls the precision
           used for the top tick mark labels. Assuming the default setting of the tmXTFormat resource, the value set for
@@ -10688,6 +10844,8 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: 4
 
    tmXTStyle
+          This resource is ignored unless tmXUseBottom is set to False.
+
           This enumerated resource of type NhlTTickMarkStyle sets the style of the TickMark top X Axis. There are 5 styles:
 
         Linear:
@@ -10724,6 +10882,8 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: Linear
 
    tmXTTickEndF
+          This resource is ignored unless tmXUseBottom is set to False.
+
           Sets the ending of the tick marks. Must be greater than tmXTTickStartF. If tmXTTickEndF is less than the maximum
           data extent, no tick marks will be drawn between the maximum data extent and tmXTTickEndF. Used for Manual mode
           ticks only.
@@ -10731,12 +10891,16 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: 0.0
 
    tmXTTickSpacingF
+          This resource is ignored unless tmXUseBottom is set to False.
+
           Used for Manual mode ticks only. Specifies the spacing between major tick marks. If Log style is being used, this
           value must be the number of decades (i.e. 1 means ticks will be placed and labels at 10**1, 10**2, etc.)
 
           Default: 0.0
 
    tmXTTickStartF
+          This resource is ignored unless tmXUseBottom is set to False.
+
           Sets the beginning of the tick marks. Must be less than tmXTTickEndF. If tmXTTickStartF is greater than the
           minimum data extent, no tick marks will be drawn between the minimum data extent and tmXTTickStartF. Used for
           Manual mode ticks only.
@@ -10744,6 +10908,8 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: 0.0
 
    tmXTValues
+          This resource is ignored unless tmXUseBottom is set to False.
+
           When tmXTMode is set to Explicit, this resource specifies an array of data locations at which major tick marks
           will be drawn. The values must increase or decrease monotonically. If you do not set tmXTValues when in Explicit
           mode, TickMark issues a warning and tmXTMode reverts to Automatic mode.
@@ -11230,6 +11396,8 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: 1.0
 
    tmYRAutoPrecision
+          This resource is ignored unless tmYUseLeft is set to False.
+
           When True, this boolean resource causes TickMark to set the precision (number of significant digits) for the right
           tick mark labels based on the range of values used for the labels. In general, the value of tmYRPrecision is
           ignored. However, if tmYRMode is set to Manual, the precision is set such that all significant digits necessary to
@@ -11249,6 +11417,8 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: True
 
    tmYRDataBottomF
+          This resource is ignored unless tmYUseLeft is set to False.
+
           The data value that will be mapped to the bottom right corner of the Y Axis.
 
           This resource may be intercepted or disabled by:
@@ -11258,6 +11428,8 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: 0.0
 
    tmYRDataTopF
+          This resource is ignored unless tmYUseLeft is set to False.
+
           The data value that will be mapped to the top right corner of the Y Axis.
 
           This resource may be intercepted or disabled by:
@@ -11267,6 +11439,8 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: 0.0
 
    tmYRFormat
+          This resource is ignored unless tmYUseLeft is set to False.
+
           This string resource specifies, according to the HLU Floating Point Format Specification scheme, the format of the
           numbers used to label the major ticks along the right Y Axis. It applies only when tmYRMode is set to Automatic or
           Manual. Unless set explicitly, the significant digits conversion field is set dynamically based on the values of
@@ -11287,6 +11461,8 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: "0@*+^sg"
 
    tmYRIrrTensionF
+          This resource is ignored unless tmYUseLeft is set to False.
+
           Specifies the value of the tension parameter applied to the spline approximation used to set up an irregular
           transformation based on the values in tmYLIrregularPoints array. This resource is only used if tmYLStyle is
           Irregular. Small values (less than ~1.0) imply a relaxed approximation; large values (greater than ~5.0) imply a
@@ -11301,6 +11477,8 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: 2.0
 
    tmYRIrregularPoints
+          This resource is ignored unless tmYUseLeft is set to False.
+
           Used for Irregular style ticks only. Specifies an array of data locations spaced at equal intervals along the
           right Y Axis. These points represent a discrete approximation to the desired coordinate system. These points must
           be strictly monotonically increasing or decreasing. Therefore, periodic coordinate systems can not be approximated
@@ -11315,11 +11493,15 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: NULL
 
    tmYRLabelAngleF
+          This resource is ignored unless tmYUseLeft is set to False.
+
           Sets the counterclockwise rotation of all of the right Y-Axis labels.
 
           Default: 0.0
 
    tmYRLabelConstantSpacingF
+          This resource is ignored unless tmYUseLeft is set to False.
+
           If this resource has the value 0.0, the characters in the right Y-Axis label will be proportionally spaced. If it
           has a value greater than 0.0, the distance from the beginning of one character to the beginning of the next
           character will be constant. The value of tmYRLabelConstantSpacingF sets this constant distance as a multiple of
@@ -11332,6 +11514,8 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: 0.0
 
    tmYRLabelDeltaF
+          This resource is ignored unless tmYUseLeft is set to False.
+
           Sets an offset from the default location for the right tick mark labels. This value multiplied by the
           tmYRLabelFontHeightF represents the amount, in NDC coordinates, that the right tick marks will be displaced from
           their default location in the X direction. A positive value moves labels in the positive direction in NDC
@@ -11340,26 +11524,36 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: 0.0
 
    tmYRLabelDirection
+          This resource is ignored unless tmYUseLeft is set to False.
+
           Sets the drawing direction for the right Y-Axis labels.
 
           Default: Across
 
    tmYRLabelFont
+          This resource is ignored unless tmYUseLeft is set to False.
+
           Sets the font index for the right Y-Axis tick mark labels.
 
           Default: 0
 
    tmYRLabelFontAspectF
+          This resource is ignored unless tmYUseLeft is set to False.
+
           Sets the ratio of height/width for the right Y-Axis label characters.
 
           Default: 1.3125
 
    tmYRLabelFontColor
+          This resource is ignored unless tmYUseLeft is set to False.
+
           Sets the color index for right Y-Axis labels.
 
           Default: 1
 
    tmYRLabelFontHeightF
+          This resource is ignored unless tmYUseLeft is set to False.
+
           Sets the font height of the Y-Axis right labels in NDC coordinates. This value scales proportionally to changes in
           viewport height.
 
@@ -11370,11 +11564,15 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: <dynamic> -- initially 0.02 for a viewport height of 0.6
 
    tmYRLabelFontQuality
+          This resource is ignored unless tmYUseLeft is set to False.
+
           This resource of type NhlTFontQuality determines the quality of the font used to draw the right Y-Axis label.
 
           Default: High
 
    tmYRLabelFontThicknessF
+          This resource is ignored unless tmYUseLeft is set to False.
+
           Sets the thickness of the lines used to draw the characters of the right Y-Axis label. The value acts as a
           multiplier of a (device-dependent) unit thickness. This resource is ignored when the tmYRLabelFont specifies a
           filled font (font indexes 21-22, 25-26, 29-30, and 33-37).
@@ -11382,6 +11580,8 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: 1.0
 
    tmYRLabelFuncCode
+          This resource is ignored unless tmYUseLeft is set to False.
+
           This resource of type NhlTCharacter sets the function code character for the Y-Axis right labels.
 
           This resource may be intercepted or disabled by:
@@ -11391,17 +11591,23 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: :
 
    tmYRLabelJust
+          This resource is ignored unless tmYUseLeft is set to False.
+
           Sets the justification point for the right Y-Axis labels.
 
           Default: CenterLeft
 
    tmYRLabelStride
+          This resource is ignored unless tmYUseLeft is set to False.
+
           Used to skip tick mark labels. The value represents how many tick marks to skip between tick mark labels when
           drawing the tick mark labels. Will cause the tick mark object to draw first, then skip.
 
           Default: 0
 
    tmYRLabels
+          This resource is ignored unless tmYUseLeft is set to False.
+
           When tmYRMode is set to Explicit, this resource specifies an array of strings that correspond to the values in
           tmYRValues. Each element of this resource is placed under the corresponding tick location in tmYRValues. If a
           string array element is set to NULL, no label will appear at the corresponding tick mark location. If you do not
@@ -11426,9 +11632,10 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: False
 
    tmYRMajorLengthF
+          This resource is ignored unless tmYUseLeft is set to False.
+
           Sets the length of the Y-Axis right major tick marks in NDC coordinates. This length scales with changes to the
-          viewport width, unless you explicitly set tmYRMajorLengthF (or tmYLMajorLengthF if tmYUseLeft is True) at the same
-          time.
+          viewport width, unless you explicitly set tmYRMajorLengthF at the same time as you change the width.
 
           This resource may be intercepted or disabled by:
 
@@ -11437,11 +11644,15 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: <dynamic> -- initially 0.02 for a viewport width of 0.6
 
    tmYRMajorLineColor
+          This resource is ignored unless tmYUseLeft is set to False.
+
           Sets the color index for the Y-Axis right major tick marks.
 
           Default: 1
 
    tmYRMajorOutwardLengthF
+          This resource is ignored unless tmYUseLeft is set to False.
+
           Sets the length of the Y-Axis right major tick marks that will be drawn outside of the current viewport. This
           value scales proportionally to changes in width.
 
@@ -11452,6 +11663,8 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: 0.0
 
    tmYRMajorThicknessF
+          This resource is ignored unless tmYUseLeft is set to False.
+
           Sets the linewidth scale factor for the Y-Axis right major tick marks.
 
           Default: 2.0
@@ -11463,6 +11676,8 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: <dynamic>
 
    tmYRMaxTicks
+          This resource is ignored unless tmYUseLeft is set to False.
+
           Used with Automatic mode. Sets the maximum number of tick marks that will be drawn.
 
           Default: 7
@@ -11474,12 +11689,16 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: <dynamic>
 
    tmYRMinorLengthF
+          This resource is ignored unless tmYUseLeft is set to False.
+
           Sets the length in NDC coordinates of the Y Axis minor tick marks. This length scales with changes to the viewport
-          width, unless you explicitly set tmYRMinorLengthF (or tmYLMinorLengthF if tmYUseLeft is True) at the same time.
+          width, unless you explicitly set tmYRMinorLengthF at the same time as you change the width.
 
           Default: <dynamic> -- initially 0.01 for a viewport height of 0.6.
 
    tmYRMinorLineColor
+          This resource is ignored unless tmYUseLeft is set to False.
+
           Sets the line color index for the right Y Axis minor tick marks.
 
           Default: 1
@@ -11490,12 +11709,16 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: True
 
    tmYRMinorOutwardLengthF
+          This resource is ignored unless tmYUseLeft is set to False.
+
           Sets the length of the right Y Axis minor tick marks that will be drawn outside of the viewport. This value scales
           proportionally to changes in width.
 
           Default: 0.0
 
    tmYRMinorPerMajor
+          This resource is ignored unless tmYUseLeft is set to False.
+
           Sets the number of minor tick marks per major tick mark for the right Y Axis. When using Log style tick marks,
           only the values 1, 4, and 8 are accepted as valid. If the Explicit mode is in effect, TickMark ignores this
           resource: you must instead specify the spacing of each minor tick individually using tmYRMinorValues. If you do
@@ -11507,12 +11730,16 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: <dynamic>
 
    tmYRMinorThicknessF
+          This resource is ignored unless tmYUseLeft is set to False.
+
           Sets the length of the Y Axis minor tick marks in NDC coordinates. This value scales proportionally to changes in
           width.
 
           Default: 1.0
 
    tmYRMinorValues
+          This resource is ignored unless tmYUseLeft is set to False.
+
           When tmYRMode is set to Explicit, this resource specifies an array of data locations at which the minor tick marks
           will be drawn. If not set, minor tick marks will be absent from the right Y Axis.
 
@@ -11522,6 +11749,8 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: NULL
 
    tmYRMode
+          This resource is ignored unless tmYUseLeft is set to False.
+
           This enumerated resource of type NhlTTickMarkMode determines the method for specifying the spacing of the ticks
           and the contents of the labels along the right Y Axis. It has three possible settings:
 
@@ -11566,6 +11795,8 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: True
 
    tmYRPrecision
+          This resource is ignored unless tmYUseLeft is set to False.
+
           If tmYRAutoPrecision is set False and the significant digit field in the tmYRFormat string (as specified by the
           Floating Point Format Specification scheme) has the dynamic attribute set on, this resource controls the precision
           used for the right tick mark labels. Assuming the default setting of the tmYRFormat resource, the value set for
@@ -11577,6 +11808,8 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: 4
 
    tmYRStyle
+          This resource is ignored unless tmYUseLeft is set to False.
+
           This enumerated resource of type NhlTTickMarkStyle sets the style of the TickMark right Y Axis. There are 5
           styles:
 
@@ -11614,6 +11847,8 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: Linear
 
    tmYRTickEndF
+          This resource is ignored unless tmYUseLeft is set to False.
+
           Sets the ending of the tick marks. Must be greater than tmYRTickStartF. If tmYRTickEndF is less than the maximum
           data extent, no tick marks will be drawn between the maximum data extent and tmYRTickEndF. Used for Manual mode
           ticks only.
@@ -11621,12 +11856,16 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: 0.0
 
    tmYRTickSpacingF
+          This resource is ignored unless tmYUseLeft is set to False.
+
           Used for Manual mode ticks only. Specifies the spacing between major tick marks. If Log style is being used, this
           value must be the number of decades (i.e. 1 means ticks will be placed and labels at 10**1, 10**2, etc.)
 
           Default: 0.0
 
    tmYRTickStartF
+          This resource is ignored unless tmYUseLeft is set to False.
+
           Sets the beginning of the tick marks. Must be less than tmYRTickEndF. If tmYRTickStartF is greater than the
           minimum data extent, no tick marks will be drawn between the minimum data extent and tmYRTickStartF. Used for
           Manual mode ticks only.
@@ -11634,6 +11873,8 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: 0.0
 
    tmYRValues
+          This resource is ignored unless tmYUseLeft is set to False.
+
           When tmYRMode is set to Explicit, this resource specifies an array of data locations at which major tick marks
           will be drawn. The values must increase or decrease monotonically. If you do not set tmYRValues when in Explicit
           mode, TickMark issues a warning and tmYRMode reverts to Automatic mode.
@@ -14434,6 +14675,54 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
 
           Default: 0.8
 
+   wkAntiAlias (DocumentWorkstation)
+          Used to control whether the Workstation employs anti-aliasing algorithms in the generation of graphical output.
+          (Anti-aliasing refers to a number of techniques for softening the appearance of graphical artifacts such as jagged
+          edges/lines.) There are three possible settings:
+
+        On
+                Anti-aliasing measures are applied to all graphical output.
+
+        Off
+                No anti-aliasing algorithms are used.
+
+        TextOnly
+                Anti-aliasing is applied to only the generation of textual graphics.
+
+          Default: On
+
+   wkAntiAlias (ImageWorkstation)
+          Used to control whether the Workstation employs anti-aliasing algorithms in the generation of graphical output.
+          (Anti-aliasing refers to a number of techniques for softening the appearance of graphical artifacts such as jagged
+          edges/lines.) There are three possible settings:
+
+        On
+                Anti-aliasing measures are applied to all graphical output.
+
+        Off
+                No anti-aliasing algorithms are used.
+
+        TextOnly
+                Anti-aliasing is applied to only the generation of textual graphics.
+
+          Default: On
+
+   wkAntiAlias (XWorkstation)
+          Used to control whether the Workstation employs anti-aliasing algorithms in the generation of graphical output.
+          (Anti-aliasing refers to a number of techniques for softening the appearance of graphical artifacts such as jagged
+          edges/lines.) There are three possible settings:
+
+        On
+                Anti-aliasing measures are applied to all graphical output.
+
+        Off
+                No anti-aliasing algorithms are used.
+
+        TextOnly
+                Anti-aliasing is applied to only the generation of textual graphics.
+
+          Default: On
+
    wkBackgroundColor (Workstation)
           This resource can be a one-dimensional array containing three elements of type NhlTFloat that specify (in order)
           the red, green, and blue components (an RGB triplet) of the Workstation background color, or a string containing a
@@ -14444,6 +14733,24 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           object issues a warning, and reverts to the default background color value.
 
           Default: (0.0, 0.0, 0.0) (Black)
+
+   wkBackgroundOpacityF (DocumentWorkstation)
+          Sets the opacity of the background color. This should be a value between 0.0 (fully transparent) and 1.0 (fully
+          opaque).
+
+          Default: 1.0
+
+   wkBackgroundOpacityF (ImageWorkstation)
+          Sets the opacity of the background color. This should be a value between 0.0 (fully transparent) and 1.0 (fully
+          opaque).
+
+          Default: 1.0
+
+   wkBackgroundOpacityF (XWorkstation)
+          Sets the opacity of the background color. This should be a value between 0.0 (fully transparent) and 1.0 (fully
+          opaque).
+
+          Default: 1.0
 
    wkColorMapLen (Workstation)
           This read-only resource allows you to determine the number of elements currently in the wkColorMap without
@@ -15486,5 +15793,5 @@ REAL    YARR(NUM_VECTORS,NUM_ELEMENTS)
           Default: Linear
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
 # vim:set foldmethod=indent foldlevel=0:

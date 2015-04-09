@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/ind.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/ind.shtml
 THE_TITLE:ind
    NCL Home > Documentation > Functions > Array query
 
@@ -159,4 +159,4 @@ Examples
    where( x(:,klev,:,:).lt.0. ) x(:,klev,:,:) = x(:,klev-1,:,:)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

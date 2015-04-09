@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/kron_product.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/kron_product.shtml
 THE_TITLE:kron_product
    NCL Home > Documentation > Functions > General applied math
 
@@ -75,4 +75,4 @@ Examples
      (3,3)        28
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

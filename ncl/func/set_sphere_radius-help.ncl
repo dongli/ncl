@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/set_sphere_radius.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/set_sphere_radius.shtml
 THE_TITLE:set_sphere_radius
    NCL Home > Documentation > Functions > Spherical harmonic routines
 
@@ -34,4 +34,4 @@ Examples
   r = get_sphere_radius       ; Retrieve the radius, should be 1.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

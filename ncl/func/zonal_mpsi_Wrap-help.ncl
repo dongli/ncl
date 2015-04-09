@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/zonal_mpsi_Wrap.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/zonal_mpsi_Wrap.shtml
 THE_TITLE:zonal_mpsi_Wrap
    NCL Home > Documentation > Functions > Meteorology
 
@@ -127,4 +127,4 @@ Examples
   zmpsi = zonal_mpsi_Wrap(vp,lat,lev_p*100.,ps)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

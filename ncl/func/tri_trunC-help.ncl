@@ -1,53 +1,54 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/tri_trunC-1.shtml
-THE_TITLE:tri_trunC
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/tri_trunc.shtml
+THE_TITLE:tri_trunc
    NCL Home > Documentation > Functions > Spherical harmonic routines
 
-tri_trunC
+tri_trunc
 
    Performs triangular truncation on spherical harmonic coefficients.
 
 Prototype
 
-        function tri_trunC (
-                ab  : numeric,
-                T   : integer
+        procedure tri_trunc (
+                a  : float or double,
+                b  : float or double,
+                T  : integer
         )
-
-        return_val [dimsizes(ab)] :  float or double
 
 Arguments
 
-   ab
+   a
+   b
 
-   Spherical harmonic coefficients returned to user by the NCL functions shagC/shaeC. The first dimension must be 2, which
-   addresses the real and imaginary parts.
+   Spherical harmonic coefficients returned to user by NCL procedures shagc/shaec.
 
    T
 
    Triangular truncation parameter. T is the constant number of total wave numbers to keep.
 
-Return value
-
-   A double array is returned if the input is double; otherwise a float array is returned. The returned array will be of
-   size dimsizes(ab).
-
 Description
 
-   tri_trunC performs triangular truncation on coefficients returned by the Spherepack analysis routines shagC or shaeC.
+   tri_trunc performs triangular truncation on coefficients returned by the Spherepack analysis routines shagc or shaec. The
+   results are returned in the a and b variables.
 
 See Also
 
-   tri_trunc, rhomb_trunC, rhomb_trunc, shagC, shsgC shaeC, shseC
+   tri_trunC, rhomb_trunc, rhomb_trunC, shaec, shsec, shagc, shsgc
 
 Examples
 
    Example 1
 
    g(nlat,nlon)
-  T  = 42
-  ab = shagC (g)
-  ab = tri_trunC (ab,T)
-  g  = shsgC (ab,nlon)
+
+   Array space for a and b must be preallocated by the user prior to calling NCL procedures shagc/shaec.
+
+  a  = new ( dimsizes(g), typeof(g))
+  b  = new ( dimsizes(g), typeof(g))
+
+  T  = 19
+  shaec(g,a,b)
+  tri_trunc (a,b,T)
+  shsec(a,b,g)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

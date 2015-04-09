@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/crossp3.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/crossp3.shtml
 THE_TITLE:crossp3
    NCL Home > Documentation > Functions > Array manipulators
 
@@ -66,4 +66,4 @@ Examples
     (1,2)       ab=83.7     ba=-83.7
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

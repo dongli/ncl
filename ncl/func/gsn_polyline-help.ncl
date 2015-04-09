@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Graphics/Interfaces/gsn_polyline.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Graphics/Interfaces/gsn_polyline.shtml
 THE_TITLE:gsn_polyline
    NCL Home > Documentation > Graphics > Graphical Interfaces
 
@@ -50,6 +50,20 @@ Description
    If you want to resize the plot (i.e. by passing the plot to gsn_panel or setting the vpWidthF or vpHeightF resources),
    then use the function gsn_add_polyline. This will cause the polyline to be attached to the given plot, and hence
    automatically resized when the plot is resized.
+
+   Note: there is a potential incompatible change in NCL version 6.2.0, when attaching lines or polygons to a map. This
+   change affects gsn_polyline, gsn_add_polyline, gsn_polygon, and gsn_add_polygon.
+
+   Previously, drawing a polyline around the equator, for example, could be specified using 2-element arrays. For example:
+
+  lnid = gsn_add_polyline(wks,map,(/0,360/),(/0,0/),lnres)
+
+   Now, however, in order to eliminate a number of ambiguous situations and to make user code simpler in most cases, a new
+   behavior has been introduced: the line between two points on the globe always follows the shortest path. In the example
+   above, the behavior in NCL V6.2.0 leads to a 0-length line. The recommended approach now for drawing a line around the
+   equator is to use four points, such that the distance from one to the next is always less than 180 degrees. For example:
+
+  lnid = gsn_add_polyline(wks,map,(/0,120,240,360/),(/0,0,0,0/),lnres)
 
 See Also
 
@@ -123,4 +137,4 @@ end
    Also, see the suite of polyline examples.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/generate_unique_indices.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/generate_unique_indices.shtml
 THE_TITLE:generate_unique_indices
    NCL Home > Documentation > Functions > Random number generators, Array creators
 
@@ -32,7 +32,7 @@ Description
 
 See Also
 
-   generate_2d_array
+   generate_2d_array, generate_resample_indices
 
 Examples
 
@@ -40,4 +40,4 @@ Examples
          i = generate_unique_indices( 500000 )
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

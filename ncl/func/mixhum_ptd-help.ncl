@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/mixhum_ptd.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/mixhum_ptd.shtml
 THE_TITLE:mixhum_ptd
    NCL Home > Documentation > Functions > Meteorology
 
@@ -60,4 +60,4 @@ Examples
   w    = mixhum_ptd (p*100., tdk, -1 ) ; ==> 6.06 (g/kg)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

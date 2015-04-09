@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/WRF_contributed/wrf_mapres_c.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/WRF_contributed/wrf_mapres_c.shtml
 THE_TITLE:wrf_mapres_c
    NCL Home > Documentation > Functions > WRF
 
@@ -93,4 +93,4 @@ load "$NCARG_ROOT/lib/ncarg/nclscripts/wrf/WRF_contributed.ncl"
    change any of the attributes associated with res.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

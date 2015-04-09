@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/cdft_p.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/cdft_p.shtml
 THE_TITLE:cdft_p
    NCL Home > Documentation > Functions > General applied math
 
@@ -22,7 +22,7 @@ Arguments
    A scalar or array containing t-values.
    df
 
-   A scalar or array of the same size as t containing the number of degrees of fredom.
+   A scalar or array of the same size as t containing the number of degrees of freedom.
 
 Return value
 
@@ -51,7 +51,7 @@ Examples
      P = cdft_p( t, df)   ; P = 0.975
 
    Note: the following could be used to calculate the two-sided significance given t and df:
-     prob = betainc( df/(df+tval^2), df/2.0, 0.5)    ; prob=0.05   [PROB=1-prob=0.95]
+     prob = betainc( df/(df+t^2), df/2.0, 0.5)    ; prob=0.05   [PROB=1-prob=0.95]
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

@@ -1,6 +1,6 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/csa2lxd.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/csa2lxd.shtml
 THE_TITLE:csa2lxd
-   NCL Home > Documentation > Functions > Interpolation
+   NCL Home > Documentation > Functions > Interpolation, Ngmath routines
 
 csa2lxd
 
@@ -128,4 +128,4 @@ begin
 end
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/time_to_newtime.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/time_to_newtime.shtml
 THE_TITLE:time_to_newtime
    NCL Home > Documentation > Functions > Type converters
 
@@ -34,12 +34,12 @@ Return value
 
 Description
 
-   This function converts the time units using ut_calendar. Useful for making the time variables associated with different
+   This function converts the time units using cd_calendar. Useful for making the time variables associated with different
    variables and files consistent.
 
 See Also
 
-   ut_calendar, ut_inv_calendar, calendar_decode2
+   cd_calendar, cd_inv_calendar, calendar_decode2
 
 Examples
 
@@ -49,7 +49,7 @@ Examples
 load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/contributed.ncl"
 
   TIME = f->time                                ; hours since 1-1-1 00:00:0.0
-  DATE = ut_calendar (TIME, 0)
+  DATE = cd_calendar (TIME, 0)
 
   new_time_units = "hours since 1800-01-01 00:00"
 
@@ -92,4 +92,4 @@ Number Of Attributes: 2
     time = time_to_newtime(time, "hours since 1800-01-01 00:00") ; time(time)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

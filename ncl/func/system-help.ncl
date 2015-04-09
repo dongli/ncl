@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/system.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/system.shtml
 THE_TITLE:system
    NCL Home > Documentation > Functions > System tools
 
@@ -184,5 +184,44 @@ end
                                               ; remove the ps files
   system("/bin/rm -f "+pltIn)
 
+   Example 7
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   Use an NCL script to invoke a different NCL script. This example was based upon an ncl-talk question. A user had a bash
+   shell script that invoked an NCL script with a command line argument. The following shows how NCL could be used in a
+   similar manner. NOTE: The sample creates an explicit variable 'CMD' to hold the string that will be passed to the system.
+   This is not required. It is done for pedantic purposes. Two sample system commands are illustrated.
+
+;; ====> Simulate the following bash shell script <====
+;; #!/bin/bash
+;; season=(JJA DJF MAM)
+;; for ((k=0; k<${#season[@]}; k=k+1))
+;; do
+;; ncl 'se="${season[${k}]}"' sample.ncl
+;; done
+
+   dq     = str_get_dq()     ; double quote (") as a string
+   season = (/"JJA", "DJF", "MAM" /)
+
+   do k=0,dimsizes(season)-1 ; loop over each season
+      CMD = "ncl 'se="+dq+season(k)+dq+"' sample.ncl"
+     ;CMD = "ncl 'se="+dq+season(k)+dq+"' sample.ncl >&! out.sample."+k
+      print(""+CMD)           ; print for illustration
+
+      system(CMD)            ; system("ncl 'se="+dq+season(k)+dq+"' test.ncl")
+   end do
+
+
+   A trivial NCL script 'sample.ncl' might be
+
+begin
+  print("sample.ncl : season="+se)
+end
+
+   The output would be
+
+sample.ncl: season=JJA
+sample.ncl: season=DJF
+sample.ncl: season=MAM
+
+
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

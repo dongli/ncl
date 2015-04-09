@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/runave.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/runave.shtml
 THE_TITLE:runave
    NCL Home > Documentation > Functions > General applied math
 
@@ -136,4 +136,4 @@ Examples
     x = runave (x, nave, opt)  ; return the series in the original array
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

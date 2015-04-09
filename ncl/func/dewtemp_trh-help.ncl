@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/dewtemp_trh.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/dewtemp_trh.shtml
 THE_TITLE:dewtemp_trh
    NCL Home > Documentation > Functions > Meteorology
 
@@ -32,6 +32,9 @@ Description
 
    Calculates the dew point temperature given temperature and relative humidity using the equations from John Dutton's
    "Ceaseless Wind" (pp 273-274). Missing values are ignored.
+
+   Note: If you input a value of RH < 0.0, then this function will return NaNs (not-a-number). We will fix this behavior in
+   V6.3.0.
 
 See Also
 
@@ -76,4 +79,4 @@ Examples
   td = dewtemp_trh(t,conform(t,rh,1))
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/dtrend_msg_n.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/dtrend_msg_n.shtml
 THE_TITLE:dtrend_msg_n
    NCL Home > Documentation > Functions > General applied math
 
@@ -34,7 +34,7 @@ Arguments
    mean.
    return_info
 
-   A logical scalar controlling whether attributes corresponding to the y-interscept and slope are attached to return_val.
+   A logical scalar controlling whether attributes corresponding to the y-intercept and slope are attached to return_val.
    True = attributes returned. False = no attributes returned.
    dim
 
@@ -47,7 +47,7 @@ Return value
    Two attributes (slope and y_intercept) may be attached to return_val if return_info = True. These attributes will be
    one-dimensional arrays if y is one-dimensional. If y is multi-dimensional, the attributes will be the same size as y
    minus the dim-th dimension but in the form of a one-dimensional array. e.g. if y is 45 x 34 and dim is 1, then the
-   attributes will be a one-dimensional array of size 45*34. This occurs because attributes can not be multi-dimensional.
+   attributes will be a one-dimensional array of size 45*34. This occurs because attributes cannot be multi-dimensional.
    Double if return_val is double, float otherwise.
 
    You access the attributes through the @ operator:
@@ -57,7 +57,7 @@ Return value
 Description
 
    Estimates and removes the least squares linear trend of the dim-th dimension from all grid points. The mean is optionally
-   removed. Missing values are allowed. Optionally returns the slope (eg, linear trend per unit time interval) and
+   removed. Missing values are allowed. Optionally returns the slope (i.e., linear trend per unit time interval) and
    y-intercept for graphical purposes.
 
 See Also
@@ -79,7 +79,7 @@ Examples
     yDtrend = dtrend_msg_n (x,y,True,True,2)
 ;   yDtrend@slope is a one-dimensional array of size nlat x nlon elements.
 
-   Since attributes can not be returned as two-dimensional arrays, the user should use onedtond to create a two-dimensional
+   Since attributes cannot be returned as two-dimensional arrays, the user should use onedtond to create a two-dimensional
    array for plotting purposes:
 
    yDtrend = dtrend_msg_n (x,y,False,True,2)
@@ -93,14 +93,14 @@ Examples
 
    Example 3
 
-   Let y be three-dimensional array with dimensions time, lat, lon.
+   Let y be a three-dimensional array with dimensions time, lat, lon.
   yDtrend = dtrend_msg_n(y&time,y,True,False,0)
-; yDtrend will be three-dimensional with dimension lat, lon, time.
+; yDtrend will be three-dimensional with dimensions lat, lon, time.
 
    Example 4
 
-   This example shows how to calculate the significance of trends by evaluating the incomplete beta function by using
-   betainc. Let z be a three-dimensional array with dimensions named lat, lon, time.
+   This example shows how to calculate the significance of trends by evaluating the incomplete beta function using betainc.
+   Let z be a three-dimensional array with dimensions named lat, lon, time.
   dimz = dimsizes(z)   ; retrieve dimension sizes of z
   zDtrend = dtrend_msg_n(ispan(0,dimz(2)-1,1),z,True,True,2)
 
@@ -126,4 +126,4 @@ Examples
                                                                ; expressed from 0 to 100%
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

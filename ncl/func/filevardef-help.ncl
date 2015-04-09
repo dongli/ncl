@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/filevardef.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/filevardef.shtml
 THE_TITLE:filevardef
    NCL Home > Documentation > Functions > File IO
 
@@ -105,4 +105,4 @@ Examples
                              ; c's attributes.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

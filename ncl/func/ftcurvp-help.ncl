@@ -1,6 +1,6 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/ftcurvp.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/ftcurvp.shtml
 THE_TITLE:ftcurvp
-   NCL Home > Documentation > Functions > Interpolation
+   NCL Home > Documentation > Functions > Interpolation, Ngmath routines
 
 ftcurvp
 
@@ -78,4 +78,4 @@ Errors
           = 3 if the xi values are not strictly increasing.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

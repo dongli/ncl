@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/eofunc.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/eofunc.shtml
 THE_TITLE:eofunc
    NCL Home > Documentation > Functions > Empirical orthogonal functions
 
@@ -21,7 +21,7 @@ Arguments
    data
 
    A multi-dimensioned array in which the rightmost dimension is the number of observations. Generally, this is the time
-   dimension.
+   dimension. Commonly, the data array contains anomalies from some base climatology, however, this is not required.
    neval
 
    A scalar integer that specifies the number of eigenvalues and eigenvectors to be returned. This is usually less than or
@@ -73,6 +73,8 @@ Description
    Missing values are ignored when computing the covariance or correlation matrix. The returned values are normalized such
    that the sum of squares for each EOF pattern equals one. To denormalize the returned EOFs multiply by the square root of
    the associated eigenvalue (aka,the singular value).
+
+   Most commonly, the input data consists of anomalies.
 
    This function differs from the deprecated eofcov and eofcor functions in that it may transpose the input data array prior
    to computing the EOFs. If data is transposed, a linear transformation is applied to the EOFs of the transposed array
@@ -136,14 +138,15 @@ North, G. R., T. L. Bell, R. F. Cahalan, and F. J. Moeng, Sampling
 errors in the estimation of empirical orthogonal functions, Mon.
 Wea. Rev., 110, 699â706, 1982.
 
+Dawson, A.: EOF Analysis
+
 See Also
 
-   eofunc_ts, eofunc_varimax
+   eofunc_Wrap, eofunc_varimax eofunc_ts, eofunc_varimax
 
 Examples
 
    In the following, the attribute pcvar can be output via:
-
   print(ev@pcvar)             ; 1D vector of length "neval"
 
    This attribute could also be used in graphics. For example, it is it could be used in a title.
@@ -154,7 +157,7 @@ Examples
 
    Example 1
 
-   Let x be two dimensional with dimensions variables (size = nvar) and time:
+   Let x be two dimensional with dimensions variables (size = nvar) and time. Commonly, 'x' xontains anomalies.
   neval  = 3                         ; calculate 3 EOFs out of 7
   ev     = eofunc(x,neval,False)   ; ev(neval,nvar)
 
@@ -244,4 +247,4 @@ Examples
   end do
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/obj_anal_ic_deprecated.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/obj_anal_ic_deprecated.shtml
 THE_TITLE:obj_anal_ic_deprecated
    NCL Home > Documentation > Functions > Interpolation, Regridding
 
@@ -98,4 +98,4 @@ Examples
    grid = obj_anal_ic_deprecated(xlon,ylat,zVal, lon,lat, rscan, opt)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

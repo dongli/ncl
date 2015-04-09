@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/sprintf.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/sprintf.shtml
 THE_TITLE:sprintf
    NCL Home > Documentation > Functions > String manipulation
 
@@ -123,4 +123,4 @@ Examples
 (0)     123456  40.92635     -74.50      0.850     1.4571     1.4570
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/utm2latlon.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/utm2latlon.shtml
 THE_TITLE:utm2latlon
    NCL Home > Documentation > Functions > Lat/Lon functions
 
@@ -57,4 +57,4 @@ Examples
   latlon = utm2latlon(xy,0)   ; 34.113, -119.331
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

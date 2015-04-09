@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/ezfftf.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/ezfftf.shtml
 THE_TITLE:ezfftf
    NCL Home > Documentation > Functions > General applied math
 
@@ -36,6 +36,9 @@ Return value
 
 Description
 
+   There's a bug in V6.1.2 and earlier of this function in which if "npts" is odd, the wrong values are returned. This is
+   fixed in V6.2.0.
+
    Given a real periodic sequence x, ezfftf performs a forward Fourier transform. This is often called Fourier Analysis.
 
    ezfftf is a direct call to the FFTPACK routine at
@@ -53,9 +56,12 @@ Description
         Fourier analysis of time series : An introduction
         New York : John Wiley and Sons  , 1976
 
+   Use ezfftf_n if the dimension to do the transform across is not the rightmost dimension. This function can be
+   significantly faster than ezfftf.
+
 See Also
 
-   ezfftb, cfftf, cfftb taper, dtrend, specx_anal, specxy_anal
+   ezfftf_n, ezfftb, ezfftb_n, cfftf, cfftb, taper, dtrend, specx_anal, specxy_anal
 
 Examples
 
@@ -117,7 +123,8 @@ Number Of Attributes: 2
                                             length=ntim*klvl*nlat
 
    The attribute xbar is returned as a one dimensional array. The following will make this a three dimensional array:
-    xAvg = onedtond(cf@xbar, (/ntim,klvl,nlat/) )
+
+    xAvg = reshape(cf@xbar, (/ntim,klvl,nlat/) )
 
    Example 3
 
@@ -215,4 +222,4 @@ Number Of Attributes: 2
    All results were 193.207
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

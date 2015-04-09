@@ -1,10 +1,10 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/dspnt2d.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/dspnt2d.shtml
 THE_TITLE:dspnt2d
-   NCL Home > Documentation > Functions > Interpolation
+   NCL Home > Documentation > Functions > Interpolation, Ngmath routines
 
 dspnt2d
 
-   Interpolates 2-D data at specified points. (Deprecated version.)
+   Interpolates 2D data at specified points. (Deprecated version.)
 
 Prototype
 
@@ -22,21 +22,21 @@ Arguments
 
    x
 
-   A 1-D array of length (npts) containing the X coordinates of the points where interpolation is desired.
+   A 1D array of length (npts) containing the X coordinates of the points where interpolation is desired.
    y
 
-   A 1-D array of length npts containing the Y coordinates of the points where interpolation is desired.
+   A 1D array of length npts containing the Y coordinates of the points where interpolation is desired.
    z
 
    An array of any dimensionality (last dimension must be npts) containing the functional values of the input data points.
    Element z(...,i) is the value of the input function at coordinate (x(i), y(i)) for i = 0, npts - 1).
    xo
 
-   A 1-D array of length m containing the X coordinates of the output data grid. The values in xo may be in any order and m
+   A 1D array of length m containing the X coordinates of the output data grid. The values in xo may be in any order and m
    can be equal to one.
    yo
 
-   A 1-D array of length m containing the Y coordinates of the output data grid. The values in yo may be in any order and m
+   A 1D array of length m containing the Y coordinates of the output data grid. The values in yo may be in any order and m
    can be equal to one.
 
 Return value
@@ -47,7 +47,7 @@ Description
 
    [Deprecated: use dspnt2 instead.]
 
-   This function performs interpolation from sets of 2-D data at specified points.
+   This function performs interpolation from sets of 2D data at specified points.
 
    This function must allocate its output array in advance.
 
@@ -189,4 +189,4 @@ begin
 end
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

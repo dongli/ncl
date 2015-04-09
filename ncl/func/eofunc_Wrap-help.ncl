@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/eofunc_Wrap.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/eofunc_Wrap.shtml
 THE_TITLE:eofunc_Wrap
    NCL Home > Documentation > Functions > Empirical orthogonal functions
 
@@ -23,7 +23,7 @@ Arguments
    data
 
    A multi-dimensioned array in which the rightmost dimension is the number of observations. Generally, this is the time
-   dimension.
+   dimension. Commonly, the data array contains anomalies from some base climatology, however, this is not required.
    neval
 
    A Scalar integer that specifies the number of eigenvalues and eigenvectors to be returned. This is usually less than or
@@ -52,21 +52,29 @@ Return value
    A multi-dimensional array of the same size as data with the rightmost dimension removed and an additional leftmost
    dimension of the same size as neval added. Double if data is double, float otherwise.
    Will contain the following attributes:
-     * pcvar: a one-dimensional float array of size neval equal to the percent variance associated with each eigenvalue.
+     * pcvar: a one-dimensional array of size neval equal to the percent variance associated with each eigenvalue.
      * pcrit: The same value and type of optEOF@pcrit if the user changed the default.
      * matrix: A string indicating the type of matrix used, "correlation" or "covariance".
      * method: A string indicating the status of the matrix, "transpose" or "no transpose"
+     * sig: (v6.3.0 onward) A one-dimensional logical array of size neval indicating if each eigenvalue is significanly
+       separated from adjacent eigenvalues. See eofunc_north
 
    These attributes can be accessed using the @ operator:
 print(return_val@pcvar)
 print(return_val@pcrit)
+print(return_val@sig)      ; v6.3.0 onward
 
 Description
 
    Computes Empirical Orthogonal Functions (EOFs) via an anomaly covariance matrix or, optionally, via a correlation matrix
    and retains metadata. This is also known as Principal Component Analysis or Eigen Analysis. The eigenvectors are
-   calculated using LAPACK's "dspevx" routine. Missing values are ignored when computing the covariance or correlation
-   matrix.
+   calculated using LAPACK's "dspevx" routine. The returned values are normalized such that the sum of squares for each EOF
+   pattern equals one. To denormalize the returned EOFs multiply by the square root of the associated eigenvalue (aka,the
+   singular value).
+
+   Most commonly, the input data consists of anomalies. Missing values are ignored when computing the covariance or
+   correlation matrix.
+
    Note on weighting observations
 
    Generally, when performing and EOF analysis on observations over the globe or a portion of the globe, the values are
@@ -104,6 +112,8 @@ North, G. R., T. L. Bell, R. F. Cahalan, and F. J. Moeng, Sampling
 errors in the estimation of empirical orthogonal functions, Mon.
 Wea. Rev., 110, 699â706, 1982.
 
+Dawson, A.: EOF Analysis
+
 See Also
 
    eofunc_ts, eofunc_varimax
@@ -114,6 +124,7 @@ Examples
 
   print(ev@pcvar)             ; 1D vector of length "neval"
 
+
    This attribute could also be used in graphics. For example, it is it could be used in a title.
   title = "%=" + ev@pcvar(1)
 
@@ -122,7 +133,7 @@ Examples
 
    Example 1
 
-   Let x be two dimensional with dimensions variables (size = nvar) and time:
+   Let x be two dimensional with dimensions variables (size = nvar) and time. Commonly, this is an anomaly array.
   neval  = 3                         ; calculate 3 EOFs out of 7
   ev     = eofunc_Wrap(x,neval,False)   ; ev(neval,nvar)
 
@@ -194,4 +205,4 @@ Examples
   evec= eofunc_Wrap(ptw,neval,80.)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

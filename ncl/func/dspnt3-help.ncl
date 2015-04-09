@@ -1,10 +1,10 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/dspnt3.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/dspnt3.shtml
 THE_TITLE:dspnt3
-   NCL Home > Documentation > Functions > Interpolation
+   NCL Home > Documentation > Functions > Interpolation, Ngmath routines
 
 dspnt3
 
-   Interpolates 3-D data at specified points.
+   Interpolates 3D data at specified points.
 
 Prototype
 
@@ -24,28 +24,28 @@ Arguments
 
    x
 
-   A 1-D array of length npts containing the X coordinates of the points where interpolation is desired
+   A 1D array of length npts containing the X coordinates of the points where interpolation is desired.
    y
 
-   A 1-D array of length npts containing the Y coordinates of the points where interpolation is desired
+   A 1D array of length npts containing the Y coordinates of the points where interpolation is desired.
    z
 
-   A 1-D array of length npts containing the Z coordinates of the points where interpolation is desired
+   A 1D array of length npts containing the Z coordinates of the points where interpolation is desired.
    u
 
    An array of any dimensionality (last dimension must be npts) containing the functional values of the input data. Element
    u(...,i) is the value of the input function at coordinate (x(i), y(i), z(i)) for i = 0, npts - 1.
    xo
 
-   A 1-D array of length m containing the X coordinates of the output data grid. The values in xo may be in any order and m
+   A 1D array of length m containing the X coordinates of the output data grid. The values in xo may be in any order and m
    can be equal to one.
    yo
 
-   A 1-D array of length m containing the Y coordinates of the output data grid. The values in yo may be in any order and m
+   A 1D array of length m containing the Y coordinates of the output data grid. The values in yo may be in any order and m
    can be equal to one.
    zo
 
-   A 1-D array of length m containing the Z coordinates of the output data grid. The values in zo may be in any order and m
+   A 1D array of length m containing the Z coordinates of the output data grid. The values in zo may be in any order and m
    can be equal to one.
 
 Return value
@@ -55,7 +55,7 @@ Return value
 
 Description
 
-   This function performs interpolation from sets of 3-D data at a list of specified points.
+   This function performs interpolation from sets of 3D data at a list of specified points.
 
    This function must allocate its output arrays in advance.
 
@@ -64,7 +64,7 @@ Description
 
 See Also
 
-   dsgrid2 dsgrid3 dspnt2 dspnt3 dsgetp dssetp
+   dsgrid2, dsgrid3, dspnt2, dsgetp, dssetp
 
 Examples
 
@@ -103,9 +103,9 @@ begin
   rand3 = new((/NUM/), float)
   srand(1)
   do i = 0, NUM - 1
-    rand1(i) = rand
-    rand2(i) = rand
-    rand3(i) = rand
+    rand1(i) = rand()
+    rand2(i) = rand()
+    rand3(i) = rand()
   end do
   xi = xmin + (xmax - xmin) * (rand1 / RAND_MAX)
   yi = ymin + (ymax - ymin) * (rand2 / RAND_MAX)
@@ -130,4 +130,4 @@ begin
 end
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/tanh.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/tanh.shtml
 THE_TITLE:tanh
    NCL Home > Documentation > Functions > General applied math
 
@@ -43,4 +43,4 @@ Examples
   print(tanh_f)        ; Should be 0.5849799
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

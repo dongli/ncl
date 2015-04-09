@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/fbinnumrec.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/fbinnumrec.shtml
 THE_TITLE:fbinnumrec
    NCL Home > Documentation > Functions > File IO
 
@@ -53,4 +53,4 @@ Examples
    nrec = fbinnumrec("foo.binary")   ; nrec is scalar integer
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/pres_hybrid_ccm.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/pres_hybrid_ccm.shtml
 THE_TITLE:pres_hybrid_ccm
    NCL Home > Documentation > Functions > CESM
 
@@ -108,4 +108,4 @@ Examples
   pm = pres_hybrid_ccm(ps,p0,hya,hyb)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

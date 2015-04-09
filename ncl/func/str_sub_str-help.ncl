@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/str_sub_str.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/str_sub_str.shtml
 THE_TITLE:str_sub_str
    NCL Home > Documentation > Functions > String manipulation
 
@@ -113,4 +113,4 @@ Total           4,356                 65.32%
 (20)    Total           4356                  65.32%
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

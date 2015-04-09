@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/quadroots.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/quadroots.shtml
 THE_TITLE:quadroots
    NCL Home > Documentation > Functions > General applied math
 
@@ -136,4 +136,4 @@ and
  5 - i 3
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

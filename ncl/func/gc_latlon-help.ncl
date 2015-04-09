@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/gc_latlon.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/gc_latlon.shtml
 THE_TITLE:gc_latlon
    NCL Home > Documentation > Functions > Lat/Lon functions
 
@@ -25,8 +25,9 @@ Arguments
    lat1
    lon1
 
-   Latitude/longitude of the first point. These can be scalars or multi-dimensional arrays of the same size as lat2 and
-   lon2. Units are (say) 'degrees_north' and 'degrees_east'.
+   Latitude/longitude of the first point. These can be scalars or multi-dimensional arrays. If the latter, they must be the
+   same size and shape as lat2 and lon2. Units are (say) 'degrees_north' and 'degrees_east', however a units attribute is
+   not required.
    lat2
    lon2
 
@@ -69,6 +70,9 @@ Description
    If the two specified points are exactly opposite one another on the globe, the code does not fail, but the direction of
    the great circle route will be somewhat unpredictable. Setting npts <= 2 has the effect of just calculating the great
    circle distance between the two input points. No lat/lon points will be interpolated in between.
+
+   Note: this routine does not check for missing value input. If you input missing values, it will try to calculate a
+   distance for them. Be sure to remove any missing values prior to calling this function if this behavior is not desired.
 
 See Also
 
@@ -128,5 +132,54 @@ end
 (8)     57.3891  285.105       ; interpolated
 (9)     60       296           ; lat2,lon2
 
+   Example 4
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   Calculate the distances between one set of lat/lon and an array of lat/lon pts. Here the latter are one-dimensional but
+   the set can be multi-dimensional.
+
+ lat1 = (/  84.0/)
+ lon1 = (/  30.0/)
+ lat2 = (/  30.0,  40.0,  84.0/)
+ lon2 = (/  50.0,  20.0,  30.0 /)
+
+ print("===")
+ print(lat1+"  "+lon1)
+ print("===")
+ print(lat2+"  "+lon2)
+ print("===")
+
+ dist = gc_latlon(lat1,lon1,lat2,lon2,2,4)
+ print(dist)
+
+
+   The output would be:
+
+(0)     ===
+(0)     84  30
+(0)     ===
+(0)     30  50
+(1)     40  20
+(2)     84  30
+(0)     ===
+
+
+Variable: dist
+Type: float
+Total Size: 12 bytes
+            3 values
+Number of Dimensions: 1
+Dimensions and sizes:   [3]
+Coordinates:
+Number Of Attributes: 4
+  units :       kilometers
+  gclon :       ( 30, 50, 30, 20, 30, 30 )
+  gclat :       ( 84, 30, 84, 40, 84, 84 )
+  spacing :     ( 6047.622, 4903.893,  0 )
+(0)     6047.622
+(1)     4903.893
+(2)      0
+
+begin
+
+
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

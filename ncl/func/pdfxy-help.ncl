@@ -1,10 +1,10 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/pdfxy.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/pdfxy.shtml
 THE_TITLE:pdfxy
    NCL Home > Documentation > Functions > General applied math
 
 pdfxy
 
-   Generates a joint probability density distribution.
+   Generates a joint probability density distribution. (Please use pdfxy_conform.)
 
 Prototype
 
@@ -27,7 +27,7 @@ Arguments
    An array of any dimensionality.
    y
 
-   An array of the same dimensionality of x.
+   An array of the same dimensionality of x. The pdfxy_conform function cane be used if y is of different dimensionality.
    nbinx
 
    Number of bins to use for x. Specifying 0 will result in 25 bins being used. This must be greater than 2.
@@ -69,12 +69,15 @@ Return value
 
 Description
 
+   A bug was fixed in NCL version 6.2.0 in which values exactly equal to the rightmost edge of the rightmost bin were not
+   getting counted correctly. PLEASE use the pdfxy_conform interface to pdfxy. The argument sequence is the same.
+
    The input arrays x and y are partitioned into nbinx and y sections. The user may set the desired minimum, maximum and the
    number of bins. The returned PDF will be in percent of total.
 
 See Also
 
-   pdfx, genNormalDist, gsn_histogram
+   pdfxy_conform, pdfx, genNormalDist, gsn_histogram
 
    histogram plot examples
 
@@ -176,4 +179,4 @@ Number Of Attributes: 26
    More joint (bivariate) examples are at Probability Distributions
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

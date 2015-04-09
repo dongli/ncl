@@ -1,10 +1,10 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/dim_stddev_n.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/dim_stddev_n.shtml
 THE_TITLE:dim_stddev_n
    NCL Home > Documentation > Functions > General applied math
 
 dim_stddev_n
 
-   Computes the population standard deviation of a variable's given dimension(s) at all other dimensions.
+   Computes the sample standard deviation of a variable's given dimension(s) at all other dimensions.
 
    [new.gif] Available in version 5.1.1 and later.
 
@@ -35,10 +35,10 @@ Return value
 
 Description
 
-   The dim_stddev_n function computes the population standard deviation of all elements of the dimensions indicated by dims
-   for each index of the remaining dimensions. Missing values are ignored.
+   The dim_stddev_n function computes the sample standard deviation of all elements of the dimensions indicated by dims for
+   each index of the remaining dimensions. Missing values are ignored.
 
-   Technically, this function calculates the population standard deviation. This means that it divides by one less than the
+   Technically, this function calculates the sample standard deviation. This means that it divides by one less than the
    total number of non-missing values (1/(N-1)).
 
    Use dim_stddev_n_Wrap if retention of metadata is desired.
@@ -52,7 +52,7 @@ Examples
 
    Example 1
 
-   Create a variable q of size (3,5,10) array. Then calculate the population standard deviation of the rightmost dimension.
+   Create a variable q of size (3,5,10) array. Then calculate the sample standard deviation of the rightmost dimension.
     q   = random_uniform(-20,100,(/3,5,10/))
     qStd= dim_stddev_n(q,2)   ;==>  qStd(3,5)
 
@@ -84,4 +84,4 @@ Examples
     xStd = dim_stddev_n( x, (/2,3/) ) ; ==> xStd(nlev,ntim)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

@@ -1,55 +1,56 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/rhomb_trunC-1.shtml
-THE_TITLE:rhomb_trunC
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/rhomb_trunc.shtml
+THE_TITLE:rhomb_trunc
    NCL Home > Documentation > Functions > Spherical harmonic routines
 
-rhomb_trunC
+rhomb_trunc
 
    Performs rhomboidal truncation on spherical harmonic coefficients.
 
 Prototype
 
-        function rhomb_trunC (
-                ab  : numeric,
-                T   : integer
+        procedure rhomb_trunc (
+                a  : float or double,
+                b  : float or double,
+                T  : integer
         )
-
-        return_val [dimsizes(ab)] :  float or double
 
 Arguments
 
-   ab
+   a
+   b
 
-   Spherical harmonic coefficients returned to user by the NCL functions shagC/shaeC. The first dimension must be 2, which
-   addresses the real and imaginary parts.
+   Spherical harmonic coefficients returned to user by NCL procedures shagc/shaec.
 
    T
 
    Rhomboidal truncation parameter. T is the constant number of total wave numbers to keep.
 
-Return value
-
-   A double array is returned if the input is double; otherwise a float array is returned. The returned array will be of
-   size dimsizes(ab).
-
 Description
 
-   rhomb_trunC performs rhomboidal truncation on coefficients returned by the Spherepack analysis routines shagC or shaeC.
+   rhomb_trunc performs rhomboidal truncation on coefficients returned by the Spherepack analysis routines shagc or shaec.
+   The results are returned in the a and b variables.
 
-   rhomb_trunC is the function version of rhomb_trunc.
+   rhomb_trunc is the procedural version of rhomb_trunC.
 
 See Also
 
-   rhomb_trunc, tri_trunC, tri_trunc, shagC, shsgC shaeC, shseC
+   rhomb_trunC, tri_trunc, tri_trunC, shaec, shsec, shagc, shsgc
 
 Examples
 
    Example 1
 
    g(nlat,nlon)
-  T  = 15
-  ab = shagC (g)
-  ab = rhomb_trunC (ab,T)
-  g  = shsgC (ab,nlon)
+
+   Array space for a and b must be preallocated by the user prior to calling NCL procedures shagc/shaec.
+
+  a  = new ( dimsizes(g), typeof(g))
+  b  = new ( dimsizes(g), typeof(g))
+
+  T  = 19
+  shaec(g,a,b)
+  rhomb_trunc (a,b,T)
+  shsec(a,b,g)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

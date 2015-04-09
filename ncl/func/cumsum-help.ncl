@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/cumsum.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/cumsum.shtml
 THE_TITLE:cumsum
    NCL Home > Documentation > Functions > General applied math
 
@@ -58,4 +58,4 @@ Examples
   x_cumsum = cumsum(x, 2)  ; result (/1  3    3    7   12/)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/dim_num_n.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/dim_num_n.shtml
 THE_TITLE:dim_num_n
    NCL Home > Documentation > Functions > General applied math
 
@@ -68,4 +68,4 @@ Examples
     N = dim_num_n(z,(/2,3/))    ; N(ntim,klev)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

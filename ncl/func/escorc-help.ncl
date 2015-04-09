@@ -1,10 +1,10 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/escorc.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/escorc.shtml
 THE_TITLE:escorc
    NCL Home > Documentation > Functions > General applied math
 
 escorc
 
-   Computes sample cross-correlations at lag 0 only.
+   Computes sample linear cross-correlations at lag 0 only.
 
 Prototype
 
@@ -27,8 +27,8 @@ Arguments
 
 Description
 
-   Computes sample cross-correlations at lag 0 only. If a lagged correlations is required, use esccr. Missing values are
-   allowed. This function can be used to determine:
+   Computes sample linear cross-correlations at lag 0 only. If a lagged correlations is required, use esccr. Missing values
+   are allowed. This function can be used to determine:
      * a "one-point-correlation-map" where one point is used to cross-correlate with all other points (see example 4 below)
      * a "pattern correlation" which measures the degree of overall agreement between two grids (see examples 4-7). A high
        pattern correlation indicates that both amplitude and phase of both grids are in agreement.
@@ -46,15 +46,17 @@ Description
    Special case when dimensions of all x and y are identical:
     x(J,I,N), y(J,I,N)      c(J,I)
 
-   The correlation coefficient (r) for n pairs of independent observations can be tested against the null hypothesis (ie.:
-   no correlation) using the statistic
+   The linear correlation coefficient (r) for n pairs of independent observations can be tested against the null hypothesis
+   (ie.: no correlation) using the statistic
     r*sqrt[ (n-2)/(1-r^2) ]
 
-   This statistic has a Student t distribution with n-2 degrees of freedom.
+   This statistic has a Student t distribution with n-2 degrees of freedom. Use escorc_n if the dimension to do the
+   calculation on is not the rightmost dimension and reordering is not desired. This function can be significantly faster
+   than escorc.
 
 See Also
 
-   esacv, esacr, esccr, esccv, escovc, pattern_cor
+   escorc_n, esacv, esacr, esccr, esccv, escovc, pattern_cor
 
 Examples
 
@@ -65,8 +67,8 @@ Examples
 
    Example 2
 
-   The following will calculate the cross-correlation for one two-dimensional array y(lat,lon) and one one-dimensional array
-   x(time).
+   The following will calculate the cross-correlation for one two-dimensional array y(lat,lon,time) and one one-dimensional
+   array x(time).
      ccr = escorc(x,y)      ; ccr(lat,lon)
 
    Example 3
@@ -84,10 +86,14 @@ Examples
 
    Example 5
 
-   Consider w(time,lat,lon) an q(time,lat,lon) where 'time', 'lat' and 'lon' are named dimensions: Compute the temporal
+   Consider w(time,lat,lon) and q(time,lat,lon) where 'time', 'lat' and 'lon' are named dimensions: Compute the temporal
    correlation at each latitude and longitude. Dimension reordering must be used to make 'time' the rightmost dimension.
      ccr = escorc(w(lat|:,lon|:,time|:),q(lat|:,lon|:,time|:))   ===> ccr(lat,lon)
 
 
+   Note: with NCL V6.2.1 or later, you can use escorc_n to avoid having to reorder the array first:
+     ccr = escorc_n(w,q,0,0)   ===> ccr(lat,lon)
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+
+
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

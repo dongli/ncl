@@ -1,10 +1,10 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/spcorr.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/spcorr.shtml
 THE_TITLE:spcorr
    NCL Home > Documentation > Functions > General applied math
 
 spcorr
 
-   Computes Spearman rank order correlation coefficient.
+   Computes Spearman rank order correlation (Rho) correlation coefficient.
 
 Prototype
 
@@ -34,6 +34,9 @@ Description
    Computes Spearman rank-order correlation. This function should not be used if there are many ranked 'ties'. The formula
    used does not apply to this situation.
 
+   The Spearman rank-order correlation is less sensitive than the Pearson correlation to strong outliers that are in the
+   tails of both samples. That is because Spearman's Rho limits the outlier to the value of its rank.
+
    Missing values will be removed from the input x and/or y prior to doing the calcuation. [Available in version 6.1.0 and
    later.]
 
@@ -42,17 +45,16 @@ Description
 
 See Also
 
-   spcorr_n, escorc, esacv, esacr, esccr, esccv, escovc
+   spcorr_n,rtest, escorc, escorc_n, esacv, esacr, esccr, esccv, escovc
 
 Examples
 
-   Example 1
-
-   ; http://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient
-  x   = (/ 86, 97, 99, 100, 101, 103, 106, 110, 112, 113/)*1d0
-  y   = (/  0, 20, 28,  27,  50,  29,   7,  17,   6,  12/)*1d0
+   Example 1 See: http://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient
+  x   = (/ 86, 97, 99, 100, 101, 103, 106, 110, 112, 113/)
+  y   = (/  0, 20, 28,  27,  50,  29,   7,  17,   6,  12/)
 
   spc = spcorr( x, y)       ; spc = -0.175758
+  p   = rtest( spc, N, 0)   ; p   =  0.6271883
 
    Example 2
 
@@ -93,4 +95,4 @@ Examples
   spc = spcorr( x(i), y(i))       ; spc = 0.7513736
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

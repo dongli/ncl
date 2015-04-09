@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Graphics/Interfaces/gsn_open_wks.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Graphics/Interfaces/gsn_open_wks.shtml
 THE_TITLE:gsn_open_wks
    NCL Home > Documentation > Graphics > Graphical Interfaces
 
@@ -34,8 +34,10 @@ Description
 
    This function creates a workstation for drawing graphics, given a workstation type and name.
 
-   A workstation type can be an NCGM file ("ncgm"), a PostScript file ("ps", "eps", or "epsi"), a PDF file ("pdf"), or an
-   X11 window ("x11"). The name will be used for the ouput file (if applicable) and with the appropriate extension appended.
+   The workstation type can be one of "ps", "eps", "epsi" for PostScript output, or "pdf" for PDF output, "png" for PNG file
+   output, "x11" for display to an X11 window, or new with NCL v6.2.0, "svg" for SVG file output . The name will be used for
+   the output file (if applicable) and with the appropriate file suffix appended. For output formats that do not support
+   multiple pages, such as PNG, a sequence number will be included in the suffix when more than one plot is generated.
 
    The new cairo workstation types added in NCL V5.2.0 ("newpdf", "newps", "png") are now the default in V6.1.0. If you
    specify "ps", "pdf", or "png", you will now be getting the new cairo workstation. In order to get the old PS and PDF
@@ -129,4 +131,4 @@ end
      * "coads_2.ncl" (view example)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Graphics/Interfaces/gsn_csm_y.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Graphics/Interfaces/gsn_csm_y.shtml
 THE_TITLE:gsn_csm_y
    NCL Home > Documentation > Graphics > Graphical Interfaces
 
@@ -69,4 +69,4 @@ Examples
      * "xy_13.ncl" (view example)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

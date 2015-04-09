@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/dim_min.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/dim_min.shtml
 THE_TITLE:dim_min
    NCL Home > Documentation > Functions > General applied math
 
@@ -54,7 +54,7 @@ Examples
    Example 3
 
    Let x be defined as in Example 2: x(time,lat,lon). Determine the minimum value over all time at each latitude/longitude
-   grid point. Use NCL's Named Subscri pting to reorder the input array such that "time" is the rightmost dimension.
+   grid point. Use NCL's Named Subscripting to reorder the input array such that "time" is the rightmost dimension.
 
    Note: in V5.1.1, you will be able to use dim_min_n to avoid having to reorder your data.
 
@@ -63,4 +63,4 @@ Examples
     xMinTime = dim_min_n( x, 0 )                     ; no reordering needed
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

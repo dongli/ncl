@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/dim_rmvmed_Wrap.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/dim_rmvmed_Wrap.shtml
 THE_TITLE:dim_rmvmed_Wrap
    NCL Home > Documentation > Functions > General applied math
 
@@ -78,4 +78,4 @@ Examples
    xRmvJuly = dim_rmvmed_Wrap(x(lat|:, lon|:, time|6:ntim-1:12))
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

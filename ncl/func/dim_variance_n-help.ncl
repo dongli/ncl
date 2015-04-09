@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/dim_variance_n.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/dim_variance_n.shtml
 THE_TITLE:dim_variance_n
    NCL Home > Documentation > Functions > General applied math
 
@@ -45,7 +45,7 @@ Description
 
 See Also
 
-   dim_variance_n_Wrap , dim_variance_Wrap , variance, dim_avg, dim_median, dim_num, dim_product, dim_rmsd, dim_rmvmean,
+   dim_variance_n_Wrap, dim_variance_Wrap, variance, dim_avg, dim_median, dim_num, dim_product, dim_rmsd, dim_rmvmean,
    dim_rmvmed, dim_standardize, dim_stat4, dim_sum, dim_variance
 
 Examples
@@ -53,7 +53,7 @@ Examples
    Example 1
 
    The following calculates the population and sample variance of 5 values. For illustration, a step-by-step calculation of
-   the variance is done. The variances returned by NCL's three built-in variance funtions are included.
+   the variance is done. The variances returned by NCL's three built-in variance functions are included.
 
   f      = (/ 7, 9, -2, -8, 2/)
 
@@ -84,11 +84,12 @@ output:   pvar=37.84  svar=47.3  var1=47.3  var2=47.3  var3=47.3
    Example 3
 
    Let x be of size (ntim,nlat,mlon) and with named dimensions "time", "lat" and "lon", respectively. Then, for each time
-   and latitude, the the variance is:
+   and latitude, the variance is:
     xVarLon= dim_variance_n(x,2)    ; ==> xVarLon(ntim,nlat)
 
    Generally, users prefer that the returned variable have metadata associated with it. This can be accomplished via the
-   dim_variance_n_Wrap function
+   dim_variance_n_Wrap function:
+
     xVarLon = dim_variance_n_Wrap(x,2)    ; ==> xVarLon(time,lat)
 
    Example 4
@@ -98,6 +99,7 @@ output:   pvar=37.84  svar=47.3  var1=47.3  var2=47.3  var3=47.3
     xVarTime = dim_variance_n(x,0)    ; ==> xVarTime(nlat,nlon)
 
    If metadata is desired use
+
     xVarTime = dim_variance_n_Wrap(x,0)    ; ==> xVarTime(lat,lon)
 
    Example 5
@@ -106,7 +108,8 @@ output:   pvar=37.84  svar=47.3  var1=47.3  var2=47.3  var3=47.3
     xVar = dim_variance_n(x,(/0,1/))    ; ==> xVar(nlat,nlon)
 
    To compute the variance at each time/lev grid point:
-    xVar = dim_variance_n(x,(/2,3/))    ; ==> xVar(nlev,ntim)
+
+    xVar = dim_variance_n(x,(/2,3/))    ; ==> xVar(ntim,nlev)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

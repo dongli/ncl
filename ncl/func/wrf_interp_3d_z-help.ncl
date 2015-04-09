@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/wrf_interp_3d_z.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/wrf_interp_3d_z.shtml
 THE_TITLE:wrf_interp_3d_z
    NCL Home > Documentation > Functions > WRF, Interpolation
 
@@ -95,4 +95,4 @@ Examples
   tc_plane = wrf_user_intrp3d(tc,z,"h",height,0.,False)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

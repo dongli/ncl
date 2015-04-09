@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/cdfnor_x.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/cdfnor_x.shtml
 THE_TITLE:cdfnor_x
    NCL Home > Documentation > Functions > Cumulative distribution functions
 
@@ -20,8 +20,8 @@ Arguments
 
    p
 
-   A multi-dimensional array or scalar value equal to the the integral from -infinity to return_val
-   of distribution.(0,1) mean
+   A multi-dimensional array or scalar value equal to the integral of the distribution from -infinity to return_val.(0,1)
+   mean
 
    A multi-dimensional array or scalar value equal to the mean of the distribution (-infinity to +infinity).
    sd
@@ -35,6 +35,7 @@ Return value
 Description
 
    Calculates the upper limit of integration of a cumulative normal distribution function.
+
    The source code is from source routine "CDFNOR" from DCDFLIB (Double precision Cumulative Distribution Function LIBrary)
 
 See Also
@@ -53,4 +54,4 @@ Examples
      print("x="+x)                ; x = 1.64485
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

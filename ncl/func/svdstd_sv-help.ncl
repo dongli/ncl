@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/svdstd_sv.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/svdstd_sv.shtml
 THE_TITLE:svdstd_sv
    NCL Home > Documentation > Functions > Singular value decomposition
 
@@ -95,4 +95,4 @@ begin
 end
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

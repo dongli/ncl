@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/dim_product.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/dim_product.shtml
 THE_TITLE:dim_product
    NCL Home > Documentation > Functions > General applied math
 
@@ -50,7 +50,7 @@ Examples
    Example 2
 
    Let x be of size (ntim,nlat,mlon) and with named dimensions "time", "lat" and "lon", respectively. Then, for each time
-   and latitude, the the 'zonal product' (ie, product of all non-missing longitudes) is:
+   and latitude, the the 'zonal product' (i.e., product of all non-missing longitudes) is:
     xProLon = dim_product( x )    ; ==> xProLon(ntim,nlat)
 
    Example 3
@@ -65,4 +65,4 @@ Examples
     xProTime = dim_product_n( x, 0 )                     ; no reordering needed
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

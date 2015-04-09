@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/onedtond.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/onedtond.shtml
 THE_TITLE:onedtond
    NCL Home > Documentation > Functions > Array manipulators
 
@@ -89,4 +89,4 @@ Examples
    x_mjon = x4d(:,(/2,6,9,10/),:,:)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

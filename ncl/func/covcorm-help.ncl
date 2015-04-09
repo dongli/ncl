@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/covcorm.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/covcorm.shtml
 THE_TITLE:covcorm
    NCL Home > Documentation > Functions > General applied math
 
@@ -22,8 +22,11 @@ Arguments
    Data array of size(nrow,ncol).
    iopt
 
-   iopt(0)=0 or 1 means return the covariance or correlation matrix. iopt(1)=0 return in symmetric storage mode: 1D of size
-   [ nrow*(nrow+1)/2 ]. iopt(1)=1 means that the return matrix will be a 2D array (nrow,nrow).
+     * iopt(0)=0 means return the covariance matrix.
+     * iopt(0)=1 means return the correlation matrix.
+
+     * iopt(1)=0 return in symmetric storage mode: 1D of size [ nrow*(nrow+1)/2 ].
+     * iopt(1)=1 means that the return matrix will be a 2D array (nrow,nrow).
 
    There's a bug in V6.1.2 of this function in which "iopt" behaves the opposite of how it is described:
      * iopt=(/0,1/) behaves as if you had set iopt=(/1,0/)
@@ -50,7 +53,7 @@ Description
 
 See Also
 
-   eofunc,ndtooned,onedtond
+   covcorm_xy, ndtooned, onedtond
 
 Examples
 
@@ -60,6 +63,7 @@ Examples
   John Wiley and Sons: 2002:   3rd Edition:
 
    Specifically, the folllowing data which are contained within the ascii text file: "BOXES.TXT"
+
   3.760  3.660  0.540  5.275  9.768 13.741  4.782
   8.590  4.990  1.340 10.022  7.500 10.162  2.130
   6.220  6.140  4.520  9.842  2.175  2.732  1.089
@@ -86,46 +90,92 @@ Examples
   8.210  3.080  2.420  9.097  3.753  4.657  1.719
   9.410  6.440  5.110 12.495  2.446  3.103  0.914
 
+
    Example 1
-   Compute the covariance matrix [iopt(0)=0] and return in symmetric storage mode [iopt(1)=0].
+   Compute the covariance matrix [iopt(0)=0] and return in both nxn mode [iopt(1)=1] and symmetric storage mode [iopt(1)=0].
+   Here the input matrix is reordered to simulate a 'space x time ' which is most commonly used for this type of
+   computation.
        diri     = "./"
        fili     = "BOXES.TXT"
                                           ; read the entire data array
        ntim     = 25                      ; number of observations [number of time steps]
        mpts     = 7                       ; number of variables or grid points
        data     = asciiread( diri+fili, (/ntim,mpts/), "float")
-       data!0   = "time"                  ; name the dimensions
+
+       data!0   = "time"                  ; name the dimensions to facilitate reorder
        data!1   = "gridpts"
+
+
+       cov_nxn  = covcorm( data(gridpts|:,time|:), (/0,1/)  )
+       printVarSummary(cov_nxn)
+       write_matrix (cov_nxn, "7f7.3", False)
 
        cov_ssm  = covcorm( data(gridpts|:,time|:), (/0,0/)  )
        print(cov_ssm)
 
-   The output values in symmetric storage mode are:
+   The output values in nxn storage mode (iopt(1)=1) are:
+
+Variable: cov_nxn
+Dimensions and sizes:   [7] x [7]
+trace : 57.21125
+
+  5.400  3.260  0.778  6.390  2.155  3.035 -1.996
+  3.260  5.846  1.465  6.083  1.312  2.877 -2.370
+  0.778  1.465  2.774  2.204 -3.839 -5.167 -1.740
+  6.390  6.083  2.204  9.107  1.611  2.783 -3.283
+  2.155  1.312 -3.839  1.611 10.714 14.774  2.252
+  3.035  2.877 -5.167  2.783 14.774 20.776  2.622
+ -1.996 -2.370 -1.740 -3.283  2.252  2.622  2.594
+
+
+   The output values in symmetric storage mode (iopt(1)=0) are:
+Variable: cov_ssm
+Dimensions and sizes:   [28]
+trace : 57.21125
+
        5.400
        3.260
        5.846
+       0.778
         :
+      -3.283
        2.252
        2.622
        2.594
 
-   Example 2
-   Compute the correlation matrix [iopt(0)=1] and return in symmetric storage mode [iopt(1)=0].
-       corm_ssm = covcorm( data(gridpts|:,time|:), (/1,0/)  )
-       print(corm_ssm)
+   Example 2 Same as Example 1 but return the correlation matrix [iopt(0)=1].
 
-   The output values in symmetric storage mode are:
+Variable: cor_nxn
+Dimensions and sizes:   [7] x [7]
+trace : 7
 
-       1.000
-       0.580
-       1.000
-       0.201
-       0.364
-       1.000
-        :
-       0.427
-       0.357
-       1.000
+  1.000  0.580  0.201  0.911  0.283  0.287 -0.533
+  0.580  1.000  0.364  0.834  0.166  0.261 -0.609
+  0.201  0.364  1.000  0.439 -0.704 -0.681 -0.649
+  0.911  0.834  0.439  1.000  0.163  0.202 -0.676
+  0.283  0.166 -0.704  0.163  1.000  0.990  0.427
+  0.287  0.261 -0.681  0.202  0.990  1.000  0.357
+ -0.533 -0.609 -0.649 -0.676  0.427  0.357  1.000
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   The output values in symmetric storage mode (iopt(1)=0) are:
+
+Variable: cor_ssm
+Dimensions and sizes:   [28]
+trace : 7
+
+(0)      1
+(1)     0.580
+(2)      1
+(3)     0.201
+(4)     0.364
+         :
+(23)    -0.649
+(24)    -0.676
+(25)    0.427
+(26)    0.357
+(27)     1
+
+
+
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

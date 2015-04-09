@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/list_vars.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/list_vars.shtml
 THE_TITLE:list_vars
    NCL Home > Documentation > Functions > Variable query
 
@@ -73,4 +73,4 @@ logical res [ 1 ]
    list_files if you want to list these.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

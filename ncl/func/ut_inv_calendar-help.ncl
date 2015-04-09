@@ -1,10 +1,10 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/ut_inv_calendar.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/ut_inv_calendar.shtml
 THE_TITLE:ut_inv_calendar
    NCL Home > Documentation > Functions > Date routines
 
 ut_inv_calendar
 
-   Converts a UT-referenced date to a mixed Julian/Gregorian date.
+   Converts a UT-referenced date to a mixed Julian/Gregorian date (deprecated; use cd_inv_calendar).
 
 Prototype
 
@@ -76,8 +76,9 @@ Return value
 
 Description
 
-   Unidata is no longer supporting the internal code that ut_inv_calendar is based on. We recommend that you use the
-   cd_inv_calendar function instead.
+   Unidata no longers supports the internal code that ut_inv_calendar is based on. We therefore strongly recommend that you
+   use the cd_inv_calendar function instead. Important note: ut_inv_calendar and cd_inv_calendar treat "year 0" differently.
+   See the caveats below.
 
    Converts a UT-referenced date to a mixed Julian/Gregorian date. As of version 5.1.0, if the option variable contains a
    "calendar" attribute with one of the following values:
@@ -142,7 +143,7 @@ or
 
 See Also
 
-   cd_calendar, cd_inv_calendar, ut_calendar, calendar_decode2, ut_string, cd_string, time_axis_labels
+   cd_calendar, cd_inv_calendar, ut_calendar, cd_convert, cd_string, calendar_decode2, time_axis_labels
 
 Examples
 
@@ -156,4 +157,4 @@ Examples
    The arrays date and time should be identical.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

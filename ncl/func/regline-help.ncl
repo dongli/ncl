@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/regline.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/regline.shtml
 THE_TITLE:regline
    NCL Home > Documentation > Functions > General applied math
 
@@ -61,7 +61,7 @@ Description
 
 See Also
 
-   regline_stats, regCoef, reg_multlin_stats, equiv_sample_size, rtest
+   regline_stats, regCoef, regCoef_n, reg_multlin_stats, equiv_sample_size, rtest
 
 Examples
 
@@ -188,4 +188,4 @@ Number Of Attributes: 1
         end if
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/filwgts_lanczos.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/filwgts_lanczos.shtml
 THE_TITLE:filwgts_lanczos
    NCL Home > Documentation > Functions > General applied math
 
@@ -116,7 +116,7 @@ Description
 
 See Also
 
-   filwgts_normal, wgt_runave_n, wgt_runave, wgt_runave_n_Wrap, wgt_runave_Wrap, filter applications
+   bw_bandpass_filter, filwgts_normal, wgt_runave_n, wgt_runave, wgt_runave_n_Wrap, wgt_runave_Wrap, filter applications
 
 Examples
 
@@ -152,4 +152,4 @@ Examples
     wts = filwgts_lanczos (nwt, ihp, fca, fcb, nsigma)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

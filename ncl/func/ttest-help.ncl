@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/ttest.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/ttest.shtml
 THE_TITLE:ttest
    NCL Home > Documentation > Functions > General applied math
 
@@ -43,8 +43,8 @@ Arguments
    iflag
 
    Set to False if the two original samples are assumed to have the same population variance. Set to True if the two
-   original samples are assumed to have different population variances. The latter applies applies the Welsh
-   degree-of-freedom modification (Welsh's t-test).
+   original samples are assumed to have different population variances. The latter applies the Welsh degree-of-freedom
+   modification (Welsh's t-test).
    tval_opt
 
    Set to True if the Student t-values are to be returned in addition to the statistical probabilities. Set to False if only
@@ -123,9 +123,9 @@ Examples
    Example 3
 
    Assume aveX, stdX, aveY, stdY are dimensioned 12 x nlat x mlon and represent climatologies and interannual variabilities
-   (represented here as standard deviations) for each month. Further assume sx and sy contain the number of statistically
+   (represented here as standard deviations) for each month. Further assume sX and sY contain the number of statistically
    independent values. (Generally, there is no significant year-to-year autocorrelation of monthly data [e.g. successive
-   Januaries].) So here, xX and xY are scalars indicating the number of years used.
+   Januaries].) So here, xX and sY are scalars indicating the number of years used.
   prob   = ttest(aveX, stdX^2, sX, aveY, stdY^2, sY, iflag, False)
 
    will yield prob dimensioned 12 x nlat x mlon. Note that the standard deviations were squared to produce variances as
@@ -171,4 +171,4 @@ Examples
   prob = ttest(xAve,xVar,xN, yAve,yVar,yN, iflag, False)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/eof_varimax.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/eof_varimax.shtml
 THE_TITLE:eof_varimax
    NCL Home > Documentation > Functions > Empirical orthogonal functions
 
@@ -148,4 +148,4 @@ Examples
   evec_rot = eof_varimax(evec)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

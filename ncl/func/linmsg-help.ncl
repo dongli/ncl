@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/linmsg.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/linmsg.shtml
 THE_TITLE:linmsg
    NCL Home > Documentation > Functions > Interpolation
 
@@ -136,4 +136,4 @@ end
  end do
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

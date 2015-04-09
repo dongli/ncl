@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/wgt_volave_ccm.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/wgt_volave_ccm.shtml
 THE_TITLE:wgt_volave_ccm
    NCL Home > Documentation > Functions > General applied math, CESM
 
@@ -102,4 +102,4 @@ Examples
    standard subscripting are used to subset the input global array. shAve will have dimension (ktime).
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

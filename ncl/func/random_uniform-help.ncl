@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/random_uniform.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/random_uniform.shtml
 THE_TITLE:random_uniform
    NCL Home > Documentation > Functions > Random number generators
 
@@ -112,4 +112,4 @@ end
 [SNIP]
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

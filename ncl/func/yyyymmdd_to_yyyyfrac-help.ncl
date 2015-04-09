@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/yyyymmdd_to_yyyyfrac.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/yyyymmdd_to_yyyyfrac.shtml
 THE_TITLE:yyyymmdd_to_yyyyfrac
    NCL Home > Documentation > Functions > Date routines
 
@@ -23,6 +23,8 @@ Arguments
 
    A one dimensional array containing yyyymmdd values: yyyy are years (Gregorian); "mm" are months ranging from 1 to 12
    corresponding to January to December; the "dd" are calendar day of the month [1 to 31]
+
+   NOTE: This function does not recognize the proleptic_gregorian calendar.
    dd_offset
 
    A scalar denoting the daily fractional offset. A value of zero indicates no daily offset. A value of 0.5 yields mid-day
@@ -37,6 +39,8 @@ Description
 
    For each value of yyyymmdd, the day_of_year is determined. The fractional part is determined by the quantity
    (day_of_year(yyyy,mm,dd)-1)) divided by the numbers of days in the year [365 or 366].
+
+   NOTE: This function does not recognize the proleptic_gregorian calendar.
 
 See Also
 
@@ -70,4 +74,4 @@ Examples
 (3)     2001.916
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

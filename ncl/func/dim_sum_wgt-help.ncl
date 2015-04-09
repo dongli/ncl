@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/dim_sum_wgt.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/dim_sum_wgt.shtml
 THE_TITLE:dim_sum_wgt
    NCL Home > Documentation > Functions > General applied math
 
@@ -23,12 +23,12 @@ Arguments
    A variable of numeric type and any dimensionality. Missing values are indicated by the _FillValue attribute.
    w
 
-   A one dimensional of weights. The length must the same as the right dimension of x
+   A one dimensional array of weights. The length must be the same as the right dimension of x.
    opt
 
    A scalar: (a) opt=0 means compute the weighted sum only if all values are not missing; (b) opt=1 means compute the
    weighted sum of all non-missing values; (c) opt>1 means to return the sum only if the number of non-missing values is
-   greater-then or equal to opt.
+   greater-than or equal to opt.
 
 Return value
 
@@ -80,11 +80,11 @@ Examples
    Example 2
 
    Let T(time,lev,lat,lon). Compute the weighted vertical sum total at each time/lat/lon point. Use dimension reordering to
-   make time the rightmost dimension.
-    delp = (/50,50,100,100,100,50,25,10/) ; same size as dimension "lev"
+   make level the rightmost dimension.
+    wgt = (/50,50,100,100,100,50,25,10/) ; same size as dimension "lev"
 
     Tsum = dim_sum_wgt( T(time|:,lat|:,lon|:,lev|:), wgt, 0 )   ; ==> Tsum(time,lat,lon)
-    Tsum = dim_sum_wgt_n( T, wgt, 0, 0 )                        ; no reordering needed
+    Tsum = dim_sum_wgt_n( T, wgt, 0, 1 )                        ; no reordering needed
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

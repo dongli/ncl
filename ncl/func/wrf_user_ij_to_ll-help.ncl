@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/WRF_arw/wrf_user_ij_to_ll.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/WRF_arw/wrf_user_ij_to_ll.shtml
 THE_TITLE:wrf_user_ij_to_ll
    NCL Home > Documentation > Functions > WRF, Lat/Lon functions
 
@@ -131,4 +131,4 @@ load "$NCARG_ROOT/lib/ncarg/nclscripts/wrf/WRFUserARW.ncl"
      http://www.mmm.ucar.edu/wrf/OnLineTutorial/Graphics/NCL/
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

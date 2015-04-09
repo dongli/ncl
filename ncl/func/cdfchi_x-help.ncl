@@ -1,10 +1,10 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/cdfchi_x.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/cdfchi_x.shtml
 THE_TITLE:cdfchi_x
    NCL Home > Documentation > Functions > Cumulative distribution functions
 
 cdfchi_x
 
-   Calculates the upper limit of intergration of a cumulative chi-square distribution function.
+   Calculates the upper limit of integration of a cumulative chi-square distribution function.
 
 Prototype
 
@@ -31,7 +31,8 @@ Return value
 
 Description
 
-   Calculates the upper limit of intergration of a cumulative chi-square distribution function.
+   Calculates the upper limit of integration of a cumulative chi-square distribution function.
+
    The source code is from source routine "CDFCHI" from DCDFLIB (Double precision Cumulative Distribution Function LIBrary)
 
 See Also
@@ -50,4 +51,4 @@ begin
 end
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/dim_sum_wgt_n_Wrap.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/dim_sum_wgt_n_Wrap.shtml
 THE_TITLE:dim_sum_wgt_n_Wrap
    NCL Home > Documentation > Functions > General applied math
 
@@ -84,4 +84,4 @@ Examples
    All attributes and, if present, time, latitude and longitude coordinate variables are retained.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/update.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/update.shtml
 THE_TITLE:update
    NCL Home > Documentation > Functions > Workstation routines
 
@@ -28,4 +28,4 @@ See Also
    clear, NhlUpdateWorkstation, frame
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

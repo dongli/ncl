@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/dim_rmvmean.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/dim_rmvmean.shtml
 THE_TITLE:dim_rmvmean
    NCL Home > Documentation > Functions > General applied math
 
@@ -74,4 +74,4 @@ Examples
    xRmvJuly = dim_rmvmean_n_Wrap(x(6:ntim-1:12,:,:),0)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

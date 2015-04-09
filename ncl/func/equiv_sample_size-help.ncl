@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/equiv_sample_size.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/equiv_sample_size.shtml
 THE_TITLE:equiv_sample_size
    NCL Home > Documentation > Functions > General applied math
 
@@ -127,4 +127,4 @@ Examples
   yN   = wgt_areaave (yEqv, wgty, 1., 0)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

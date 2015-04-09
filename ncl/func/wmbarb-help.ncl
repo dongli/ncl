@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/wmbarb.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/wmbarb.shtml
 THE_TITLE:wmbarb
    NCL Home > Documentation > Functions > Graphics routines
 
@@ -106,4 +106,4 @@ end
    will draw four wind barbs of the same magnitude, but at different locations and in different directions.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

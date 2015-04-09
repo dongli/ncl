@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Shea_util/add90LatY.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Shea_util/add90LatY.shtml
 THE_TITLE:add90LatY
    NCL Home > Documentation > Functions > Lat/Lon functions
 
@@ -46,4 +46,4 @@ Examples
      * "h_time_4.ncl" (view example)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

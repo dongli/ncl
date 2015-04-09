@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/v5d_setLowLev.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/v5d_setLowLev.shtml
 THE_TITLE:v5d_setLowLev
    NCL Home > Documentation > Functions > File IO
 
@@ -26,9 +26,9 @@ lowLev(numvars-1) = offset for last variable
 Description
 
    v5d_setLowLev()
-   sets a lowest vertical offset, in grid level, for each data variable in a 3-D gridded dataset.
+   sets a lowest vertical offset, in grid level, for each data variable in a 3D gridded dataset.
 
-   By default, the bottom-most grid level of each variable is displayed at the bottom of the 3-D box; each grid extends
+   By default, the bottom-most grid level of each variable is displayed at the bottom of the 3D box; each grid extends
    upward for however many levels are present. Sometimes, however, the bottom-most grid level of a particular variable is
    best positioned higher up in the grid. An example of this might be a combined ocean/atmosphere dataset. There may be a
    total of 18 grid levels, the bottom 8 grid levels being ocean data and the top 10 grid levels being atmospheric data. In
@@ -70,4 +70,4 @@ Examples
 
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/get1Dindex.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/get1Dindex.shtml
 THE_TITLE:get1Dindex
    NCL Home > Documentation > Functions > Array query
 
@@ -97,7 +97,7 @@ Total Size: 28 bytes
    f = addfiles(diri+fili, "r")
 
    time = f[:]->time
-   date = ut_calendar(time, -2)         ; yyyymmdd
+   date = cd_calendar(time, -2)         ; yyyymmdd
 
    idate= get1Dindex(date, date_select) ; index for each desired data
 
@@ -113,4 +113,4 @@ Total Size: 28 bytes
 
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

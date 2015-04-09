@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/readAsciiHead.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/readAsciiHead.shtml
 THE_TITLE:readAsciiHead
    NCL Home > Documentation > Functions > File IO
 
@@ -86,4 +86,4 @@ Coordinates:
 (1)     YEAR   JAN   FEB   MAR   APR   MAY   JUN   JUL   AUG   SEP   OCT   NOV   DEC
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

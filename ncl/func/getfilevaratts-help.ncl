@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/getfilevaratts.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/getfilevaratts.shtml
 THE_TITLE:getfilevaratts
    NCL Home > Documentation > Functions > File IO
 
@@ -68,4 +68,4 @@ Coordinates:
 (13)    parent_stat
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

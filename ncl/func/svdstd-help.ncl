@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/svdstd.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/svdstd.shtml
 THE_TITLE:svdstd
    NCL Home > Documentation > Functions > Singular value decomposition
 
@@ -117,7 +117,7 @@ begin
   xmsg    = -999.9                     ; missing value
 
 ; ================================>  ; READ THE ASCII FILE
-                                     ; open "files" as 2-D
+                                     ; open "files" as 2D
   s     = asciiread ("svdrdm_S.asc",(/ntime,ncols/), "float")
   z     = asciiread ("svdrdm_Z.asc",(/ntime,ncolz/), "float")
 
@@ -149,4 +149,4 @@ begin
 end
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/printFileVarSummary.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/printFileVarSummary.shtml
 THE_TITLE:printFileVarSummary
    NCL Home > Documentation > Functions > Printing
 
@@ -51,4 +51,4 @@ Examples
    from the file, which is an unnecessary step.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

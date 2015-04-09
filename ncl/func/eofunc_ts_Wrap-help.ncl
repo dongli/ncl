@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/eofunc_ts_Wrap.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/eofunc_ts_Wrap.shtml
 THE_TITLE:eofunc_ts_Wrap
    NCL Home > Documentation > Functions > Empirical orthogonal functions
 
@@ -152,4 +152,4 @@ Examples
   evec_ts = eofunc_ts_Wrap(ptw,evec,False)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

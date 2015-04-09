@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/wgt_areaave2.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/wgt_areaave2.shtml
 THE_TITLE:wgt_areaave2
    NCL Home > Documentation > Functions > General applied math
 
@@ -28,9 +28,9 @@ Arguments
    A two-dimensional array corresponding to the rightmost dimensions of q.
    opt
 
-   If opt = 0, the area sum is calculated using available non-missing data. If opt = 1, then if any point in q is missing,
-   the area sum is not computed. In this case, it will be set to the missing value, which is indicated by q@_FillValue, or
-   the default missing value if q@_FillValue is not set.
+   If opt = 0, the area average is calculated using available non-missing data. If opt = 1, then if any point in q is
+   missing, the area average is not computed. In this case, it will be set to the missing value, which is indicated by
+   q@_FillValue, or the default missing value if q@_FillValue is not set.
 
 Return value
 
@@ -51,10 +51,11 @@ Examples
 
    Example 1
 
-   Let q(t, y, x) [size: (nt, ny, nx)] and let each grid point have a unique weight represented by w(y, x). Then:
-    qSum = wgt_areaave2(q, w, opt)    ; opt = 0 or 1
+   Let q(t, y, x) [size: (nt, ny, nx)] and let each grid point have a unique weight represented by w(y, x). Ideally, 'w'
+   would be the area represented by each grid cell. Then:
+    qAvg = wgt_areaave2(q, w, opt)    ; opt = 0 or 1
 
-   qSum will be a 1D array of length nt.
+   qAvg will be a 1D array of length nt.
 
    Example 2
 
@@ -77,12 +78,12 @@ Examples
    wgt  = conform (wgt, dxdy, 0)
 
 
-   qSum = wgt_areaave2(q, wgt, opt)  ; => qSum(ntim, klev)
+   qAvg = wgt_areaave2(q, wgt, opt)  ; => qAvg(ntim, klev)
 
    Limited area sums may be obtained via standard or coordinate subscripting:
 
- ; standard subscripting => qSums(ntim, klev)
-   qSums= wgt_areaave2(q(:, 10:20), wgt(:, 10:20), opt)
+ ; standard subscripting => qAvg(ntim, klev)
+   qAvg = wgt_areaave2(q(:, 10:20), wgt(:, 10:20), opt)
 
  ; name coordinates for wgt
    wgt!0   = "lat"
@@ -91,7 +92,29 @@ Examples
    wgt&lon =  lon
 
  ; standard subscripting => qSumc(ntim, klev)
-   qSumc = wgt_areaave2(q({-20:20}), {110:270}), wgt({-20:20}), {110:270}), opt)
+   qAvg = wgt_areaave2(q({-20:20}), {110:270}), wgt({-20:20}), {110:270}), opt)
+
+   Example 3
+
+   Let q(t, y, x) [size: (nt, ny, nx)] and let each grid point have a latitude (lat2d) associated with each grid point. If
+   you do not know how to calculate the grid cell areas, you could possibly use cosine weighting.
+
+    f      = addfile("foo.{grb,nc,hdf}","r")
+    q      = f->Q                                          ; (ntim,nlat,mlon)
+    lat2d  = f->LAT                                        ; (nlat,mlon)
+    clat2d = cos(lat2d*0.01745329)
+    qAvg   = wgt_areaave2(q, clat2d, opt)    ; opt = 0 or 1
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   For a subset of the area, you can specify the appropriate indices.
+
+
+    iStrt =
+    iLast =
+    jStrt =
+    jLast =
+    qAvg  = wgt_areaave2(q(:,jStrt:jLast,iStrt:iLast), clat2d(jStrt:jLast,iStrt:iLast), opt)    ; opt = 0 or 1
+
+
+
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

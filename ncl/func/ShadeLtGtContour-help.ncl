@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Shea_util/ShadeLtGtContour.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Shea_util/ShadeLtGtContour.shtml
 THE_TITLE:ShadeLtGtContour
    NCL Home > Documentation > Functions > Graphics routines
 
@@ -70,4 +70,4 @@ Examples
      * "h_lat_5.ncl" (view example)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

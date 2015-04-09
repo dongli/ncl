@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/dim_sum.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/dim_sum.shtml
 THE_TITLE:dim_sum
    NCL Home > Documentation > Functions > General applied math
 
@@ -52,11 +52,12 @@ Examples
    Example 2
 
    Let x be of size (ntim,nlat,mlon) and with named dimensions "time", "lat" and "lon", respectively. Then, for each time
-   and latitude, the the zonal sum (ie, sum of all non-missing longitudes) is:
+   and latitude, the zonal sum (i.e., sum of all non-missing longitudes) is:
     xSumLon = dim_sum( x )    ; ==> xSumLon(ntim,nlat)
 
    Generally, users prefer that the returned variable have metadata associated with it. This can be accomplished via the
-   dim_sum_Wrap function
+   dim_sum_Wrap function:
+
     xSumLon = dim_sum_Wrap( x )    ; ==> xSumLon(time,lat)
 
    Example 3
@@ -74,4 +75,4 @@ Examples
     xSumTime = dim_sum_n_Wrap( x, 0 )                     ; no reordering needed
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

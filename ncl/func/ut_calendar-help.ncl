@@ -1,10 +1,10 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/ut_calendar.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/ut_calendar.shtml
 THE_TITLE:ut_calendar
    NCL Home > Documentation > Functions > Date routines
 
 ut_calendar
 
-   Converts a mixed Julian/Gregorian date to a UT-referenced date.
+   Converts a mixed Julian/Gregorian date to a UT-referenced date (deprecated; use cd_calendar).
 
 Prototype
 
@@ -77,8 +77,9 @@ Return value
 
 Description
 
-   Unidata is no longer supporting the internal code that ut_calendar is based on. We recommend that you use the cd_calendar
-   function instead.
+   Unidata no longer supports the internal code that ut_calendar is based on. We therefore strongly recommend that you use
+   the cd_calendar function instead. Important note: ut_calendar and cd_calendar treat "year 0" differently. See the caveats
+   below.
 
    Converts a mixed Julian/Gregorian date to a UT-referenced date using the UDUNITS-2 library.
 
@@ -143,8 +144,8 @@ or
 
          2. Unset the UDUNITS_PATH environment variable before you run NCL.
        See Also
-       cd_calendar, cd_inv_calendar, ut_inv_calendar, calendar_decode2, yyyymm_to_yyyyfrac, yyyymmdd_to_yyyyfrac,
-       yyyymmddhh_to_yyyyfrac, ut_string, cd_string, time_axis_labels
+       cd_calendar, cd_inv_calendar, ut_inv_calendar, cd_convert, cd_string, calendar_decode2, yyyymm_to_yyyyfrac,
+       yyyymmdd_to_yyyyfrac, yyyymmddhh_to_yyyyfrac, time_axis_labels
        Examples
        Example 1
        Assume five time values that represent "hours since 1-1-1 00:00:0.0". Convert these values to UTC time in the format
@@ -306,4 +307,4 @@ Caveats of Unidata's Udunits:
 
        Again, the difference between CAM and NCL calendars only occurs when the units are "xxxx since 0000".
 
-       ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+       ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

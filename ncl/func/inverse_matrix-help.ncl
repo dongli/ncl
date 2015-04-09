@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/inverse_matrix.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/inverse_matrix.shtml
 THE_TITLE:inverse_matrix
    NCL Home > Documentation > Functions > General applied math
 
@@ -90,4 +90,4 @@ Errors
           singular, and division by zero will occur if it is used to solve a system of equations.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

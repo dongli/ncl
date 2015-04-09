@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/relhum_ttd.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/relhum_ttd.shtml
 THE_TITLE:relhum_ttd
    NCL Home > Documentation > Functions > Meteorology
 
@@ -88,4 +88,4 @@ end
       -52.4  -58.2   49.8948
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

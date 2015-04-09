@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/status_exit.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/status_exit.shtml
 THE_TITLE:status_exit
    NCL Home > Documentation > Functions > System tools
 
@@ -48,4 +48,4 @@ end if
    be accessed as $?. In bash it is also available as $PIPESTATUS.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

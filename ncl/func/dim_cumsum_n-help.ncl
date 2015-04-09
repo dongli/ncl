@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/dim_cumsum_n.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/dim_cumsum_n.shtml
 THE_TITLE:dim_cumsum_n
    NCL Home > Documentation > Functions > General applied math
 
@@ -32,7 +32,7 @@ Arguments
 
    dims
 
-   The dimension(s) of x on which to do the cumulative sum across.
+   The dimension of x on which to do the cumulative sum across. This can only be a single dimension.
 
 Return value
 
@@ -47,7 +47,7 @@ Description
 
 See Also
 
-   dim_cumsum, cumsum, dim_cumsum_n_Wrap, dim_rmvmean_n, dim_rmvmed_n
+   dim_acumrun_n, dim_cumsum, cumsum, dim_cumsum_n_Wrap, dim_rmvmean_n, dim_rmvmed_n
 
 Examples
 
@@ -79,12 +79,5 @@ Examples
 or, to retain meta data
   p_cumsum = dim_cumsum_n_Wrap(p, opt, 0)
 
-   Example 4:
 
-   Let p(time,lev,lat,lon). Calculate cumulative sums at each time and level. The opt argument can be set by the user.
-  p_cumsum = dim_cumsum_n(p, opt, (/0,1/))  ; (ntim,nlev,nlat,mlon)
-or, to retain meta data
-  p_cumsum = dim_cumsum_n_Wrap(p, opt, (/0,1/))
-
-
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

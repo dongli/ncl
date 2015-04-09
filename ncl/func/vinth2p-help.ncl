@@ -1,10 +1,10 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/vinth2p.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/vinth2p.shtml
 THE_TITLE:vinth2p
    NCL Home > Documentation > Functions > CESM
 
 vinth2p
 
-   Interpolates CESM hybrid coordinates to pressure coordinates
+   Interpolates CAM (Community Atmosphere Model) hybrid coordinates to pressure coordinates.
 
 Prototype
 
@@ -30,18 +30,17 @@ Arguments
    is specific. The three rightmost dimensions must be level x lat x lon [e.g. T(time,lev,lat,lon)]. The order of the level
    dimension must be top-to-bottom.
 
-   Note: the ability to handle 5 dimensions was added in version a034. An example would be T(case,time,lev,lat,lon).
    hbcofa
 
-   A one-dimensional array containing the hybrid A coefficients. Must have the same dimension as the level dimension of
+   A one-dimensional array containing the hybrid A coefficients. Must have the same dimension size as the level dimension of
    datai. The order must be top-to-bottom. (These are expected to be normalized to one (1.0). If not, divide by P0.)
    hbcofb
 
-   A one-dimensional array containing the hybrid B coefficients. Must have the same dimension as the level dimension of
+   A one-dimensional array containing the hybrid B coefficients. Must have the same dimension size as the level dimension of
    datai. The order must be top-to-bottom.
    plevo
 
-   A one-dimensional array of output pressure levels in mb.
+   A one-dimensional array of output pressure levels in mb. These can be ordered top-to-bottom or bottom-to-top.
    psfc
 
    A multi-dimensional array of surface pressures in Pa. Must have the same dimension sizes as the corresponding dimensions
@@ -69,13 +68,14 @@ Return value
 
 Description
 
-   Interpolates CESM hybrid coordinates to pressure coordinates. The type of interpolation is currently a variant of
-   transformed pressure coordinates with the interpolation type specified by intyp. All hybrid coordinate values are
-   transformed to pressure values. If datai is on midlevels (interfaces), then hyam/hybm (hyai/hybi) coefficients should be
-   input.
+   Interpolates CAM (Community Atmosphere Model) hybrid coordinates to pressure coordinates. The type of interpolation is
+   currently a variant of transformed pressure coordinates with the interpolation type specified by intyp. All hybrid
+   coordinate values are transformed to pressure values. If datai is on midlevels (interfaces), then hyam/hybm (hyai/hybi)
+   coefficients should be input.
 
-   This is the exact routine used within the CESM Processor. The mixture of Pa for psfc and mb for plevo and p0 is specified
-   by the source routine.
+   This is the exact routine used within the old CCM (Community Climate Model) Processor. The mixture of Pa for psfc and mb
+   for plevo and p0 is specified by the source routine. Further, the datai are required to be top-to-bottom BUT the hyam and
+   hybm are ordered bottom-to-top. Again, this is the ordering expected by the original routine.
 
 See Also
 
@@ -175,6 +175,8 @@ Examples
    Let x(time,lev,lat,lon) be a variable from a model in which the level coordinate is in sigma levels but is in the correct
    top-to-bottom order:
 ; vinth2p requires the lev_p to be expressed in mb [hPa]
+; eother top-to-bottom or bottom-to-top ordering is allowed
+
   lev_p           = (/  10, 20, 30, 50, 70,100,150,200,250 \
                      , 300,400,500,600,700,850,925,1000 /)
   lev_p!0         = "lev_p"                  ; variable/dim name
@@ -182,8 +184,8 @@ Examples
   lev_p@long_name = "pressure"               ; attach some attributes
   lev_p@units     = "hPa"
   lev_p@positive  = "down"
-
-  hybm            = f->sigma
+                                    ; CAM outputs bottom-to-top
+  hybm            = f->sigma        ; hybm is the 'sigma' coordinate
   hyam            = hybm            ; create a bogus hyam 1D array
   hyam            = 0.0             ; set all values to zero
 
@@ -194,4 +196,4 @@ Examples
   xp   = vinth2p(x, hyam, hybm, lev_p, ps, intyp, P0mb, 1, False )
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

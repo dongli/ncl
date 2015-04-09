@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/day_of_week.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/day_of_week.shtml
 THE_TITLE:day_of_week
    NCL Home > Documentation > Functions > Date routines
 
@@ -50,4 +50,4 @@ dow = day_of_week((/1996,1990/),(/3,3/),(/1,1/))
 ; dow = (/5,4/)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

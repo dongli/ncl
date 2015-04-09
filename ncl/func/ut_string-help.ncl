@@ -1,10 +1,10 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/User_contributed/ut_string.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/User_contributed/ut_string.shtml
 THE_TITLE:ut_string
    NCL Home > Documentation > Functions > Date routines
 
 ut_string
 
-   Converts time values into nicely formatted strings.
+   Converts time values into nicely formatted strings (deprecated; use cd_string)
 
    [new.gif] Available in version 5.2.0 and later.
 
@@ -31,6 +31,9 @@ Return value
    A string array representing the time(s) in the specified format.
 
 Description
+
+   Unidata no longers supports the internal code that ut_string is based on. We therefore strongly recommend that you use
+   the cd_string function instead.
 
    This function converts time values to nicely formatted strings, based on the inFormat format string.
 
@@ -75,7 +78,7 @@ Description
 
 See Also
 
-   time_axis_labels, cd_string
+   time_axis_labels, cd_convert, cd_string, cd_calendar, cd_inv_calendar
 
 Examples
 
@@ -128,4 +131,4 @@ Examples
    For using these labels in a plot, see the documentation for time_axis_labels.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

@@ -1,10 +1,10 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/doubletofloat.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/doubletofloat.shtml
 THE_TITLE:doubletofloat
    NCL Home > Documentation > Functions > Type converters
 
 doubletofloat
 
-   Coerces values of type double to values of type float.
+   Coerces values of type double to values of type float (deprecated; use tofloat).
 
 Prototype
 
@@ -29,6 +29,8 @@ Description
 
    This function converts double values to float values.
 
+   Note: this function and other xxxtofloat functions have been superceded by tofloat.
+
    This function performs coercion that is not automatically available through the NCL grammar. See the section on coercion
    of types for details on NCL's automatic type conversions.
 
@@ -45,7 +47,7 @@ Description
 
 See Also
 
-   doubletointeger, doubletolong, doubletoshort, doubletobyte
+   totype, todouble, tofloat, tolong, toint, toshort, tobyte, tostring, tochar
 
 Examples
 
@@ -56,6 +58,7 @@ Examples
 begin
   a = (/ -1.123456712345d, 2.123456712345d, 22. /)
   print(doubletofloat(a))
+; print(tofloat(a))
 end
 
 
@@ -71,6 +74,7 @@ begin
   a@T = "string"
   a@_FillValue = 1.e30
   b = doubletofloat(a)
+; b = tofloat(a)
   print (b)
   delete(a)
   delete(b)
@@ -88,6 +92,7 @@ begin
   b = new(3,double)
   b@_FillValue = -444
   b = doubletofloat(a)
+; b = tofloat(a)
   print (b)
   delete(a)
   delete(b)
@@ -99,6 +104,7 @@ begin
 ;
   a = (/ -1d, 2.d, 3.d40/)
   b = doubletofloat(a)
+; b = tofloat(a)
   print (b)
   delete(a)
   delete(b)
@@ -112,6 +118,7 @@ begin
   a = (/ -1d, 2.d, 3.d40/)
   a@_FillValue = -444.d
   b = doubletofloat(a)
+; b = tofloat(a)
   print (b)
   delete(a)
   delete(b)
@@ -125,6 +132,7 @@ begin
   a = (/ -1d, 2.d, 3.d40/)
   a@_FillValue = 1.d50
   b = doubletofloat(a)
+; b = tofloat(a)
   print (b)
   delete(a)
   delete(b)
@@ -139,6 +147,7 @@ begin
   a = (/ -1d, 2.d, -444.d/)
   a@_FillValue = -444.d
   b = doubletofloat(a)
+; b = tofloat(a)
   print (b)
   delete(a)
   delete(b)
@@ -157,10 +166,11 @@ begin
   a@_FillValue = -444.d
   b = new(3,float,-666.)
   b = doubletofloat(a)
+; b = tofloat(a)
   print (b)
   delete(a)
   delete(b)
 end
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

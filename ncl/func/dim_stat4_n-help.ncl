@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/dim_stat4_n.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/dim_stat4_n.shtml
 THE_TITLE:dim_stat4_n
    NCL Home > Documentation > Functions > General applied math
 
@@ -75,10 +75,12 @@ Examples
 
    Example 3: Let x be a 4-dimensional array with named dimensions (time, lev, lat, lon) and dimension sizes (ntim, klev,
    nlat, mlon). To determine the four moments in time:
+
   xstat = dim_stat4_n(x,0)   ; ==> (4,klev,nlat,mlon)
 
    Example 4: Let x be as in example 3. To determine the four moments in time and level:
+
   xstat = dim_stat4_n(x,(/0,1/))   ; ==> (4,nlat,mlon)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

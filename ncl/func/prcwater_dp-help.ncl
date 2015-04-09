@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/prcwater_dp.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/prcwater_dp.shtml
 THE_TITLE:prcwater_dp
    NCL Home > Documentation > Functions > Meteorology
 
@@ -100,4 +100,4 @@ or, using q(time,lev,lat,lon) and dp(time,lev,lat,lon), then "lev" is the 1-th d
   pw = dim_sum_n(q*dp, 1)/g        ; v5.1.1 onward
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

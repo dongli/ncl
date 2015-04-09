@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/datatondc.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/datatondc.shtml
 THE_TITLE:datatondc
    NCL Home > Documentation > Functions > Type converters
 
@@ -124,9 +124,9 @@ begin
   x_out = new(dimsizes(x_in),float)
   y_out = new(dimsizes(y_in),float)
 
+  print("datatondc")
   datatondc(map,x_in,y_in,x_out,y_out)
   print("data: (" + x_in + "," + y_in + ") NDC: (" + x_out + "," + y_out +")")
-
 
 ;
 ; Use ndctodata to go back to the original lat/lon coordinates. They
@@ -166,4 +166,4 @@ end
 (9)     data: (180,30) original data: (180,30)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

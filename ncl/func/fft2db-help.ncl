@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/fft2db.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/fft2db.shtml
 THE_TITLE:fft2db
    NCL Home > Documentation > Functions > General applied math
 
@@ -51,4 +51,4 @@ See Also
    fft2df, ezfftf, ezfftb, taper, dtrend, specx_anal, specxy_anal
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

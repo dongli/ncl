@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/pdfx.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/pdfx.shtml
 THE_TITLE:pdfx
    NCL Home > Documentation > Functions > General applied math
 
@@ -184,4 +184,4 @@ Number Of Attributes: 10
   zpdf = pdfx(z, 0, opt)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

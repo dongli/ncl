@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Diagnostics/mjo_phase_background.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Diagnostics/mjo_phase_background.shtml
 THE_TITLE:mjo_phase_background
    NCL Home > Documentation > Functions > CESM
 
@@ -70,4 +70,4 @@ Examples
    The first graphic generated may be seen here . The second graphic is here .
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

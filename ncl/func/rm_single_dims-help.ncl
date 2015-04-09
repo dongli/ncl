@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/rm_single_dims.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/rm_single_dims.shtml
 THE_TITLE:rm_single_dims
    NCL Home > Documentation > Functions > Array manipulators, Variable manipulators
 
@@ -84,4 +84,4 @@ Examples
    This is sometimes called "dimension reduction" or "rank reduction".
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Shea_util/boxplot.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Shea_util/boxplot.shtml
 THE_TITLE:boxplot
    NCL Home > Documentation > Functions > Graphics routines
 
@@ -70,4 +70,4 @@ Examples
    For a set of application examples, please refer to the Boxplot Applications Page.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

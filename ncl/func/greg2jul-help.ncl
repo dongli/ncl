@@ -1,10 +1,10 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/greg2jul.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/greg2jul.shtml
 THE_TITLE:greg2jul
    NCL Home > Documentation > Functions > Date routines
 
 greg2jul
 
-   Converts a Gregorian date to a Julian day.
+   Converts Gregorian dates to astronomical Julian days.
 
 Prototype
 
@@ -39,15 +39,15 @@ Return value
 
 Description
 
-   Converts a Gregorian date to a Julian day. A Julian day is defined as the number of days since January 1, 4713 B.C. A
-   Julian day begins at noon Universal Time [UT; 12Z] of the given date (Fliegel & Van Flandern, (1968), A Machine Algorithm
-   for Processing Calendar Dates, Communications of the ACM 11 No. 10, p657)
+   Converts a Gregorian date to a astronomical Julian day. A Julian day is defined as the number of days since January 1,
+   4713 B.C. A Julian day begins at noon Universal Time [UT; 12Z] of the given date (Fliegel & Van Flandern, (1968), A
+   Machine Algorithm for Processing Calendar Dates, Communications of the ACM 11 No. 10, p657)
 
    In V6.1.0. this function was upgraded to recognize missing values.
 
 See Also
 
-   jul2greg, day_of_year, days_in_month, day_of_week, monthday, isleapyear ut_calendar, ut_inv_calendar
+   jul2greg, day_of_year, days_in_month, day_of_week, monthday, isleapyear cd_calendar, cd_inv_calendar
 
 Examples
 
@@ -100,4 +100,4 @@ begin
 end
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

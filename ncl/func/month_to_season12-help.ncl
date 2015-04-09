@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/month_to_season12.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/month_to_season12.shtml
 THE_TITLE:month_to_season12
    NCL Home > Documentation > Functions > Climatology
 
@@ -56,4 +56,4 @@ Examples
 ; result: xSea(dimsizes(time),lat,lon)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

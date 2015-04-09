@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/numAsciiRow.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/numAsciiRow.shtml
 THE_TITLE:numAsciiRow
    NCL Home > Documentation > Functions > File IO
 
@@ -47,4 +47,4 @@ Examples
   ncol = numAsciiCol("test.dat")
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/stringtodouble.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/stringtodouble.shtml
 THE_TITLE:stringtodouble
    NCL Home > Documentation > Functions > Type converters, String manipulation
 
@@ -125,4 +125,4 @@ Errors
    If a conversion from a string to a double value is not possible, an error is issued.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

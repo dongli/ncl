@@ -1,19 +1,18 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/uv2vrG-1.shtml
-THE_TITLE:uv2vrG
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/uv2vrg.shtml
+THE_TITLE:uv2vrg
    NCL Home > Documentation > Functions > Spherical harmonic routines
 
-uv2vrG
+uv2vrg
 
    Computes the vorticity via spherical harmonics, given the u and v wind components on a gaussian grid.
 
 Prototype
 
-        function uv2vrG (
-                u  : numeric,
-                v  : numeric
+        procedure uv2vrg (
+                u     : numeric,
+                v     : numeric,
+                vort  : float or double
         )
-
-        return_val [dimsizes(u)] :  float or double
 
 Arguments
 
@@ -24,19 +23,18 @@ Arguments
      * input values must be in ascending latitude order
      * input array must be on a global grid
 
-Return value
+   vort
 
-   A double array is returned if u or v are double; a float array is returned otherwise. The returned array will be of
-   dimension size dimsizes (u).
+   vorticity (output, same dimensions as u and v, values will be in ascending latitude order)
 
 Description
 
-   Given wind components u and v, uv2vrG computes the vorticity and returns it as an array with the same dimensions as u and
-   v (values will be in ascending latitude order). uv2vrG operates on a gaussian grid.
+   Given wind components u and v, uv2vrg computes the vorticity and returns it in the array vort. uv2vrg operates on a
+   gaussian grid.
 
-   This function does not handle missing values (defined by the _FillValue attribute). If any missing values are encountered
-   in a particular 2D input grid, then all of the values in the corresponding output grids will be set to the default
-   missing value appropriate to the type of the output.
+   This procedure does not handle missing values (defined by the _FillValue attribute). If any missing values are
+   encountered in a particular 2D input grid, then all of the values in the corresponding output grid will be set to the
+   missing value defined by the output grid's _FillValue attribute.
 
    Note: For the arrays whose last two dimensions are nlat x nlon, the rest of the dimensions (if any) are collectively
    referred to as N. If the input/output arrays are just two dimensions, then N can either be considered equal to 1 or
@@ -45,16 +43,14 @@ Description
    Arrays which have dimensions N x nlat x nlon should not include the cyclic (wraparound) points when invoking the
    procedures and functions which use spherical harmonics (Spherepack).
 
-   Use uv2vrG_Wrap if retention of metadata is desired.
-
-   If the input arrays u and v are on a fixed grid, uv2vrF should be used. Also, note that uv2vrG is the function version of
-   uv2vrg.
+   If the input arrays u and v are on a fixed grid, uv2vrf should be used. Also, note that uv2vrg is the procedural version
+   of uv2vrG.
 
    Note, if the input arrays are not global or contain missing data, then it is recommended that uv2vr_cfd be used.
 
 See Also
 
-   uv2vrF, uv2vrg, uv2vrf, uv2vrdvg, vr2uvG, uv2vr_cfd, uv2vrdvg, uv2vrdvf
+   uv2vrG, uv2vrf, uv2vrF, uv2vrdvf, vr2uvF, uv2vr_cfd, uv2vrdvg, uv2vrdvf
 
 Examples
 
@@ -67,10 +63,14 @@ begin
   mlon1 = mlon+1
   fbfile = "uv300.hs"
 
-  nrec  = fbinnumrec(fbfile)       ; total number of records in the file
+  nrec  = fbinnumrec(fbfile)           ; total number of records in the file
   ntim  = nrec/2                       ; number of time steps in dataset
 
   uvmsg = 1e+36
+
+  vrx   = new ( (/nlat,mlon /), float, uvmsg )  ; vorticity  (same as vort)
+  ur    = new ( (/nlat,mlon /), float, uvmsg )
+  vr    = new ( (/nlat,mlon /), float, uvmsg )
 
   do i = 0,nrec-1,2
    month = 1                         ; january
@@ -83,8 +83,8 @@ begin
    work = fbinrecread(fbfile,i+1,(/nlat,mlon1/),"float")
    v    = work(:,0:mlon-1)
 
-   vr    = uv2vrG (u,v)               ; u,v ==> vorticity (rel)
-   uvr   = vr2uvG (vr)                ; vr  ==> rotational wind components
+   uv2vrg   (u,v,vort)               ; u,v ==> vorticity (rel)
+   vr2uvg   (vort,ur,vr)             ; ur,vr > rotational wind components
   end do
 end
 
@@ -97,4 +97,4 @@ Errors
      4 : error in the specification of N (jer only)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

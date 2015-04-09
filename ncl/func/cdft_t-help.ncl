@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/cdft_t.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/cdft_t.shtml
 THE_TITLE:cdft_t
    NCL Home > Documentation > Functions > General applied math
 
@@ -22,7 +22,7 @@ Arguments
    A scalar or array containing probabilities ( 0 <= p < 1 ).
    df
 
-   A scalar or array of the same size as p containing the number of degrees of fredom.
+   A scalar or array of the same size as p containing the number of degrees of freedom.
 
 Return value
 
@@ -52,4 +52,4 @@ Examples
      T = cdft_t(p, df)    ; T =  2.12
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

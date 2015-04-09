@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/acos.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/acos.shtml
 THE_TITLE:acos
    NCL Home > Documentation > Functions > General applied math
 
@@ -46,4 +46,4 @@ Errors
    If value is not -1.0 <= value <= 1.0, nan is returned.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

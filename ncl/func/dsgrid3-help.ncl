@@ -1,11 +1,10 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/dsgrid3.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/dsgrid3.shtml
 THE_TITLE:dsgrid3
    NCL Home > Documentation > Functions > Interpolation
 
 dsgrid3
 
-   Interpolates float data from an unstructured (randomly-spaced) grid to a 3D grid using inverse distance weighted
-   interpolation.
+   Interpolates data from an unstructured (randomly-spaced) grid to a 3D grid using inverse distance weighted interpolation.
 
 Prototype
 
@@ -25,28 +24,28 @@ Arguments
 
    x
 
-   A 1-D array of length npts containing the X coordinates of the input data.
+   A 1D array of length npts containing the X coordinates of the input data.
    y
 
-   A 1-D array of length npts containing the Y coordinates of the input data.
+   A 1D array of length npts containing the Y coordinates of the input data.
    z
 
-   A 1-D array of length npts containing the Z coordinates of the input data.
+   A 1D array of length npts containing the Z coordinates of the input data.
    u
 
    An array of any dimensionality (last dimension must be npts) containing the functional values of the input data. Element
    u(...,i) is the value of the input function at coordinate (x(i), y(i), z(i)) for i = 0, npts - 1).
    xo
 
-   A 1-D array of any length (numxout) containing the X coordinates of the output data grid. The values in xo must be
+   A 1D array of any length (numxout) containing the X coordinates of the output data grid. The values in xo must be
    increasing, but need not be equally spaced.
    yo
 
-   A 1-D array of any length (numyout) containing the Y coordinates of the output data grid. The values in yo must be
+   A 1D array of any length (numyout) containing the Y coordinates of the output data grid. The values in yo must be
    increasing, but need not be equally spaced.
    zo
 
-   A 1-D array of any length (numzout) containing the Z coordinates of the output data grid. The values in zo must be
+   A 1D array of any length (numzout) containing the Z coordinates of the output data grid. The values in zo must be
    increasing, but need not be equally spaced.
 
 Return value
@@ -56,7 +55,7 @@ Return value
 
 Description
 
-   This function interpolates float data from an unstructured (randomly-spaced) grid to a 3D grid.
+   This function interpolates data from an unstructured (randomly-spaced) grid to a 3D grid.
 
    This function requires that desired values for control parameters have been set using the procedure dssetp.
 
@@ -65,7 +64,7 @@ Description
 
 See Also
 
-   dsgrid2 dsgrid3 dspnt2 dspnt3 dsgetp dssetp
+   dsgrid2, dspnt2, dspnt3, dsgetp, dssetp
 
 Examples
 
@@ -109,7 +108,7 @@ begin
   yi = ymin + (ymax - ymin) * (rand2 / RAND_MAX)
   zi = zmin + (zmax - zmin) * (rand3 / RAND_MAX)
 
-  u = (xi * xi) + (yi * yi) + (zi  *zi)
+  u = (xi * xi) + (yi * yi) + (zi * zi)
 ;
 ; Create the output grid.
 ;
@@ -126,4 +125,4 @@ begin
 end
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/v5d_create.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/v5d_create.shtml
 THE_TITLE:v5d_create
    NCL Home > Documentation > Functions > File IO
 
@@ -41,11 +41,11 @@ Arguments
 
    nr
 
-   Number of rows in all 3-D grids (at least 2)
+   Number of rows in all 3D grids (at least 2)
 
    nc
 
-   Number of columns in all 3-D grids (at least 2)
+   Number of columns in all 3D grids (at least 2)
 
    varname
 
@@ -73,7 +73,7 @@ Arguments
 
    nl
 
-   Number of levels in the 3-D grids per variable:
+   Number of levels in the 3D grids per variable:
     nl(0) = number of levels for first variable
     nl(1) = number of levels for second variable
     ...
@@ -96,15 +96,15 @@ Arguments
 
    Projection arguments:
     if projection = 0 then
-        proj_args(0) = North boundary of 3-D box
-        proj_args(1) = West boundary of 3-D box
+        proj_args(0) = North boundary of 3D box
+        proj_args(1) = West boundary of 3D box
         proj_args(2) = Increment between rows
         proj_args(3) = Increment between columns
 
     else if projection = 1 then
 
-        proj_args(0) = North Latitude bound of 3-D box
-        proj_args(1) = West Longitude bound of 3-D box
+        proj_args(0) = North Latitude bound of 3D box
+        proj_args(1) = West Longitude bound of 3D box
         proj_args(2) = Increment between rows in degrees
         proj_args(3) = Increment between cols in degrees
 
@@ -179,7 +179,7 @@ Arguments
 Description
 
    v5d_create()
-   creates a file in the Vis5D+ format, named fname, for writing 3-D gridded data.
+   creates a file in the Vis5D+ format, named fname, for writing 3D gridded data.
 
    The v5d_create()
    function allow you to control how the gridded data is compressed. The default is for grid values to be linearly scaled to
@@ -192,8 +192,7 @@ Description
    The product of the number of rows, columns, levels, timesteps, and variables is the total number of data points. In the
    example below: 30 * 40 * 20 * 5 * 1 = 120,000. A real dataset may be much larger.
 
-   The data must be a 3-D array of grid values where the number of values to write is equal to nr * nc * nl(var), ordered
-   as:
+   The data must be a 3D array of grid values where the number of values to write is equal to nr * nc * nl(var), ordered as:
      data[row + nr * (col + nc * lev)]
 
    where row increases from North to South, col(umn) increases from West to East, and lev(el) increases from bottom to top.
@@ -224,9 +223,9 @@ Examples
 
   numtimes = 5      ; 5 time steps
   numvars = 1       ; 1 physical variable
-  nr = 30           ; 30 rows in each 3-D grid
-  nc = 40           ; 40 columns in each 3-D grid
-  nl = 20           ; 20 levels in each 3-D grid
+  nr = 30           ; 30 rows in each 3D grid
+  nc = 40           ; 40 columns in each 3D grid
+  nl = 20           ; 20 levels in each 3D grid
 
   myData = new((/nr, nc, nl/), "float")    ; data placeholder
   ;; populate data
@@ -241,7 +240,7 @@ Examples
 
   northlat = 60.0   ; Northern boundary of box is at 30 degrees latitude
   latinc = 1.0      ; There is 1 degree of latitude between each of the 30 rows
-  westlon = 100.0   ; Western boundary of 3-D box is at 100 degrees longitude
+  westlon = 100.0   ; Western boundary of 3D box is at 100 degrees longitude
   loninc = 0.5      ; 0.5 degree of longitude between each of the 40 columns
 
   projection = 1    ; linear, rectangular, cylindrical-equidistant
@@ -256,7 +255,7 @@ Examples
   v5d_create("UVdata.v5d", numtimes, numvars, nr, nc, nl, (/"myData"/), timestamp,
            datestamp, compress, proj, proj_args, vert, vert_args)
 
-      [fill the 3-D grid, from NW bottom corner: grid(0, 0, 0)
+      [fill the 3D grid, from NW bottom corner: grid(0, 0, 0)
        to the SE upper corner: grid(nr -1, nc -1, nl - 1)]
 
   v5d_write(numtimes, 1, myData)
@@ -265,4 +264,4 @@ Examples
 
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

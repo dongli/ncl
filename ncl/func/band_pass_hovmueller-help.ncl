@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Diagnostics/band_pass_hovmueller.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Diagnostics/band_pass_hovmueller.shtml
 THE_TITLE:band_pass_hovmueller
    NCL Home > Documentation > Functions > unknown
 
@@ -155,4 +155,4 @@ Number Of Attributes: 17
 (0)     Daily OLR: min=-114.438   max=47.8352
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

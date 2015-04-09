@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/region_ind.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/region_ind.shtml
 THE_TITLE:region_ind
    NCL Home > Documentation > Functions > Array query, Lat/Lon functions
 
@@ -129,4 +129,4 @@ Examples
 
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/cfftf_frq_reorder.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/cfftf_frq_reorder.shtml
 THE_TITLE:cfftf_frq_reorder
    NCL Home > Documentation > Functions > General applied math
 
@@ -33,7 +33,7 @@ Description
    Background from Paul Swarztrauber:
 
    Historically, the continuous complex transform is defined on the interval -pi to pi with wave numbers -infinity to
-   infinity. In its' discrete form it is defined on the points x sub j = j2pi/N where
+   infinity. In its discrete form it is defined on the points x sub j = j2pi/N where
 
 if N is  odd then j = -(N-1)/2,...,(N-1)/2
 
@@ -48,7 +48,7 @@ if N is even then j = N/2,...,N/2-1
 
 See Also
 
-   cfftf,cfftb ezfftf, ezfftb, taper, dtrend, specx_anal, specxy_anal
+   cfftf,cfftb, ezfftf, ezfftb, taper, dtrend, specx_anal, specxy_anal
 
 Examples
 
@@ -98,4 +98,4 @@ Examples
 (23)      0.45833       35.417      -33.699
 
 
-       ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+       ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

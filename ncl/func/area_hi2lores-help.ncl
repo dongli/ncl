@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/area_hi2lores.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/area_hi2lores.shtml
 THE_TITLE:area_hi2lores
    NCL Home > Documentation > Functions > Regridding, Interpolation
 
@@ -116,8 +116,8 @@ Examples
   po  = area_hi2lores (p&lon,p&lat, p , True, 1,  LON, LAT, False)  ; (ntim,49,120)
 
   opt = True
-  opt@critpc = 50                ; require only 50% of the values to be precent
+  opt@critpc = 50                ; require only 50% of the values to be present
   PO  = area_hi2lores (p&lon,p&lat, p , True, 1,  LON, LAT, opt  )  ; (ntim,49,120)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

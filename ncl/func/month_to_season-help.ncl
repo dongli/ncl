@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/month_to_season.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/month_to_season.shtml
 THE_TITLE:month_to_season
    NCL Home > Documentation > Functions > Climatology
 
@@ -101,4 +101,4 @@ Coordinates:
 (17)    199607   2.13118
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

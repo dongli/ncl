@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/days_in_month.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/days_in_month.shtml
 THE_TITLE:days_in_month
    NCL Home > Documentation > Functions > Date routines
 
@@ -76,4 +76,4 @@ year@calendar = "360_day"
 dim = days_in_month(year,month)  ; dim = (/30,30,30/)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

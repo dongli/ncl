@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Graphics/Interfaces/namedcolor2rgb.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Graphics/Interfaces/namedcolor2rgb.shtml
 THE_TITLE:namedcolor2rgb
    NCL Home > Documentation > Graphics > Graphical Interfaces
 
@@ -33,7 +33,7 @@ Description
 
 See Also
 
-   namedcolor2rgba, span_named_colors, gsn_draw_named_colors, NhlNewColor, gsn_define_colormap
+   draw_color_palette, namedcolor2rgba, span_named_colors, gsn_draw_named_colors, NhlNewColor, gsn_define_colormap
 
 Examples
 
@@ -73,4 +73,4 @@ write_matrix(rgb,"3f5.2",0)
 *************** 1.00
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

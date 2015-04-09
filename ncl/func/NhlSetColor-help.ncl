@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/NhlSetColor.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/NhlSetColor.shtml
 THE_TITLE:NhlSetColor
    NCL Home > Documentation > Functions > Color routines
 
@@ -115,4 +115,4 @@ end
 
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

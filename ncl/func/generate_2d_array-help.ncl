@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/generate_2d_array.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/generate_2d_array.shtml
 THE_TITLE:generate_2d_array
    NCL Home > Documentation > Functions > Random number generators
 
@@ -52,7 +52,8 @@ Description
 
 See Also
 
-   random_chi, random_gamma, random_normal, random_uniform, random_setallseed, generate_unique_indices
+   random_chi, random_gamma, random_normal, random_uniform, random_setallseed, generate_unique_indices,
+   generate_sample_indices
 
 Examples
 
@@ -185,4 +186,4 @@ end
 
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/maxind.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/maxind.shtml
 THE_TITLE:maxind
    NCL Home > Documentation > Functions > Array query
 
@@ -66,4 +66,4 @@ Examples
   print("Maximum value located at "+lat_max+", "+lon_max)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

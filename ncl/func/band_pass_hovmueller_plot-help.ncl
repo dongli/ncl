@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Diagnostics/band_pass_hovmueller_plot.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Diagnostics/band_pass_hovmueller_plot.shtml
 THE_TITLE:band_pass_hovmueller_plot
    NCL Home > Documentation > Functions > unknown
 
@@ -129,4 +129,4 @@ load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/diagnostics_cam.ncl"
 
 
 
-          ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+          ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

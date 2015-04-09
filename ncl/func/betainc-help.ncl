@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/betainc.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/betainc.shtml
 THE_TITLE:betainc
    NCL Home > Documentation > Functions > General applied math
 
@@ -83,4 +83,4 @@ Examples
    prob = (1.-betainc(x,a,b))*100.  ; probability in %
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

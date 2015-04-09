@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/wgt_runave.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/wgt_runave.shtml
 THE_TITLE:wgt_runave
    NCL Home > Documentation > Functions > General applied math
 
@@ -87,7 +87,7 @@ Description
    The running average is a special case of a filter. The filter is applied to the i-th time of the requested series as
    follows:
 
-    F(i) = SUM{w(j) * UF(i - (nwgt / 2) + j - 1)} from j = 0, nwgt - 1
+    F(i) = SUM{w(j) * UF(i - (nwgt / 2) + j)} from j = 0, nwgt - 1
 
    where F is the filtered field, UF is the unfiltered field, w(j) is the j-th filter weight, and nwgt is the number of
    weights.
@@ -228,4 +228,4 @@ Examples
      x    = wgt_runave(x, wgt, opt)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

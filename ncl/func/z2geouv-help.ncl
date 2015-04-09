@@ -1,10 +1,11 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/z2geouv.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/z2geouv.shtml
 THE_TITLE:z2geouv
    NCL Home > Documentation > Functions > Meteorology
 
 z2geouv
 
-   Computes the geostrophic zonal and meridional wind components using geopotential height.
+   Computes the geostrophic zonal and meridional wind components using geopotential height on isobaric levels (rectilinear
+   grid only).
 
 Prototype
 
@@ -44,11 +45,21 @@ Return value
 
 Description
 
-   Available in version 4.2.0.a33 and later.
+   This function computes geostrophic wind components at isobaric levels on a rectilinear latitude-longitude grid. If a
+   latitude is exactly at the equator, the function sets the components to missing. The grid need not be global and missing
+   values are allowed.
 
-   This function computes geostrophic wind components on a latitude-longitude grid using finite differences. If a latitude
-   is exactly at the equator, the function sets the components to missing. The grid need not be global and missing values
-   are allowed.
+   Specifically, the following are used:
+
+           u = -(g/f)*[dZ/dy]
+
+           v =  (g/f)*[dZ/dx]
+
+
+   where g=gravity, f=Coriolis Force and [...] indicate isobaric levels. The 'dx' and 'dy' are derived assuming a
+   rectilinear grid structure..
+
+   NOTE: The WRF, RUC and other similar models are not on rectilinear grids.
 
 Examples
 
@@ -85,4 +96,4 @@ Examples
 
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

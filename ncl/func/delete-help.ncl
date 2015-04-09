@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/delete.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/delete.shtml
 THE_TITLE:delete
    NCL Home > Documentation > Functions > Variable manipulators
 
@@ -80,4 +80,4 @@ Examples
   print(lon(0))    ; This would produce an error that "lon" is undefined
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Graphics/Interfaces/span_named_colors.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Graphics/Interfaces/span_named_colors.shtml
 THE_TITLE:span_named_colors
    NCL Home > Documentation > Graphics > Graphical Interfaces
 
@@ -56,28 +56,33 @@ Description
 
 See Also
 
-   namedcolor2rgb, gsn_define_colormap, gsn_draw_named_colors
+   draw_color_palette, namedcolor2rgb, gsn_define_colormap, gsn_draw_named_colors
 
 Examples
 
    Example 1
 
-   Create a color table that spans between five named colors.
+   Create a color table that spans between five named colors. Use draw_color_palette and gsn_draw_colormap to draw the
+   colors using two different methods.
+
+   Note that using gsn_draw_colormap requires that you first set the color to the workstation using gsn_define_colormap.
 
 load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/gsn_code.ncl"
 
-begin
 ;---Open an X11 window for drawing graphics.
-  wks = gsn_open_wks("x11","colormap")
+wks = gsn_open_wks("x11","colormap")
 
 ;----Five colors
-  colors = (/"SandyBrown","IndianRed","LightBlue","Purple","Yellow"/)
+colors = (/"SandyBrown","IndianRed","LightBlue","Purple","Yellow"/)
 
-  rgb_array = span_named_colors(colors,False)
+rgb_array = span_named_colors(colors,False)
 
-  gsn_define_colormap(wks,rgb_array)
-  gsn_draw_colormap(wks)
-end
+;---Draw colors using one method
+draw_color_palette(wks,rgb_array,False)
+
+;---Draw colors using a second method
+gsn_define_colormap(wks,rgb_array)
+gsn_draw_colormap(wks)
 
    Example 2
 
@@ -101,7 +106,7 @@ begin
   gsn_draw_colormap(wks)
 end
 
-   For more examples, see the color map applications page.
+   See also the suite of color and color map examples.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

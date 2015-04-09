@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/dtrend_quadratic_msg_n.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/dtrend_quadratic_msg_n.shtml
 THE_TITLE:dtrend_quadratic_msg_n
    NCL Home > Documentation > Functions > General applied math
 
@@ -24,7 +24,7 @@ Arguments
 
    y
 
-   A one or multi-dimensional array containing the data to be detrended. The dimension from which the trend is calculated
+   A one- or multi-dimensional array containing the data to be detrended. The dimension from which the trend is calculated
    needs to be the dim-th dimension. This is usually time. The sampling interval is assumed to be constant.
    remove_mean
 
@@ -47,8 +47,8 @@ Return value
 
    An attribute (quadratic) may be attached to return_val if return_info = True. This attribute will be a one-dimensional
    array of length 3 if y is one-dimensional. If y is multi-dimensional, the attributes will be the same size as y minus the
-   dim-th dimension but in the form of a one-dimensional array. E.G. if y is (K,N,M) and dim is 0 which corresponds to K,
-   then the attributes will be a one-dimensional array of size N*M*3. This occurs because attributes can not be
+   dim-th dimension but in the form of a one-dimensional array. (e.g., if y is (K,N,M) and dim is 0 which corresponds to K,
+   then the attributes will be a one-dimensional array of size N*M*3.) This occurs because attributes cannot be
    multi-dimensional. Double if return_val is double, float otherwise.
 
    You access the attributes through the @ operator:
@@ -81,8 +81,8 @@ Examples
     yDtrend = dtrend_quadratic_msg_n (y,True,True,0)
 ;   yDtrend@quadratic is a one-dimensional array of size nlat*nlon*3 elements.
 
-   Since attributes can not be returned as multidimensional arrays, the user should use onedtond to create a
-   multidimensional array for plotting purposes:
+   Since attributes cannot be returned as multi-dimensional arrays, the user should use onedtond to create a
+   multi-dimensional array for plotting purposes:
 
    yDtrend = dtrend_quadratic_msg_n (y,False,True,0)
 
@@ -147,4 +147,4 @@ load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/gsn_csm.ncl"
      print("avg(ybtrend)=" + ybavg)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

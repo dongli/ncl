@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Diagnostics/band_pass_latlon_time_plot.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Diagnostics/band_pass_latlon_time_plot.shtml
 THE_TITLE:band_pass_latlon_time_plot
    NCL Home > Documentation > Functions > CESM
 
@@ -95,4 +95,4 @@ load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/diagnostics_cam.ncl"
         filtered: weighted area avg: Daily OLR: min=-6.58817   max=5.37212
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

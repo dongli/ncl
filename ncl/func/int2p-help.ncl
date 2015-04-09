@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/int2p.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/int2p.shtml
 THE_TITLE:int2p
    NCL Home > Documentation > Functions > Interpolation
 
@@ -131,4 +131,4 @@ end
   t_out_n = int2p_n(p_in, t_in, p_out, linlog, 1)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

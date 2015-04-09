@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/svd_lapack.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/svd_lapack.shtml
 THE_TITLE:svd_lapack
    NCL Home > Documentation > Functions > Singular value decomposition
 
@@ -288,4 +288,4 @@ alues
    that factor is exactly 1/3.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

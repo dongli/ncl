@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/strlen.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/strlen.shtml
 THE_TITLE:strlen
    NCL Home > Documentation > Functions > String manipulation
 
@@ -130,4 +130,4 @@ Number of Attributes: 1
 
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

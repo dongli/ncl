@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/eofunc_varimax_reorder.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/eofunc_varimax_reorder.shtml
 THE_TITLE:eofunc_varimax_reorder
    NCL Home > Documentation > Functions > Empirical orthogonal functions
 
@@ -86,4 +86,4 @@ Examples
    The result is that the returned array and all the attributes have been reordered into descending order.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

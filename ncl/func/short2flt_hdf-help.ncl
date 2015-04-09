@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/short2flt_hdf.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/short2flt_hdf.shtml
 THE_TITLE:short2flt_hdf
    NCL Home > Documentation > Functions > Type converters
 
@@ -52,4 +52,4 @@ See Also
    short2flt, dble2flt, flt2dble, byte2flt, typeof, getfilevartypes
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/changeCase.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/changeCase.shtml
 THE_TITLE:changeCase
    NCL Home > Documentation > Functions > String manipulation
 
@@ -37,4 +37,4 @@ Description
    Changes case of a string to the case specified. Recognizes "up" and "low".
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

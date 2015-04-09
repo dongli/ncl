@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/esacv.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/esacv.shtml
 THE_TITLE:esacv
    NCL Home > Documentation > Functions > General applied math
 
@@ -57,7 +57,7 @@ Description
 
 See Also
 
-   esacr,esccr,esccv, escorc,escovc
+   esacr, funcref>esccr, esccv, escorc, escorc_n, escovc
 
 Examples
 
@@ -73,4 +73,4 @@ Examples
      acv   = esacv(x,mxlag) ; acv(nlat,nlon,maxlag+1)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

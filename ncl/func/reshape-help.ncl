@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/reshape.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/reshape.shtml
 THE_TITLE:reshape
    NCL Home > Documentation > Functions > Array manipulators
 
@@ -57,4 +57,4 @@ Examples
   xjfm = reshape(x4d(:,0:2,:,:),(/nyears*3,nlat,nlon/))
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

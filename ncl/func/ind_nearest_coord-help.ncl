@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/ind_nearest_coord.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/ind_nearest_coord.shtml
 THE_TITLE:ind_nearest_coord
    NCL Home > Documentation > Functions > Array query
 
@@ -85,4 +85,4 @@ Examples
   ilon = ind_nearest_coord (rlon, lon, 0)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/cbinwrite.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/cbinwrite.shtml
 THE_TITLE:cbinwrite
    NCL Home > Documentation > Functions > File IO
 
@@ -55,7 +55,7 @@ Examples
    Example 2
 
    From ncl-talk: I am using 'cbinwrite' to output some binary data to a file. Since I am writing data in a loop, I found
-   that cbinwrite will overwrite the pervious data every time. Does anybody know how to write the data in the file without
+   that cbinwrite will overwrite the previous data every time. Does anybody know how to write the data in the file without
    overwriting?
     cbinwrite("file.bin",data)
     do i = 1, number_of_writes -1
@@ -65,4 +65,4 @@ Examples
     end do
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

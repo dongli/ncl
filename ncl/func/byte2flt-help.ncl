@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/byte2flt.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/byte2flt.shtml
 THE_TITLE:byte2flt
    NCL Home > Documentation > Functions > Type converters
 
@@ -47,4 +47,4 @@ See Also
    short2flt, dble2flt, flt2dble
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

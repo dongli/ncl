@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/str_split_by_length.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/str_split_by_length.shtml
 THE_TITLE:str_split_by_length
    NCL Home > Documentation > Functions > String manipulation
 
@@ -257,4 +257,4 @@ Coordinates:
 (4)     dtime_second: 10
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

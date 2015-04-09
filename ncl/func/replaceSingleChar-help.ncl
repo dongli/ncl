@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/replaceSingleChar.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/replaceSingleChar.shtml
 THE_TITLE:replaceSingleChar
    NCL Home > Documentation > Functions > String manipulation
 
@@ -70,4 +70,4 @@ load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/contributed.ncl"
 (1)     NCEP_1950-1999
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

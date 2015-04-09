@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/ezfftb.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/ezfftb.shtml
 THE_TITLE:ezfftb
    NCL Home > Documentation > Functions > General applied math
 
@@ -23,7 +23,8 @@ Arguments
    imaginary coefficients.
    xbar
 
-   constant fourier coefficient (a scalar or a single vector of length of the product of the leftmost dimensions of x).
+   The constant fourier coefficient. This must be a scalar or a single vector of the length of the product of the leftmost
+   dimensions of x).
 
 Return value
 
@@ -37,13 +38,21 @@ Return value
 
 Description
 
+   There's a bug in V6.1.2 and earlier of this function in which if "npts" is odd, the wrong values are returned. This is
+   fixed in V6.2.0.
+
    Given Fourier coefficients cf and the series means(s) xbar, ezfftb computes the periodic sequences and returns an array
-   of length N x cf@npts. If any missing values are encountered in one of the input arrays, then no calculations will be
-   performed on that array, and the corresponding output array will be filled with missing values.
+   of length N x cf@npts.
+
+   If any missing values are encountered in one of the input arrays, then no calculations will be performed on that array,
+   and the corresponding output array will be filled with missing values.
+
+   Use ezfftb_n if the dimension to do the transform across is not the rightmost dimension. This function can be
+   significantly faster than ezfftb.
 
 See Also
 
-   ezfftf, cfftf, cfftb
+   ezfftb_n, ezfftf, ezfftf_n, cfftf, cfftb
 
 Examples
 
@@ -115,8 +124,9 @@ Examples
 
    Here cf@xbar will be a one-dimensional array of length ntim*klvl*nlat. We want set all to 0.0 so this is readily done
    via:
+
   cf@xbar = 0.0
   xWave_3 = ezfftb (cf, cf@xbar)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

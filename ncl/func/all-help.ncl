@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/all.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/all.shtml
 THE_TITLE:all
    NCL Home > Documentation > Functions > Array query
 
@@ -39,7 +39,7 @@ Examples
   x = new(5,float,-999)
   x = (/1.,2.,-999,4.,5./)
 
-  print(all(x.ge.5)   ; should be False
+  print(all(x.ge.5))   ; should be False
   print(all(x.gt.0.and.x.lt.6))   ; should be True
 
    Example 2
@@ -49,4 +49,4 @@ Examples
   end if
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

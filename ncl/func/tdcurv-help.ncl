@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/tdcurv.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/tdcurv.shtml
 THE_TITLE:tdcurv
    NCL Home > Documentation > Functions > Graphics routines
 
@@ -78,4 +78,4 @@ Examples
    See examples 6 on the three-dimensional graphics applications page.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

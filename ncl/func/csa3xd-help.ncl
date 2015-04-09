@@ -1,6 +1,6 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/csa3xd.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/csa3xd.shtml
 THE_TITLE:csa3xd
-   NCL Home > Documentation > Functions > Interpolation
+   NCL Home > Documentation > Functions > Interpolation, Ngmath routines
 
 csa3xd
 
@@ -44,7 +44,7 @@ Arguments
 
    A scalar or an array of length nxi containing weights for the ui values at the input xi values. If wts is an array, then
    wts(k) is a weight for the value of ui(...,k) for k=0,nxi-1. If you do not desire to weight the input ui values, then set
-   wts equal to -1. The weights in the wts array are relative and may be set to any non-negative value. When csa3lxd is
+   wts equal to -1. The weights in the wts array are relative and may be set to any non-negative value. When csa3xd is
    called, the weights are summed and the individual weights are normalized so that the weight sum is unity.
    knots
 
@@ -144,4 +144,4 @@ begin
 end
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

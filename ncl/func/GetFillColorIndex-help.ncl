@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/GetFillColorIndex.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/GetFillColorIndex.shtml
 THE_TITLE:GetFillColorIndex
    NCL Home > Documentation > Functions > Color routines
 
@@ -45,4 +45,4 @@ See Also
    span_color_indexes, span_color_rgba, get_color_index, get_color_rgba, read_colormap_file, gsn_retrieve_colormap,
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

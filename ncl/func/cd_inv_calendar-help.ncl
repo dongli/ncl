@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/cd_inv_calendar.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/cd_inv_calendar.shtml
 THE_TITLE:cd_inv_calendar
    NCL Home > Documentation > Functions > Date routines
 
@@ -80,7 +80,8 @@ Description
 
    This function converts a UT-referenced date to a mixed Julian/Gregorian date.
 
-   It is meant to be a replacement for ut_inv_calendar and thus takes the same arguments.
+   It is meant to be a replacement for ut_inv_calendar and thus takes the same arguments. Important note: ut_inv_calendar
+   and cd_inv_calendar treat "year 0" differently. See the caveats below.
 
    The default is to use the mixed Julian/Gregorian calendar. To change the calendar, you can set option@calendar to one of
    the following strings:
@@ -108,7 +109,7 @@ Description
 
 See Also
 
-   cd_calendar, ut_calendar, ut_inv_calendar, calendar_decode2, cd_string, ut_string, time_axis_labels
+   cd_calendar, cd_convert, cd_string, calendar_decode2, time_axis_labels
 
 Examples
 
@@ -176,4 +177,4 @@ Number Of Attributes: 2
 (4)     968136
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

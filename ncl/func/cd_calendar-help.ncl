@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/cd_calendar.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/cd_calendar.shtml
 THE_TITLE:cd_calendar
    NCL Home > Documentation > Functions > Date routines
 
@@ -81,7 +81,13 @@ Description
 
    Converts a mixed Julian/Gregorian date to a UT-referenced date.
 
-   This function is meant to be a replacement for ut_calendar and thus takes the same arguments.
+   Note: there is a potential rounding bug in this routine if you have a units of "minutes since" or "seconds since". It
+   sometimes causes the minutes/seconds to be returned as something like "0/60" (0 minutes/60 seconds) rather than "1/0" (1
+   minute/0 seconds). We have an email in to the developers of this code, but until we get a fix, you may be able to use
+   ut_calendar as a work-around, if you are using a "standard" calendar.
+
+   This function is meant to be a replacement for ut_calendar and thus takes the same arguments. Important note: ut_calendar
+   and cd_calendar treat "year 0" differently. See the caveats below.
 
    The default is to use the mixed Julian/Gregorian calendar. To change the calendar, you can set time@calendar to one of
    the following strings:
@@ -111,8 +117,8 @@ Description
 
 See Also
 
-   cd_inv_calendar, ut_calendar, ut_inv_calendar, calendar_decode2, yyyymm_to_yyyyfrac, yyyymmdd_to_yyyyfrac,
-   yyyymmddhh_to_yyyyfrac cd_string, ut_string, time_axis_labels
+   cd_inv_calendar, cd_string, cd_convert, calendar_decode2, yyyymm_to_yyyyfrac, yyyymmdd_to_yyyyfrac,
+   yyyymmddhh_to_yyyyfrac, cd_string, time_axis_labels
 
 Examples
 
@@ -270,4 +276,4 @@ Number Of Attributes: 4
 [snip]
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

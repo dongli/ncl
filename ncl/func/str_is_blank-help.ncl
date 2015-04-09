@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/str_is_blank.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/str_is_blank.shtml
 THE_TITLE:str_is_blank
    NCL Home > Documentation > Functions > String manipulation
 
@@ -59,4 +59,4 @@ Examples
  print(b3)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

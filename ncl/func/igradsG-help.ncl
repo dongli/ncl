@@ -1,19 +1,18 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/igradsG-1.shtml
-THE_TITLE:igradsG
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/igradsg.shtml
+THE_TITLE:igradsg
    NCL Home > Documentation > Functions > Spherical harmonic routines
 
-igradsG
+igradsg
 
    Computes a scalar array from its gradient components on a gaussian grid using spherical harmonics.
 
 Prototype
 
-        function igradsG (
+        procedure igradsg (
                 gzx  : numeric,
-                gzy  : numeric
+                gzy  : numeric,
+                z    : float     ; or double
         )
-
-        return_val [dimsizes(gzx)] :  float or double
 
 Arguments
 
@@ -24,20 +23,20 @@ Arguments
      * input values must be in ascending latitude order
      * input arrays must be on a global grid
 
-Return value
+   z
 
-   Returns an array of size dimsizes (gzx). The return type will be double if gzx or gzy is double, and float otherwise.
+   scalar array (output, same dimensions as gzx, gzy, values will be in ascending latitude order)
 
 Description
 
-   igradsG computes a scalar array given gradient gzx and gzy, and returns it as an array with the same dimensions as gzy,
-   gzy. igradsG operates on a gaussian grid.
+   igradsg computes a scalar array given gradient gzx and gzy and returns it in the array z. igradsg operates on a gaussian
+   grid.
 
-   This function does not handle missing values (defined by the _FillValue attribute). If any missing values are encountered
-   in a particular 2D input grid, then all of the values in the corresponding output grid will be set to the default missing
-   value appropriate to the type of the output.
+   This procedure does not handle missing values (defined by the _FillValue attribute). If any missing values are
+   encountered in a particular 2D input grid, then all of the values in the corresponding output grid will be set to the
+   default missing value appropriate to the type of the output.
 
-   This function computes a scalar function whose gradient is the irrotational component of the input vector. The gradient
+   This procedure computes a scalar function whose gradient is the irrotational component of the input vector. The gradient
    is equal to the input vector only if its rotational component is zero.
 
    Note: For the arrays whose last two dimensions are nlat x nlon, the rest of the dimensions (if any) are collectively
@@ -51,12 +50,12 @@ Description
    the user should pass the data to the procedure/function via:
     z = sample ( x([...],:,0:nlon-2) )  ; does not include cyclic points
 
-   If the input arrays gzx and gzy are on a fixed grid, igradsF should be used. Also, note that igradsG is the function
-   version of igradsg.
+   If the input arrays gzx and gzy are on a fixed grid, igradsf should be used. Also, note that igradsg is the procedural
+   version of igradsG.
 
 See Also
 
-   igradsF, igradsg, igradsf, gradsg, gradsf, lderuvf, lderuvg
+   igradsG, igradsf, igradsF, gradsg, gradsf, lderuvf, lderuvg
 
 Examples
 
@@ -65,7 +64,8 @@ Examples
    Given arrays T_grad_lat(time,lev,lat,lon) and T_grad_lon(time,lev,lat,lon) containing the gradient (latitudinal and
    longitudinal derivatives), compute the scalar array. The gradient arrays are on a gaussian grid.
 
-  T = igradsG (T_grad_lon, T_grad_lat, T)
+  T = T_grad_lat                ; create array to hold output, same type and size as input
+  igradsg (T_grad_lon, T_grad_lat, T)
 
    Example 2
 
@@ -79,7 +79,7 @@ Examples
   gradsg (T, T_grad_lon, T_grad_lat)
   T_grad_lon@long_name = "longitudinal gradient (derivative)"
   T_grad_lat@long_name = "latitudinal gradient (derivative)"
-  T = igradsG (T_grad_lon, T_grad_lat)
+  igradsg (T_grad_lon, T_grad_lat, T)
 
 Errors
 
@@ -90,4 +90,4 @@ Errors
      4 : error in the specification of N (jer only)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

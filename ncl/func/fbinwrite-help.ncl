@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/fbinwrite.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/fbinwrite.shtml
 THE_TITLE:fbinwrite
    NCL Home > Documentation > Functions > File IO
 
@@ -20,7 +20,7 @@ Arguments
    Path needed to locate binary file.
    value
 
-   A numeric value of any dimensionality.
+   A numeric variable of any dimensionality.
 
 Description
 
@@ -49,4 +49,4 @@ Examples
     open(..., form="unformatted",  [,access="sequential"] )  ; sequential is default
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

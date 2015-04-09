@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/triple2grid.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/triple2grid.shtml
 THE_TITLE:triple2grid
    NCL Home > Documentation > Functions > Regridding
 
@@ -103,4 +103,4 @@ Examples
    grid = triple2grid(xlon,ylat,zVal, lon,lat, opt)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

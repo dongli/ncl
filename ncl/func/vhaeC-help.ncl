@@ -1,19 +1,21 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/vhaeC-1.shtml
-THE_TITLE:vhaeC
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/vhaec.shtml
+THE_TITLE:vhaec
    NCL Home > Documentation > Functions > Spherical harmonic routines
 
-vhaeC
+vhaec
 
    Computes vector spherical harmonic analysis of vector fields on a fixed grid via spherical harmonics.
 
 Prototype
 
-        function vhaeC (
-                u  : numeric,
-                v  : numeric
+        procedure vhaec (
+                u   : numeric,
+                v   : numeric,
+                br  : float or double,
+                bi  : float or double,
+                cr  : float or double,
+                ci  : float or double
         )
-
-        return_val  :  float or double
 
 Arguments
 
@@ -25,45 +27,21 @@ Arguments
      * input values must be in ascending latitude order
      * input arrays must be on a global grid
 
-Return value
+   br
+   bi
+   cr
+   ci
 
-   bc will contain the vector spherical harmonic coefficients. The user need not preallocate this array since the function
-   will do so.
-
-   If the rightmost two dimensions of u and v are nlat x nlon then the second-to-the-rightmost dimension of bc is nlat and
-   the rightmost dimension (N) is a function of the comparative size of nlat and nlon. It may be determined as follows:
+   vector spherical harmonic coefficients. The user must allocate arrays of the appropriate size prior to use. If the last
+   two dimensions are nlat x nlon, then the second-to-the-last dimension is nlat. The last dimension (N) is a function of
+   the comparative size of nlat and nlon. It may be determined as follows:
 
      N = minimum[nlat, (nlon )/2] if nlon is even
      N = minimum[nlat, (nlon+1)/2] if nlon is odd
 
-   An additional dimension of length 4 is added to address the real and imaginary parts associated with the u and v
-   components.
-
-   If u and v are two dimensional arrays (nlat,nlon), then bc(0,nlat,N) will contain the "real" coefficients [u].
-
-     bc(1,nlat,N) would contain the "imaginary" coefficients [u]
-     bc(2,nlat,N) would contain the "real" coefficients [v]
-     bc(3,nlat,N) would contain the "imaginary" coefficients [v]
-
-   If u and v are three dimensional arrays (nt,nlat,nlon), then:
-
-     bc(0,nt,nlat,N) would contain the "real" coefficients [u]
-     bc(1,nt,nlat,N) would contain the "imaginary" coefficients [u]
-     bc(2,nt,nlat,N) would contain the "real" coefficients [v]
-     bc(3,nt,nlat,N) would contain the "imaginary" coefficients [v]
-
-   If u and v are four dimensional arrays (nt,nlvl,nlat,nlon), then:
-
-     bc(0,nt,nlvl,nlat,N) will contain the "real" coefficients [u]
-     bc(1,nt,nlvl,nlat,N) will contain the "imaginary" coefficients [u]
-     bc(2,nt,nlvl,nlat,N) will contain the "real" coefficients [v]
-     bc(3,nt,nlvl,nlat,N) will contain the "imaginary" coefficients [v]
-
-   etc.
-
-   The return array will be double if the input is double, and float otherwise.
-
-   Note: The coefficients contained in bc are in mathematical coordinates. Please read the documentation at:
+   Note: The coefficients contained in br, bi, cr, and ci are in mathematical coordinates. The br,bi coefficients are
+   associated with v (north-south, meridional component), and cr,ci are associated with u (east-west, zonal component).
+   Please read the documentation:
 
      http://www.scd.ucar.edu/css/software/spherepack/vhaec.txt
 
@@ -71,20 +49,20 @@ Return value
 
 Description
 
-   vhaeC performs the vector spherical harmonic analysis on the arrays u and v. In general, vhaeC (performs vector spherical
-   harmonic analysis) is used in conjunction with vhseC (performs vector spherical harmonic synthesis). Note that both vhaeC
-   and vhseC operate on a fixed grid.
+   vhaec performs the vector spherical harmonic analysis on the arrays u and v, and stores the results in the arrays br, bi,
+   cr, and ci. In general, vhaec (performs vector spherical harmonic analysis) is used in conjunction with vhsec (performs
+   vector spherical harmonic synthesis). Note that both vhaec and vhsec operate on a fixed grid.
 
-   NOTE: This function does not allow for missing data (defined by the _FillValue attribute) to be present. The input arrays
-   should not include the cyclic (wraparound) points, as this function uses spherical harmonics. (NCL procedures/functions
-   that use spherical harmonics should never be passed input arrays that include cyclic points.)
+   NOTE: This procedure does not allow for missing data (defined by the _FillValue attribute) to be present. The input
+   arrays should not include the cyclic (wraparound) points, as this procedure uses spherical harmonics. (NCL
+   procedures/functions that use spherical harmonics should never be passed input arrays that include cyclic points.)
 
-   If the input arrays u and v are on a gaussian grid, vhagC should be used. Also, note that vhaeC is the function version
-   of vhaec.
+   If the input arrays u and v are on a gaussian grid, vhagc should be used. Also, note that vhaec is the procedural version
+   of vhaeC.
 
 See Also
 
-   vhaec, vhseC, vhsec, vhagC, vhagc, vhsgc, vhsgC
+   vhaeC, vhsec, vhseC, vhagc, vhagC, vhsgC, vhsgc
 
 Examples
 
@@ -94,25 +72,55 @@ Examples
 
    u(nlat,nlon), v(nlat,nlon)
 
-bc = vhaeC (u,v)
-     [do something with the coefficients]
-UV = vhseC (bc,nlon)      ; or vhsec (bc(0,:,:),bc(1,:,:),bc(2,:,:),bc(3,:,:),u,v)
+N = nlat
+if (nlon%2 .eq.0) then    ; note % is NCL's modulus operator
+   if (nlat.gt. (nlon+2)/2) then
+      N = (nlon+2)/2
+   end if
+else                      ; nlon must be odd
+   if (nlat.gt. (nlon+1)/2) then
+      N = (nlon+1)/2
+   end if
+end if
+
+br = new ( (/nlat,N/), float)
+bi = new ( (/nlat,N/), float)
+cr = new ( (/nlat,N/), float)
+ci = new ( (/nlat,N/), float)
+
+vhaec (u,v,br,bi,cr,ci)
+      [do something with the coefficients]
+vhsec (br,bi,cr,ci,u,v)
 
    Example 2
 
    u(nt,nlat,nlon), v(nt,nlat,nlon)
 
-bc = vhaeC (u,v)
+[same if test as in Example 1]
+
+br = new ( (/nt,nlat,N/), float)
+bi = new ( (/nt,nlat,N/), float)
+cr = new ( (/nt,nlat,N/), float)
+ci = new ( (/nt,nlat,N/), float)
+
+vhaec (u,v,br,bi,cr,ci)
      [do something with the coefficients]
-UV = vhseC (bc,nlon)      ; or vhsec (bc(0,:,:,:),bc(1,:,:,:),bc(2,:,:,:),bc(3,:,:,:),u,v)
+vhsec (br,bi,cr,ci,u,v)
 
    Example 3
 
-   u(nt,nlvl,nlat,nlon), v(nt,nlvl,nlat,nlon)
+   g(nt,nlvl,nlat,nlon)
 
-bc = vhaeC (u,v)
-     [do something with the coefficients]
-UV = vhseC (bc,nlon)      ; or vhsec (bc(0,:,:,:,:),bc(1,:,:,:,:),bc(2,:,:,:,:),bc(3,:,:,:,:),u,v)
+[same if test as in Example 1]
+
+br = new ( (/nt,nlvl,nlat,N/), float)
+bi = new ( (/nt,nlvl,nlat,N/), float)
+cr = new ( (/nt,nlvl,nlat,N/), float)
+ci = new ( (/nt,nlvl,nlat,N/), float)
+
+vhaec (u,v,br,bi,cr,ci)
+    [do something with the coefficients]
+vhsec (br,bi,cr,ci,u,v)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

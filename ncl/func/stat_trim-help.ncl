@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/stat_trim.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/stat_trim.shtml
 THE_TITLE:stat_trim
    NCL Home > Documentation > Functions > General applied math
 
@@ -102,4 +102,4 @@ begin
 end
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

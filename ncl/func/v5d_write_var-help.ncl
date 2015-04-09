@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/v5d_write_var.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/v5d_write_var.shtml
 THE_TITLE:v5d_write_var
    NCL Home > Documentation > Functions > File IO
 
@@ -21,7 +21,7 @@ Arguments
 Description
 
    v5d_write_var()
-   writes data to a file in the Vis5D+ format. The data must be a 3-D array of grid values where the number of values to
+   writes data to a file in the Vis5D+ format. The data must be a 3D array of grid values where the number of values to
    write is equal to nr * nc * nl(var), ordered as:
      data[row + nr * (col + nc * lev)]
 
@@ -43,9 +43,9 @@ Examples
 
   numtimes = 5      ; 5 time steps
   numvars = 1       ; 1 physical variable
-  nr = 30           ; 30 rows in each 3-D grid
-  nc = 40           ; 40 columns in each 3-D grid
-  nl = 20           ; 20 levels in each 3-D grid
+  nr = 30           ; 30 rows in each 3D grid
+  nc = 40           ; 40 columns in each 3D grid
+  nl = 20           ; 20 levels in each 3D grid
 
   ...
   initialData = new((/nl, nc, nr/), "float")
@@ -56,11 +56,11 @@ Examples
 
   moreData = new((/nl, nc, nr/), "float")
 
-;; [fill the 3-D grid, from NW bottom corner: grid(0, 0, 0)
+;; [fill the 3D grid, from NW bottom corner: grid(0, 0, 0)
 ;;  to the SE upper corner: grid(nr -1, nc -1, nl - 1)]
 
   v5d_write_var(moreData)
   v5d_close()
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

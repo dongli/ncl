@@ -1,10 +1,10 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/chartoint.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/chartoint.shtml
 THE_TITLE:chartoint
    NCL Home > Documentation > Functions > Type converters
 
 chartoint
 
-   Coerces values of type character to values of type integer.
+   Coerces values of type character to values of type integer (deprecated; use toint).
 
 Prototype
 
@@ -29,6 +29,8 @@ Description
    This function converts an ASCII character (or characters) to its decimal equivalent and returns that as an integer value.
    For example, conversion of the ASCII character 'a' yields the integer 97 as a return value.
 
+   Note: this function and other xxxtoint functions have been superceded by toint.
+
    This function performs coercion that is not automatically available through the NCL grammar. See the section on coercion
    of types for details on NCL's automatic type conversions.
 
@@ -41,7 +43,7 @@ Description
 
 See Also
 
-   charactertointeger, charactertodouble, charactertofloat, charactertoshort, charactertolong
+   totype, toint, toint64, touint, touint64
 
 Examples
 
@@ -117,4 +119,4 @@ begin
 end
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

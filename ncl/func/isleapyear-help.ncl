@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/isleapyear.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/isleapyear.shtml
 THE_TITLE:isleapyear
    NCL Home > Documentation > Functions > Date routines
 
@@ -79,4 +79,4 @@ isleap = isleapyear(year)  ; False, False, False, False, False
 
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/User_contributed/time_axis_labels.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/User_contributed/time_axis_labels.shtml
 THE_TITLE:time_axis_labels
    NCL Home > Documentation > Functions > Date routines
 
@@ -175,4 +175,4 @@ Examples
                                       ; timestep in the format 29 Jun, 4 Jul, etc.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

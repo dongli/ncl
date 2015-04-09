@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/fbinrecwrite.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/fbinrecwrite.shtml
 THE_TITLE:fbinrecwrite
    NCL Home > Documentation > Functions > File IO
 
@@ -11,7 +11,7 @@ Prototype
         procedure fbinrecwrite (
                 path    [1] : string,
                 rec_num [1] : integer,
-                var
+                var         : numeric
         )
 
 Arguments
@@ -24,7 +24,7 @@ Arguments
    Record number to write to the file beginning at 0, -1 for append
    var
 
-   A variable of any dimensionality and type
+   A numeric variable of any dimensionality.
 
 Description
 
@@ -129,4 +129,4 @@ Examples
     enddo
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

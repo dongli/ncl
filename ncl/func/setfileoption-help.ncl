@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/setfileoption.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/setfileoption.shtml
 THE_TITLE:setfileoption
    NCL Home > Documentation > Functions > File IO
 
@@ -279,10 +279,20 @@ Binary data file options
           byte-swap the data or not, as appropriate for the byte ordering of the system executing the code, in order to
           produce data files with the specified byte ordering.
 
+   KeepOpen
+          Default value: False
+
+          Available in version 6.3.0 and later.
+
+          This option improves the efficiency of reading Fortran binary records in sequential order, via the fbinrecread
+          function. When set to True, the Fortran file is kept open and the file pointer is left at the beginning of the
+          record following the last one read, allowing the user to read subsequent records faster. When finished reading the
+          file, the user must call fbinrecread once with this option set to False in order to close the file.
+
    RecordMarkerSize
           Default value: 4
 
-          Available in version 6.1.1 and later. and later.
+          Available in version 6.1.1 and later.
 
           This option can be set to 4 or 8. It indicates the size in bytes of the record marker at the beginning and end of
           Fortran sequential files. The following functions recognize this option: fbinrecread, fbinrecwrite, fbinnumrec,
@@ -293,7 +303,7 @@ Options that can apply to multiple formats
    FileStructure
           Default value: "Standard"
 
-          Available in version 6.1.1 and later. and later.
+          Available in version 6.1.1 and later.
 
           This option has two valid string type values: "Advanced", and "Standard", where "Advanced" means NCL will use a
           newer file structure with the capability of handling groups and more advanced data structures, like compound data
@@ -319,14 +329,14 @@ Options that can apply to multiple formats
           implemented using the "Advanced" file structure only.
 
    UseNewHLFS
-   Default value: False
+          Default value: False
 
-   NOTE: This option is available beginning with version 6.1.0. However, it has been deprecated and may be removed from
-   version 6.2.0 or later.
+          NOTE: This option is available beginning with version 6.1.0. However, it has been deprecated and may be removed
+          from version 6.2.0 or later.
 
-   This option is basically a synonym for the option FileStructure except that it expects a logical value rather than a
-   string. Setting UseNewHLFS to True is equivalent to setting FileStructure to "Advanced". Likewise, setting it False is
-   equivalent to setting FileStructure to "Standard".
+          This option is basically a synonym for the option FileStructure except that it expects a logical value rather than
+          a string. Setting UseNewHLFS to True is equivalent to setting FileStructure to "Advanced". Likewise, setting it
+          False is equivalent to setting FileStructure to "Standard".
 
 See Also
 
@@ -400,4 +410,4 @@ Examples
    There are numerous options. Please read the description above.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

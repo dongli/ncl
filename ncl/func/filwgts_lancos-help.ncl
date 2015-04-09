@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/filwgts_lancos.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/filwgts_lancos.shtml
 THE_TITLE:filwgts_lancos
    NCL Home > Documentation > Functions > General applied math
 
@@ -31,4 +31,4 @@ subroutine lancos (nwt,fca,fcb,nsigma,ihp,wt,resp,freq,ier)
    a maximum of 6 characters. The subroutine name was inadvertently used when naming the NCL function.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

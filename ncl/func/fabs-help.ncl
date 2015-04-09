@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/fabs.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/fabs.shtml
 THE_TITLE:fabs
    NCL Home > Documentation > Functions > General applied math
 
@@ -46,4 +46,4 @@ Examples
   print(jarray)        ; Should be (/3.5, 2.2, 1, 0, 1.2, 2.4, 3.9/)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

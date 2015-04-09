@@ -1,12 +1,10 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/linmsg_n.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/linmsg_n.shtml
 THE_TITLE:linmsg_n
    NCL Home > Documentation > Functions > Interpolation
 
 linmsg_n
 
    Linearly interpolates to fill in missing values, given the dimension to do the interpolation across.
-
-   [new.gif] Available in version 5.2.0 and later.
 
 Prototype
 
@@ -106,4 +104,4 @@ end
  x = linmsg_n(x, opt,0) ; y(ntim,klev,nlat,mlon)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

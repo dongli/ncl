@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/dim_variance.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/dim_variance.shtml
 THE_TITLE:dim_variance
    NCL Home > Documentation > Functions > General applied math
 
@@ -49,8 +49,8 @@ Examples
    Example 1
 
    The following calculates the population and sample variance of 5 values. For illustration, a step-by-step calculation of
-   the variance is done. The variances returned by NCL's three built-in variance funtions are included. All return the
-   sample variance
+   the variance is done. The variances returned by NCL's three built-in variance functions are included. All return the
+   sample variance.
 
   f      = (/ 7, 9, -2, -8, 2/)
 
@@ -85,7 +85,8 @@ output:   pvar=37.84  svar=47.3  var1=47.3  var2=47.3  var3=47.3
     xVarLon= dim_variance( x )    ; ==> xVarLon(ntim,nlat)
 
    Generally, users prefer that the returned variable have metadata associated with it. This can be accomplished via the
-   dim_variance_Wrap function
+   dim_variance_Wrap function:
+
     xVarLon = dim_variance_Wrap( x )    ; ==> xVarLon(time,lat)
 
    Example 4
@@ -98,9 +99,10 @@ output:   pvar=37.84  svar=47.3  var1=47.3  var2=47.3  var3=47.3
     xVarTime = dim_variance( x(lat|:, lon|:, time|:) )    ; ==> xVarTime(nlat,nlon)
     xVarTime = dim_variance_n(x, 0)                       ; no reordering needed
 
-   If metadata is desired use
+   If metadata is desired use:
+
     xVarTime = dim_variance_Wrap( x(lat|:, lon|:, time|:) )    ; ==> xVarTime(lat,lon)
     xVarTime = dim_variance_n_Wrap(x,0)                        ; no reordering needed
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

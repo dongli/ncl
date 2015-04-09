@@ -1,39 +1,37 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/lapsG-1.shtml
-THE_TITLE:lapsG
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/lapsg.shtml
+THE_TITLE:lapsg
    NCL Home > Documentation > Functions > Spherical harmonic routines
 
-lapsG
+lapsg
 
    Computes the Laplacian using spherical harmonics, given a scalar z on a gaussian grid.
 
 Prototype
 
-        function lapsG (
-                z  : numeric
+        procedure lapsg (
+                z     : numeric,
+                zlap  : float or double
         )
-
-        return_val [dimsizes(z)] :  float or double
 
 Arguments
 
    z
 
    scalar function array (input, two or more dimensions, last two dimensions must be nlat x nlon)
-     * values must be in ascending latitude order
-     * array must be on a global grid
+     * input values must be in ascending latitude order
+     * input array must be on a global grid
 
-Return value
+   zlap
 
-   The return type will be double if z is double, and float otherwise. The returned array will be of size dimsizes(z).
+   Laplacian array (output, same dimensions as z, values will be in ascending latitude order)
 
 Description
 
-   Given scalar function z, lapsG computes the Laplacian and returns an array with the same dimensions as z (values will be
-   in ascending latitude order). lapsG operates on a gaussian grid.
+   lapsg computes the Laplacian z and returns it in the array zlap. lapsg operates on a gaussian grid.
 
-   This function does not handle missing values. If any missing values are encountered in a particular 2D input grid, then
-   all of the values in the corresponding output grid will be set to the default missing value appropriate to the type of
-   the output.
+   This procedure does not handle missing values. If any missing values are encountered in a particular 2D input grid, then
+   all of the values in the corresponding output grid will be set to the missing value defined by the output grid's
+   _FillValue attribute.
 
    Note: For the arrays whose last two dimensions are nlat x nlon, the rest of the dimensions (if any) are collectively
    referred to as N. If the input/output arrays are just two dimensions, then N can either be considered equal to 1 or
@@ -46,11 +44,11 @@ Description
    the user should pass the data to the procedure/function via:
     z = sample ( x([...],:,0:nlon-2) )  ; does not include cyclic points
 
-   If the input array z is on a fixed grid, lapsF should be used. Also, note that lapsG is the function version of lapsg.
+   If the input array z is on a fixed grid, lapsf should be used. Also, note that lapsg is the procedural version of lapsG.
 
 See Also
 
-   lapsF, lapsg, lapsf, ilapsG, ilapsF, ilapsg, ilapsf
+   lapsf, lapsG, lapsF, ilapsG, ilapsF, ilapsg, ilapsf
 
 Examples
 
@@ -63,7 +61,8 @@ begin
    a = addfile("/cgd/cas/shea/MURPHYS/ATMOS/80.nc","r")
    z200 = a->Z(0,{189.},:,:)                    ; z200 is dimensioned nlat x nlon
    printVarSummary(z200)
-   lapl = lapsG(z200)
+   lapl = z200                                  ; preallocate space for the returned array
+   lapsg(z200,lapl)
 end
 
 Errors
@@ -75,4 +74,4 @@ Errors
      4 : error in the specification of N (jer only)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

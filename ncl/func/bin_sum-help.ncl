@@ -1,10 +1,10 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/bin_sum.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/bin_sum.shtml
 THE_TITLE:bin_sum
    NCL Home > Documentation > Functions > Lat/Lon functions
 
 bin_sum
 
-   Calculates binned sums and counts over multiple invocations of the procedure.
+   Calculates binned sums and counts over multiple invocations of the procedure on a rectilinear grid.
 
 Prototype
 
@@ -23,14 +23,14 @@ Arguments
    gbin
 
    User supplied array which will contain the summed quantities. This must be type "float" or "double" and it is the user's
-   responsibility to initialize the array elements to 0.0
+   responsibility to initialize the array elements to 0.0.
    gknt
 
    User supplied array which will contain the integer counts. This must conform to gbin. It is the user's responsibility to
    initialize the array elements to integer zero.
    glon
 
-   Longitudes of gbin and gknt. These are reuired to be equally spaced.
+   Longitudes of gbin and gknt. These are required to be equally spaced.
    glat
 
    Latitudes of gbin and gknt. These must be equally spaced but they do not need to be the same spacing as glon.
@@ -46,15 +46,18 @@ Arguments
 
 Description
 
-   This procedure sums values z contained within the rectilinear array defined by the input grid. This takes advantage of
-   the fact the latitude and longitude grid spacing is required to be constant but, as noted in the argument description,
-   the spacing in the latitude and longitude directions need not be equal. The appropriate grid point subscripts are
-   determined via a simple algotithm.
+   This procedure sums values z contained within the simple rectilinear array defined by the input grid. This takes
+   advantage of the fact that the latitude and longitude grid spacing is required to be constant but, as noted in the
+   argument description, the spacing in the latitude and longitude directions need not be equal. The appropriate grid point
+   subscripts are determined via a simple algorithm.
+
+   Note: There was a bug in this routine in NCL versions 6.2.1 and earlier where the binning was done incorrectly if the
+   observation locations were outside the region spanned by the user provided grid. This function wasn't explicitly checking
+   for this situation.
 
    This procedure was specifically added to facilitate spanning multiple files in an efficient manner.
 
-   It is the user's responsibility to perform the averaging operation when all files have been read. The prime purpose of
-   the function is efficiency when .
+   It is the user's responsibility to perform the averaging operation when all files have been read.
 
 See Also
 
@@ -137,4 +140,4 @@ Examples
 
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

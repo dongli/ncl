@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/simpne.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/simpne.shtml
 THE_TITLE:simpne
    NCL Home > Documentation > Functions > General applied math
 
@@ -70,4 +70,4 @@ Examples
    Note: the above mentioned vibeta function may better fit your needs.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

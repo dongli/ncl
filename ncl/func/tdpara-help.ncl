@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/tdpara.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/tdpara.shtml
 THE_TITLE:tdpara
    NCL Home > Documentation > Functions > Graphics routines
 
@@ -62,4 +62,4 @@ See Also
    Simplified interface routines: tdez2d, tdez3d
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

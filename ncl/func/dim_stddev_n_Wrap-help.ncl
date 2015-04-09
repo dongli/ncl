@@ -1,11 +1,10 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/dim_stddev_n_Wrap.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/dim_stddev_n_Wrap.shtml
 THE_TITLE:dim_stddev_n_Wrap
    NCL Home > Documentation > Functions > General applied math
 
 dim_stddev_n_Wrap
 
-   Computes the population standard deviation of a variable's given dimension(s) at all other dimensions and retains
-   metadata.
+   Computes the sample standard deviation of a variable's given dimension(s) at all other dimensions and retains metadata.
 
    [new.gif] Available in version 5.1.1 and later.
 
@@ -38,10 +37,10 @@ Return value
 
 Description
 
-   The dim_stddev_n_Wrap function computes the population standard deviation of all elements of the dimensions indicated by
-   dims for each index of the remaining dimensions and retains metadata. A wrapper function. Missing values are ignored.
+   The dim_stddev_n_Wrap function computes the sample standard deviation of all elements of the dimensions indicated by dims
+   for each index of the remaining dimensions and retains metadata. A wrapper function. Missing values are ignored.
 
-   Technically, this function calculates the population standard deviation. This means that it divides by one less than the
+   Technically, this function calculates the sample standard deviation. This means that it divides by one less than the
    total number of non-missing values (1/(N-1)).
 
 See Also
@@ -53,7 +52,7 @@ Examples
 
    Example 1
 
-   Create a variable q of size (3,5,10) array. Then calculate the population standard deviation of the rightmost dimension.
+   Create a variable q of size (3,5,10) array. Then calculate the sample standard deviation of the rightmost dimension.
     q   = random_uniform(-20,100,(/3,5,10/))
     qStd= dim_stddev_n_Wrap(q,2)   ;==>  qStd(3,5)
 
@@ -70,4 +69,4 @@ Examples
     xStdTime = dim_stddev_n_Wrap( x, 0 )    ; ==> xStdTime(nlat,nlon)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

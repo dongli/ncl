@@ -1,12 +1,10 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/smthClmDayTLL.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/smthClmDayTLL.shtml
 THE_TITLE:smthClmDayTLL
    NCL Home > Documentation > Functions > Climatology
 
 smthClmDayTLL
 
-   Calculates a smooth mean daily annual cycle.
-
-   [new.gif] Available in version 4.2.0.a033 and later.
+   Calculates a smooth mean daily annual cycle for an array nominally dimensioned (Time,Lat,Lon).
 
 Prototype
 
@@ -38,9 +36,11 @@ Description
    Calculate a smooth annual cycle using the output from clmDayTLL. A Fourier analysis is performed via an fft. Next, all
    harmonics greater than nHarm are set to zero and a backward transform is performed.
 
+   In 6.2.1, this function was updated to work on daily SST data which have _FillValue over land.
+
 See Also
 
-   clmDayTLL, clmMonTLL, clmMonTLLL, clmMonLLLT, clmMonLLT
+   smthClmDayTLLL, clmDayTLL, clmMonTLL, clmMonTLLL, clmMonLLLT, clmMonLLT
 
 Examples
 
@@ -58,10 +58,10 @@ load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/contributed.ncl"
 ; Read time and create required yyyyddd
 ;***********************************************************
    time    = f->time                          ; time:units = "hours since 1-1-1 00:00:0.0"
-   TIME    = ut_calendar(time, 0)          ; type float
-   year    = floattointeger( TIME(:,0) )
-   month   = floattointeger( TIME(:,1) )
-   day     = floattointeger( TIME(:,2) )
+   TIME    = cd_calendar(time, 0)          ; type float
+   year    = toint( TIME(:,0) )
+   month   = toint( TIME(:,1) )
+   day     = toint( TIME(:,2) )
    ddd     = day_of_year(year, month, day)
    yyyyddd = year*1000 + ddd                                  ; needed for input
 ;***********************************************************
@@ -94,4 +94,4 @@ Number Of Attributes: 4
   long_name :   Daily Climatology: mean Daily Geopotential height
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

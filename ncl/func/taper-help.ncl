@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/taper.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/taper.shtml
 THE_TITLE:taper
    NCL Home > Documentation > Functions > General applied math
 
@@ -29,7 +29,14 @@ Arguments
 
    option
 
-   Reserved for future use (not currently used).
+   As of NCL V6.2.1, option can be set to:
+     * option = 0
+       Results in the series being tapered to the series mean
+       (this is the default behavior in older versions of this function)
+     * option = 1
+       Forces the function to taper to 0.0
+     * option not equal to 0 or 1
+       Acts like option = 0
 
 Return value
 
@@ -74,4 +81,4 @@ Examples
 ;  xCoef  = taper_n(xTaper,0)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

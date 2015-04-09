@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/month_to_annual_weighted.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/month_to_annual_weighted.shtml
 THE_TITLE:month_to_annual_weighted
    NCL Home > Documentation > Functions > Array query
 
@@ -13,9 +13,9 @@ Prototype
 load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/contributed.ncl"
 
         function month_to_annual_weighted (
-                yyyymm  ,
-                x       : numeric,
-                opt [1] : integer
+                yyyymm [*] : numeric,
+                x          : numeric,
+                opt    [1] : integer
         )
 
 Arguments
@@ -81,4 +81,4 @@ Examples
         TMP = month_to_annual_weighted(yyyymm, tmp, 1)  ; TMP(100,klev,nlat,mlon))
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

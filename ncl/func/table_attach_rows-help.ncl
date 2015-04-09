@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/table_attach_rows.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/table_attach_rows.shtml
 THE_TITLE:table_attach_rows
    NCL Home > Documentation > Functions > Variable manipulators
 
@@ -82,4 +82,4 @@ Examples
    144.00  180.11  102.65  115.32  108.48  193.24  130.76
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

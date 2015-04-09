@@ -1,6 +1,6 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/dsgrid2s.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/dsgrid2s.shtml
 THE_TITLE:dsgrid2s
-   NCL Home > Documentation > Functions > Interpolation
+   NCL Home > Documentation > Functions > Interpolation, Ngmath routines
 
 dsgrid2s
 
@@ -23,21 +23,21 @@ Arguments
 
    x
 
-   A 1-D array of length (npts) containing the X coordinates of the input data.
+   A 1D array of length (npts) containing the X coordinates of the input data.
    y
 
-   A 1-D array of length (npts) containing the Y coordinates of the input data.
+   A 1D array of length (npts) containing the Y coordinates of the input data.
    z
 
    An array of any dimensionality (last dimension must be npts) containing the functional values of the input data. Element
    z(...,i) is the value of the input function at coordinate (x(i), y(i)) for i = 0, npts - 1).
    xo
 
-   A 1-D array of any length (numxout) containing the X coordinates of the output data grid. The values in xo must be
+   A 1D array of any length (numxout) containing the X coordinates of the output data grid. The values in xo must be
    increasing, but need not be equally spaced.
    yo
 
-   A 1-D array of any length (numyout) containing the Y coordinates of the output data grid. The values in yo must be
+   A 1D array of any length (numyout) containing the Y coordinates of the output data grid. The values in yo must be
    increasing, but need not be equally spaced.
 
 Return value
@@ -94,4 +94,4 @@ begin
 end
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

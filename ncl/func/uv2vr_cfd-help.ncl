@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/uv2vr_cfd.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/uv2vr_cfd.shtml
 THE_TITLE:uv2vr_cfd
    NCL Home > Documentation > Functions > Meteorology
 
@@ -92,4 +92,4 @@ Examples
    The 2 will cause the functions to calculate the quantities at all boundary points using one-sided differences.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

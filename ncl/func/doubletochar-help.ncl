@@ -1,10 +1,10 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/doubletochar.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/doubletochar.shtml
 THE_TITLE:doubletochar
    NCL Home > Documentation > Functions > Type converters
 
 doubletochar
 
-   Coerces values of type double to values of type character.
+   Coerces values of type double to values of type character (deprecated; use tochar).
 
 Prototype
 
@@ -33,6 +33,8 @@ Description
    For any double value in the range [0,127] (the ASCII decimal equivalent range for ASCII characters) the return value is
    the ASCII character having that decimal equivalent. A value between 128 and 255 is returned as that value.
 
+   Note: this function and other xxxtochar functions have been superceded by tochar.
+
    This function performs coercion that is not automatically available through the NCL grammar. See the section on coercion
    of types for details on NCL's automatic type conversions.
 
@@ -49,7 +51,7 @@ Description
 
 See Also
 
-   doubletochar
+   totype, tochar
 
 Examples
 
@@ -65,7 +67,7 @@ begin
 ;  -1 is not a legal ASCII decimal equivalent.
 ; 150 is a legal 8-bit ASCII decimal equivalent.
 ;
-  a = (/ 65d, 97d, 33d, -1d, 150d /)
+  a = (/ 65.d, 97.d, 33.d, -1.d, 150.d /)
   print(doubletochar(a))
 end
 
@@ -174,4 +176,4 @@ begin
 end
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

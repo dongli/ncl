@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/addfiles_GetVar.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/addfiles_GetVar.shtml
 THE_TITLE:addfiles_GetVar
    NCL Home > Documentation > Functions > File IO
 
@@ -37,28 +37,45 @@ Return value
 
 Description
 
-   The addfiles in NCL version 5.1.0 (March 2009) was upgraded to return meta data. It is faster and more flexible than
-   addfiles_GetVar. It is our recommendation to use the upgraded addfiles. Version 5.1.1 (mid-late May 2009) contains a
-   bugfix and other enhancements.
+   The addfiles in NCL version 5.1.0 (March 2009) was upgraded to return metadata. It is faster and more flexible than
+   addfiles_GetVar. We highly recommend that you use addfiles. Basically, in place of:
+     T = addfiles_GetVar(f,fils,"T")
 
-   A follow-on to addfiles (which by default does not return any metadata) that reads in a variable AND returns the
-   appropriate attributes and coordinate variables. Assumes that in the case of an addfiles join argument, that the leftmost
-   dimension is the coordinate variable that must be specially treated.
+   you can use:
+
+     T = f[:]->T
+
+   This is an old routine that was a follow-on to an old version of addfiles, which initally didn't return any metadata.
+   This routine would read in a variable AND return the appropriate attributes and coordinate variables. It assumes that in
+   the case of an addfiles join argument, that the leftmost dimension is the coordinate variable that must be specially
+   treated.
 
 See Also
 
-   addfiles
+   addfiles, ListSetType
 
 Examples
 
-   Example 1: Consider a directory that has multiple netCDF files: annual_11.nc, annual_2.nc,..., annual_5.nc. Each file has
+   Example 1
+
+   Consider a directory that has five multiple netCDF files: annual_1.nc, annual_2.nc, ..., annual_5.nc. Each file has
    variables with 12 time steps.
 
+   OLD WAY (see NEW WAY below)
      load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/contributed.ncl"
 
      fils = systemfunc("ls /model/annual*nc")
      f    = addfiles(fils, "r")           ; note the "s" of addfile
      T    = addfiles_GetVar(f,fils,"T")
+     printVarSummary(T)
+
+   NEW WAY
+
+     load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/contributed.ncl"
+
+     fils = systemfunc("ls /model/annual*nc")
+     f    = addfiles(fils, "r")           ; note the "s" of addfile
+     T    = f[:]->T
      printVarSummary(T)
 
    The output yields:
@@ -80,7 +97,11 @@ Examples
 
    Note B: This approach can be used for any supported format: .nc, .grb, .hdf, .hdfeos
 
-   Example 2: Same as Example 1 but with the "join" option specified.
+   Example 2
+
+   Same as Example 1 but with the "join" option specified.
+
+   OLD WAY (see NEW WAY below)
      load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/contributed.ncl"
 
      fils = systemfunc("ls /model/annual*")
@@ -91,7 +112,20 @@ Examples
      T    = addfiles_GetVar(f,fils,"T")
      printVarSummary(T)
 
+   NEW WAY
+
+     load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/contributed.ncl"
+
+     fils = systemfunc("ls /model/annual*")
+     f    = addfiles(fils, "r")           ; note the "s" of addfile
+
+     ListSetType (f, "join")
+
+     T    = f[:]->T
+     printVarSummary(T)
+
    The output yields:
+
      Variable: T
      Type: float
      Total Size: 5529600 bytes
@@ -113,4 +147,4 @@ Examples
        long_name :   temperature
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

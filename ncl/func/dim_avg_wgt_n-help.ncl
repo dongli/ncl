@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/dim_avg_wgt_n.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/dim_avg_wgt_n.shtml
 THE_TITLE:dim_avg_wgt_n
    NCL Home > Documentation > Functions > General applied math
 
@@ -81,9 +81,9 @@ Examples
    Example 2
 
    Let T(time,lev,lat,lon). Compute the weighted vertical average total at each time/lat/lon point.
-    delp = (/50,50,100,100,100,50,25,10/)  ; same size as dimension "lev"
+    wgt  = (/50,50,100,100,100,50,25,10/)  ; same size as dimension "lev"
 
     Tavg = dim_avg_wgt_n( T, wgt, 0, 1 )   ; ==> Tavg(time,lat,lon)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

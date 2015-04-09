@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/getvardims.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/getvardims.shtml
 THE_TITLE:getvardims
    NCL Home > Documentation > Functions > Metadata routines
 
@@ -108,4 +108,4 @@ Number Of Attributes: 1
 
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

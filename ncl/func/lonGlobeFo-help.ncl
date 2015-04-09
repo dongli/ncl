@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/lonGlobeFo.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/lonGlobeFo.shtml
 THE_TITLE:lonGlobeFo
    NCL Home > Documentation > Functions > Lat/Lon functions
 
@@ -122,4 +122,4 @@ Number Of Attributes: 2
      mlon@double = True
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

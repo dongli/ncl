@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/fbinrecread.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/fbinrecread.shtml
 THE_TITLE:fbinrecread
    NCL Home > Documentation > Functions > File IO
 
@@ -50,6 +50,12 @@ Description
    "ReadByteOrder" option in the setfileoption procedure can be used to force the "endian" type in a file. This allows
    big-endian files to be read on a little-endian machine and vice versa. The isbigendian function can be used to determine
    the endian-ness of your current system.
+
+   This function was updated in version 6.3.0 to improve the efficiency of reading Fortran binary records in sequential
+   order, via a new "KeepOpen" option that you set via setfileoption. When set to True, the Fortran file is kept open and
+   the file pointer is left at the beginning of the record following the last one read, allowing the user to read subsequent
+   records faster. When finished reading the file, the user must call fbinrecread once with this option set to False in
+   order to close the file.
 
    This function was updated in version 4.3.0 in order to allow reads into files bigger than 2 GB. This change allows you to
    access records that occur past the 2 GB point in the file, but not to read into variables that would be larger than 2 GB.
@@ -103,4 +109,4 @@ Examples
   data = fbinrecread (fili, 1, -1, "float")           ; read x, y, z as 1D
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

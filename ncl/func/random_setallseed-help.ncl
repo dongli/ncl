@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/random_setallseed.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/random_setallseed.shtml
 THE_TITLE:random_setallseed
    NCL Home > Documentation > Functions > Random number generators
 
@@ -47,4 +47,4 @@ begin
 end
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

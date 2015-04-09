@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/str_get_cols.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/str_get_cols.shtml
 THE_TITLE:str_get_cols
    NCL Home > Documentation > Functions > String manipulation
 
@@ -104,5 +104,93 @@ Examples
 
    This second method is only good if you don't have extra whitespace at the end of your lines in the file.
 
+   Example 3
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   How can the following file (sample_sounding.txt) be read?
+    PRES   HGHT   TEMP   DWPT   RELH   MIXR   DRCT   SKNT   THTA   THTE
+    hPa     m      C      C      %    g/kg    deg   knot     K      K
+-------------------------------------------------------------------------
+  1013.0     17   22.8   16.8     69  12.02     20     10  294.9  329.5
+  1012.0     26   22.8   16.9     70  12.15    350     14  294.9  330.0
+  1000.0    136   22.4   18.8     80           345     16  295.6  335.5
+   984.0    275   21.3            83           345     20  295.8  335.5
+   930.0    763   17.6            97           350     14  296.8
+
+   Use a combination of str_get_cols and tofloat. When tofloat encounters a non-numeric type (here, spaces) it issues a
+   warning message. It uses the default float _FillValue (= 9.96921e+36). The simple function below results in a cleaner
+   code and changes the return _FillValue.
+
+   To suppress these warning messages use the answer to How can I turn off NCL warning messages?
+undef("strflt")
+function strflt(dstr[*]:string, colStrt[1]:integer, colLast[1]:integer)
+begin
+  dat = tofloat( str_get_cols(dstr, colStrt, colLast) )
+  dat@_FillValue = -999.0       ; change from 9.96921e+36
+  return(dat)
+end
+
+
+   err = NhlGetErrorObjectId()
+   setvalues err
+    "errLevel" : "Fatal"          ; only report Fatal errors
+   end setvalues
+
+   diri  = "./"
+   fili  = "sample_sounding.txt"
+   dstr  = asciiread(diri+fili, -1, "string")
+
+   nrow  = dimsizes(dstr)
+   nhead =  3
+   nlvl  = nrow-nhead
+
+   p  = strflt(dstr(nhead:), 0, 7)
+   h  = strflt(dstr(nhead:),10,14)
+   ts = strflt(dstr(nhead:),16,21)
+   td = strflt(dstr(nhead:),22,28)
+   rh = strflt(dstr(nhead:),30,35)
+   mr = strflt(dstr(nhead:),37,42)
+   wd = strflt(dstr(nhead:),44,49)
+   ws = strflt(dstr(nhead:),50,56)
+   ta = strflt(dstr(nhead:),57,63)
+   te = strflt(dstr(nhead:),64,70)
+
+   print(p)
+   print(td)
+
+   The output looks like:
+
+Variable: pstr
+Type: float
+Total Size: 20 bytes
+            5 values
+Number of Dimensions: 1
+Dimensions and sizes:   [5]
+Coordinates:
+Number Of Attributes: 1
+  _FillValue :  -999
+(0)     1013
+(1)     1012
+(2)     1000
+(3)     984
+(4)     930
+
+=============
+
+Variable: tdstr
+Type: float
+Total Size: 20 bytes
+            5 values
+Number of Dimensions: 1
+Dimensions and sizes:   [5]
+Coordinates:
+Number Of Attributes: 1
+  _FillValue :  -999
+(0)     16.8
+(1)     16.9
+(2)     18.8
+(3)     -999
+(4)     -999
+
+
+
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/write_matrix.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/write_matrix.shtml
 THE_TITLE:write_matrix
    NCL Home > Documentation > Functions > Printing, File IO
 
@@ -287,4 +287,4 @@ Examples
  write_matrix (z({-10:10},{0:360:10}), fmt, opt)   ; coordinate sub
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

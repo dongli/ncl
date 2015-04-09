@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/get1Dindex_Collapse.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/get1Dindex_Collapse.shtml
 THE_TITLE:get1Dindex_Collapse
    NCL Home > Documentation > Functions > Array manipulators
 
@@ -83,4 +83,4 @@ Examples
      no i=21 year(21)=2006
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

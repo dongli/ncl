@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/smth9.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/smth9.shtml
 THE_TITLE:smth9
    NCL Home > Documentation > Functions > General applied math
 
@@ -105,4 +105,4 @@ Examples
   gvert = smth9(g(time|:, lon|:, lvl|:, lat|:), -0.25, False)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

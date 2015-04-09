@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/month_to_seasonN.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/month_to_seasonN.shtml
 THE_TITLE:month_to_seasonN
    NCL Home > Documentation > Functions > Climatology
 
@@ -62,4 +62,4 @@ Examples
 ; result: xJJA(2,dimsizes(time)/12,lat,lon)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

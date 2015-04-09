@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/sprinti.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/sprinti.shtml
 THE_TITLE:sprinti
    NCL Home > Documentation > Functions > String manipulation
 
@@ -146,4 +146,4 @@ end do
    You can also use the write_matrix procedure for "pretty printing" 2-dimensional variables.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

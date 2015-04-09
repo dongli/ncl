@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/dim_pqsort_n.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/dim_pqsort_n.shtml
 THE_TITLE:dim_pqsort_n
    NCL Home > Documentation > Functions > General applied math
 
@@ -93,12 +93,12 @@ Examples
 ;---Sort leftmost dimension of x in DECR order
  x = xorig
  opt@title  = "Before sorting on leftmost dimension, decreasing"
- write_matri (x, "3I4", opt)
+ write_matrix(x, "3I4", opt)
 
  ii_lft = dim_pqsort_n(x,-2,0)
 
  opt@title  = "After sorting on leftmost dimension, decreasing"
- write_matri (x, "3I4", opt)
+ write_matrix(x, "3I4", opt)
 
  opt@title  = "Index vector"
  write_matrix(ii_lft, "3I4", opt)
@@ -160,8 +160,8 @@ ip = dim_pqsort_n(x, -2, 0)
    Define ip = dim_pqsort_n(x, 1, 0) (ascending order, do not sort x) and it is desired to reorder a different array (say,
    y) using the permutation vector associated with x. Assume y(ntim, nlat, mlon) with named dimensions and coordinate
    variables "time", "lat" and "lon". Then:
-  y2 = y                ; create yNew with attribute, coordinate values
-  y2 = y(ip, :, :)      ; yNew will contain the values of "y"
+  y2 = y                ; create y2 with attribute, coordinate values
+  y2 = y(ip, :, :)      ; y2 will contain the values of "y"
                         ; rearranged according to the permutation
                         ; vector associated with x.
   y2&time = y&time(ip)  ; reorder the time coordinate variable
@@ -173,4 +173,4 @@ ip = dim_pqsort_n(x, -2, 0)
 ; ===> ip(ntim, nlat, mlon)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

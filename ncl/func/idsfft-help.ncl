@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/idsfft.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/idsfft.shtml
 THE_TITLE:idsfft
    NCL Home > Documentation > Functions > Interpolation
 
@@ -103,4 +103,4 @@ Errors
    If any three coordinates in the input arrays (xc,yc) are collinear, an error is reported.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/wrf_updraft_helicity.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/wrf_updraft_helicity.shtml
 THE_TITLE:wrf_updraft_helicity
    NCL Home > Documentation > Functions > WRF
 
@@ -113,4 +113,4 @@ Examples
    For more examples, see the WRF Helicity applications page.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

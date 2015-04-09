@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/calcMonAnomLLLT.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/calcMonAnomLLLT.shtml
 THE_TITLE:calcMonAnomLLLT
    NCL Home > Documentation > Functions > Climatology
 
@@ -42,4 +42,4 @@ See Also
    calcMonAnomLLT, calcMonAnomTLL, clmMonLLT, clmMonLLLT, clmMonTLL, clmMonTLLL
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/atan.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/atan.shtml
 THE_TITLE:atan
    NCL Home > Documentation > Functions > General applied math
 
@@ -43,4 +43,4 @@ Examples
   print(atan_f)        ; Should be 1.216091
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Diagnostics/wkSpaceTime.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Diagnostics/wkSpaceTime.shtml
 THE_TITLE:wkSpaceTime
    NCL Home > Documentation > Functions > CESM
 
@@ -108,6 +108,12 @@ Arguments
           sampling rate. EG: spd=4 (6 hour sampling rate) and opt@spdSkip=2, then the effective sampling rate will be
           reduced to 2 samples per day. This could be useful if memory is limited.
 
+          opt@netCDF - If opt=True and this attribute is present and is set to True (ie: opt@netCDF=True), a netCDF file
+          containing the Fig_1 variables will be created. By default, the file will be written to the 'current' directory
+          with the file name SpaceTime.varName.nc. The user may alter this behavior by setting the options dirNetCDF and
+          filNetCDF. The former specifies the directory to which the netCDF file will be written; the latter specifies the
+          name of the netCDF file.
+
 Description
 
    This procedure will create plots similar to Wheeler and Kiladis figures 1-3.
@@ -174,4 +180,4 @@ load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/diagnostics_cam.ncl"
               ,latN, spd, nDayWin, nDaySkip, opt  )
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

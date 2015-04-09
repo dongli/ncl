@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/runave_n.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/runave_n.shtml
 THE_TITLE:runave_n
    NCL Home > Documentation > Functions > General applied math
 
@@ -93,7 +93,7 @@ Description
    The running average is a special case of a filter where all weights are the same. The filter is applied to the i-th time
    of the requested series as follows:
 
-     F(i) = SUM{UF(i - (nave / 2) + j + 1)} / nave for j = 0, nave - 1
+     F(i) = SUM{UF(i - (nave / 2) + j)} / nave for j = 0, nave - 1
 
    where F is the filtered field, UF is the unfiltered field, and nave is the number of elements in the running average.
 
@@ -135,4 +135,4 @@ Examples
     x = runave_n (x, nave, opt,3) ; return the series in the original array
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

@@ -1,10 +1,10 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/chartostring.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/chartostring.shtml
 THE_TITLE:chartostring
    NCL Home > Documentation > Functions > Type converters, String manipulation
 
 chartostring
 
-   Coerces values of type character to values of type string.
+   Coerces values of type character to values of type string (deprecated; use tostring).
 
 Prototype
 
@@ -36,6 +36,8 @@ Description
    characters in the final dimension of the input array to create the strings. The example below should clarify how this
    works.
 
+   Note: this function and other xxxtostring functions have been superceded by tostring.
+
    In any conversion using chartostring a NULL byte is appended to the resultant string or strings. This means that the
    functions chartostring and stringtochar are not strictly inverse functions.
 
@@ -55,7 +57,7 @@ Description
 
 See Also
 
-   charactertostring, charactertofloat, charactertointeger, charactertoshort, charactertolong, charactertodouble
+   totype, tostring, tostring_with_format, toshort, tolong, todouble
 
 Examples
 
@@ -203,4 +205,4 @@ end
 
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

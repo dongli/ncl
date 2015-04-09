@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/conform.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/conform.shtml
 THE_TITLE:conform
    NCL Home > Documentation > Functions > Array manipulators
 
@@ -74,21 +74,21 @@ Examples
 
    Example 2
 
-   Assume you have a 4D array x with named dimensions "time", "lev", "lat" and "lon" and dimensioned ntim x klvl x nlat x
-   mlon. Assume you also have a 2D array dp of size ntim x klvl, and that you want to reorder x to be ntim x nlat x nlon x
+   Assume you have a 4D array x with named dimensions "time", "lev", "lat" and "lon" and dimensioned ntim x klev x nlat x
+   mlon. Assume you also have a 2D array dp of size ntim x klev, and that you want to reorder x to be ntim x nlat x nlon x
    klev.
 
    You can use conform to work on the reordered grid, in which the ndim arguments refer to the reordered grid:
 
     dpC = conform (x(time|:,lat|:,lon|:,lev|:), dp, (/0,3/))
 
-   The dpC array will be dimensioned ntim x nlat x mlon x klvl.
+   The dpC array will be dimensioned ntim x nlat x mlon x klev.
 
    Example 3
 
-   Assume T is a 4D array with dimensions ntim x klvl x nlat x mlon and dp is an array of length klvl. If you want to
+   Assume T is a 4D array with dimensions ntim x klev x nlat x mlon and dp is an array of length klev. If you want to
    compute the column pressure weighted mean temperature at all times, then use:
-  dpC = conform(T, dp, 1)  ; => (ntim,klvl,nlat,mlon)
+  dpC = conform(T, dp, 1)  ; => (ntim,klev,nlat,mlon)
   T_wgtAve = dim_sum(T*dpC)/dim_sum(dpC)
 
    Example 4
@@ -151,7 +151,7 @@ Examples
 
    Example 8
 
-   Compute the weighted areal average iat each time and level for T(Time, bottom_top, south_north, west_east) using the
+   Compute the weighted areal average at each time and level for T(Time, bottom_top, south_north, west_east) using the
    simple cosine of the latitude, here, XLAT(Time, south_north, west_east). The example is WRF data.
 load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/contributed.ncl"
 
@@ -226,8 +226,8 @@ Number Of Attributes: 6
 
    Example 9
 
-   Compute the global weighted areal average temperature at each time and level a POP grid. Then compute the same for user
-   specified regions. POP files come with the area of each grid cell.
+   Compute the global weighted areal average temperature at each time step and level in a POP grid. Then compute the same
+   for user specified regions. POP files come with the area of each grid cell.
 
 load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/contributed.ncl"
 
@@ -283,4 +283,4 @@ load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/contributed.ncl"
 
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

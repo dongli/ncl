@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/int2p_Wrap.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/int2p_Wrap.shtml
 THE_TITLE:int2p_Wrap
    NCL Home > Documentation > Functions > Interpolation
 
@@ -157,4 +157,4 @@ Number Of Attributes: 1
                                 t_in, p_out, linlog, 1)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

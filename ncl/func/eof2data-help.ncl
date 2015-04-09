@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/eof2data.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/eof2data.shtml
 THE_TITLE:eof2data
    NCL Home > Documentation > Functions > Empirical orthogonal functions
 
@@ -26,27 +26,27 @@ Arguments
 
 Return value
 
-   An array of the same size and type as the main data array input into eofunc
+   An array of the same size and type as the main data array input into eofunc.
 
 Description
 
    Uses the EOF spatial patterns and amplitude time series to create a data field. The original data array may be
    reconstructed if all possible eigen functions were used. If only a subset are used, the returned array will explain a
    percent of the variance of the original array. Note that the time series of amplitude coefficients returned by eofunc_ts
-   has had the mean subtracted. To reconstruct the original series the means of each component must be included. The
+   has had the mean subtracted. To reconstruct the original series, the mean of each component must be included. The
    component means are returned as an attribute, ts_mean, of of ev_ts. You access this attribute via the @ operator:
 print(ev_ts@ts_mean)
 
 See Also
 
-   eofunc,eofunc_ts
+   eofunc, eofunc_ts
 
 Examples
 
    Example 1
 
    Assume x is two-dimensional with dimensions lat, lon, and time.
-   neval = 7                       ; number of eofs
+   neval = 7                       ; number of EOFs
    ev    = eofunc(x,neval,False)       ; ev(neval,nlat,nlon)
    evts  = eofunc_ts(x,ev,False)             ; evts(neval,ntime)
 
@@ -61,7 +61,7 @@ Examples
 
    Example 2
 
-   Assume z is four-dimensional with dimension level, lat, lon, time. Comput the EOFs at one level.
+   Assume z is four-dimensional with dimensions level, lat, lon, time. Compute the EOFs at one level.
    kl     = 3                             ; specify level
    neval  = 8                             ; calculate 8 EOFs out of nlat*mlon
    ev     = eofunc(z(kl,:,:,:),neval ,False)  ; ev(neval,nlat,mlon)
@@ -78,11 +78,11 @@ Examples
    Note: when dealing with latitude/longitude grids, the user may have weighted the observations by the cosine of the
    latitude prior to using eofunc. To reconstruct the data, an extra step is needed to remove the weighting.
 
-   Assume p is three-dimensional with dimension lat, lon, and time. Both time and lat are one-dimensional. Lat contains the
-   latitudes.:
+   Assume p is three-dimensional with dimensions lat, lon, and time. Both time and lat are one-dimensional. Lat contains the
+   latitudes.
    clat = sqrt(cos(lat*0.0174532))      ; array syntax  clat(nlat)
 
-   do nl=0,nlat-1                       ; wgt by cosine of the latitude
+   do nl=0,nlat-1                       ; weight by cosine of the latitude
       p(nl,:,:)  = p(nl,:,:)*clat(nl)   ; array syntax
    end do
 
@@ -94,7 +94,7 @@ Examples
       evts(n,:) = evts(n,:) + evts@ts_mean(n)  ; add time series mean
    end do
 
-   p3     = eof2data(ev,evts)       ; reconstruct wgted array using 3 EOFs
+   p3     = eof2data(ev,evts)       ; reconstruct weighted array using 3 EOFs
 
    do nl=0,nlat-1                   ; remove weighting
       if (clat(nl).ne.0.) then
@@ -103,4 +103,4 @@ Examples
    end do
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

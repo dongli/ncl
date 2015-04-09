@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/specx_anal.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/specx_anal.shtml
 THE_TITLE:specx_anal
    NCL Home > Documentation > Functions > General applied math
 
@@ -230,7 +230,7 @@ Examples
                                                 ; all segments
    df@spcx = spcavg                             ; assign the mean spc
    df@frq  = dof@frq
-   spcavg@xlag1 = r1                            ; assign mean lag-1
+   df@xlag1= r1                            ; assign mean lag-1
 
   ;************************************************
   ; plotting
@@ -248,4 +248,4 @@ Examples
 
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

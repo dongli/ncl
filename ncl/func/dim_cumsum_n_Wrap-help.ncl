@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/dim_cumsum_n_Wrap.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/dim_cumsum_n_Wrap.shtml
 THE_TITLE:dim_cumsum_n_Wrap
    NCL Home > Documentation > Functions > General applied math
 
@@ -47,7 +47,7 @@ Description
 
 See Also
 
-   dim_cumsum_Wrap, dim_cumsum, dim_cumsum_n, cumsum, dim_cumsum, dim_rmvmean, dim_rmvmed
+   dim_acumrun_n, dim_cumsum_Wrap, dim_cumsum, dim_cumsum_n, cumsum, dim_cumsum, dim_rmvmean, dim_rmvmed
 
 Examples
 
@@ -72,4 +72,4 @@ Examples
   p_cumsum = dim_cumsum_n_Wrap(p,opt,0)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

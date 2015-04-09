@@ -1,10 +1,10 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/doubletoshort.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/doubletoshort.shtml
 THE_TITLE:doubletoshort
    NCL Home > Documentation > Functions > Type converters
 
 doubletoshort
 
-   Coerces values of type double to values of type short.
+   Coerces values of type double to values of type short (deprecated; use toshort).
 
 Prototype
 
@@ -24,12 +24,14 @@ Return value
 
    The return variable is of the same dimensionality as the input variable.
 
-   Any fractional part of an input value is truncated and the result returned as a short. Any result that is out of range
-   for a short is set to a missing value.
+   Any fractional part of an input value is truncated and the result is then returned as a short. Any result that is out of
+   range for a short is set to a missing value.
 
 Description
 
    This function converts double values to short values.
+
+   Note: this function and other xxxtoshort functions have been superceded by toshort.
 
    Any fractional part of an input value is truncated and the result returned as a short. Any result that is out of range
    for a short is set to the missing value for a short (default = -99).
@@ -50,7 +52,7 @@ Description
 
 See Also
 
-   doubletofloat, doubletolong, doubletointeger, doubletobyte
+   totype, toshort, toushort, tobyte
 
 Examples
 
@@ -59,7 +61,7 @@ Examples
    Converts an array of doubles to shorts.
 
 begin
-  a = (/ 0d, 1d, 10d, 300d, -1d, 1.8d, 300.88d, 32800d, 68000d/)
+  a = (/ 0.d, 1.d, 10.d, 300.d, -1.d, 1.8d, 300.88d, 32800.d, 68000.d/)
   print (doubletoshort(a))
 end
 
@@ -89,7 +91,7 @@ begin
 ;  in the target variable.  For example, if -444.d were a
 ;  value in "a" below, it would become a missing value in "b".
 ;
-  a = (/ -1d, -2.d, 3.d/)
+  a = (/ -1.d, -2.d, 3.d/)
   a@_FillValue = 1.d40
   b = new(3,short,integertoshort(-444))
   b = doubletoshort(a)
@@ -102,7 +104,7 @@ begin
 ;  of the target variable if neither the original variable nor
 ;  the target variable has a missing value specified.
 ;
-  a = (/ -1d, 2.d, 3.d20/)
+  a = (/ -1.d, 2.d, 3.d20/)
   b = doubletoshort(a)
   print (b)
   delete(a)
@@ -114,7 +116,7 @@ begin
 ;  the range of the target variable and the target variable
 ;  has no missing value specified.
 ;
-  a = (/ -1d, 2.d, 3.d20/)
+  a = (/ -1.d, 2.d, 3.d20/)
   a@_FillValue = -444.d
   b = doubletoshort(a)
   print (b)
@@ -127,7 +129,7 @@ begin
 ;  original variable is out of the range of the target variable
 ;  and the target variable has no missing value specified.
 ;
-  a = (/ -1d, 2.d, 3.d20/)
+  a = (/ -1.d, 2.d, 3.d20/)
   a@_FillValue = 1.d50
   b = doubletoshort(a)
   print (b)
@@ -141,7 +143,7 @@ begin
 ;  of the original variable are retained in
 ;  the target variable.
 ;
-  a = (/ -1d, 2.d, -444.d/)
+  a = (/ -1.d, 2.d, -444.d/)
   a@_FillValue = -444.d
   b = doubletoshort(a)
   print (b)
@@ -158,7 +160,7 @@ begin
 ;  original variable are converted to the
 ;  missing value of the target variable.
 ;
-  a = (/ -1d, 2.d, -444.d/)
+  a = (/ -1.d, 2.d, -444.d/)
   a@_FillValue = -444.d
   b = new(3,short,integertoshort(-666))
   b = doubletoshort(a)
@@ -169,4 +171,4 @@ end
 
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

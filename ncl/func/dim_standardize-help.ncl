@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/dim_standardize.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/dim_standardize.shtml
 THE_TITLE:dim_standardize
    NCL Home > Documentation > Functions > General applied math
 
@@ -51,14 +51,16 @@ Examples
 
    Example 1: Let x be a 1-dimensional array: (a) Create a new variable, xNew, that contains standardized values; (b)
    replace the variable x with the standardized values. Use the population standard deviation.
-  xNew = dim_standardize(x, 0)    ; new variable
-  x    = dim_standardize(x, 0)    ; overwrite with deviations
+
+  xNew = dim_standardize(x, 1)    ; new variable
+  x    = dim_standardize(x, 1)    ; Or, overwrite with deviations
 
    Example 2: Let x be a 3-dimensional array with dimension sizes (ntim, nlat, nlon). Standardize values of the the
    rightmost (here, "nlon") dimension. Use the sample standard deviation.
-   xLon = dim_standardize (x,1)         ; new variable
-   xLon = dim_standardize_Wrap( x,1 )   ; with metadata
-   x       = dim_standardize (x,1)      ; overwrite with deviations
+
+   xLon = dim_standardize (x,0)         ; new variable
+   xLon = dim_standardize_Wrap( x,0 )   ; with metadata
+   x       = dim_standardize (x,0)      ; overwrite with deviations
 
    Example 3: Let x be a 3-dimensional array with named dimensions (time, lat, lon) and dimension sizes (ntim, nlat, nlon).
    Standardize the values of the time dimension at all lat/lon indices, use NCL's Named Subscripting to reorder the input
@@ -75,8 +77,9 @@ Examples
    Example 4: Let x be as in Example 3 and let x contain monthly means for (say) 10 years of data (ntim=120). Standardized
    monthly anomalies for each month could be calculated using array subscripting and Named Subscripting to reorder the input
    array such that "time" is the rightmost dimension. (opt=0 or 1)
+
    xJan  = dim_standardize_Wrap(x(lat|:, lon|:, time|0:ntim-1:12), opt)
    xJuly = dim_standardize_Wrap(x(lat|:, lon|:, time|6:ntim-1:12), opt)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

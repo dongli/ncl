@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/wrf_ll_to_ij.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/wrf_ll_to_ij.shtml
 THE_TITLE:wrf_ll_to_ij
    NCL Home > Documentation > Functions > WRF, Lat/Lon functions
 
@@ -113,12 +113,12 @@ Examples
    Example 4
 
    You can see another specific example of using wrf_user_ll_to_ij to get temperature at a specific location:
-   http://www.mmm.ucar.edu/wrf/OnLineTutorial/Graphics/NCL/Examples/SPECIAL/wrf_meteo_5.ncl
+   http://www2.mmm.ucar.edu/wrf/OnLineTutorial/Graphics/NCL/Examples/SPECIAL/wrf_meteo_5.ncl
      ____________________________________________________________________________________________________________________
 
    There are other example scripts and their resultant images at:
 
-     http://www.mmm.ucar.edu/wrf/OnLineTutorial/Graphics/NCL/
+     http://www2.mmm.ucar.edu/wrf/OnLineTutorial/Graphics/NCL/
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

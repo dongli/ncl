@@ -1,10 +1,10 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/chartolong.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/chartolong.shtml
 THE_TITLE:chartolong
    NCL Home > Documentation > Functions > Type converters
 
 chartolong
 
-   Coerces values of type character to values of NCL type long.
+   Coerces values of type character to values of NCL type long (deprecated; use tolong).
 
 Prototype
 
@@ -29,6 +29,8 @@ Description
    This function converts an ASCII character (or characters) to its decimal equivalent and returns that as an NCL long. For
    example, conversion of the ASCII character 'a' yields the value 97 as an NCL long.
 
+   Note: this function and other xxxtolong functions have been superceded by tolong.
+
    This function performs coercion that is not automatically available through the NCL grammar. See the section on coercion
    of types for details on NCL's automatic type conversions.
 
@@ -41,7 +43,7 @@ Description
 
 See Also
 
-   charactertolong, charactertofloat, charactertointeger, charactertoshort, charactertodouble
+   totype, tolong, toulong, toint64, touint64
 
 Examples
 
@@ -111,4 +113,4 @@ begin
 end
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

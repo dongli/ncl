@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/ndctodata.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/ndctodata.shtml
 THE_TITLE:ndctodata
    NCL Home > Documentation > Functions > Type converters
 
@@ -115,4 +115,4 @@ end
 (9)     data: (180,30) original data: (180,30)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

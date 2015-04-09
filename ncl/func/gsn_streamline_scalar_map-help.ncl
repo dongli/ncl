@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Graphics/Interfaces/gsn_streamline_scalar_map.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Graphics/Interfaces/gsn_streamline_scalar_map.shtml
 THE_TITLE:gsn_streamline_scalar_map
    NCL Home > Documentation > Graphics > Graphical Interfaces
 
@@ -51,15 +51,16 @@ Description
    This function creates and draws a streamline plot over a map on the given workstation, and colors the streamlines given a
    scalar field. If u, v, or data have a _FillValue attribute, these values will be used as missing values.
 
-   Caveat: There's no equivalent "gsn_csm_streamline_scalar_map" function.
-
    To maximize the area that the streamline plot is drawn in, set the special resource gsnMaximize to True.
 
    In NCL V6.1.0, this function was updated to automatically create a labeblar if stMonoLineColor is set to False.
 
 See Also
 
-   gsn_streamline_scalar, gsn_streamline_map, gsn_streamline
+   gsn_csm_streamline, gsn_csm_streamline_scalar, gsn_csm_streamline_contour_map, gsn_csm_streamline_contour_map_polar,
+   gsn_csm_streamline_map, gsn_csm_streamline_scalar_map, gsn_csm_streamline_scalar_map_polar, gsn_csm_streamline_map_polar,
+   gsn_streamline, gsn_streamline_scalar, gsn_streamline_map, gsn_csm_pres_hgt_streamline
+
    Special gsn resources
 
 Examples
@@ -67,4 +68,4 @@ Examples
    For some application examples, see the suite of streamline examples.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

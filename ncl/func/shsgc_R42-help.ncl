@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/shsgc_R42.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/shsgc_R42.shtml
 THE_TITLE:shsgc_R42
    NCL Home > Documentation > Functions > Spherical harmonic routines
 
@@ -100,4 +100,4 @@ Examples
   x      = shsgc_R42_Wrap(a,b)      ; x(108,128)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

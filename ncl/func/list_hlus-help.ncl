@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/list_hlus.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/list_hlus.shtml
 THE_TITLE:list_hlus
    NCL Home > Documentation > Functions > NCL object routines
 
@@ -67,4 +67,4 @@ Variable: wks
         gsn_csm_y       ncgmWorkstationClass
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

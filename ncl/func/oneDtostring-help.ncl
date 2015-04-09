@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/oneDtostring.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/oneDtostring.shtml
 THE_TITLE:oneDtostring
    NCL Home > Documentation > Functions > String manipulation
 
@@ -48,4 +48,4 @@ Attributes: 1 _FillValue : missing
 (0) 1960,1969,1980,1989
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

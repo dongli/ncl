@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/mixhum_ptrh.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/mixhum_ptrh.shtml
 THE_TITLE:mixhum_ptrh
    NCL Home > Documentation > Functions > Meteorology
 
@@ -43,6 +43,8 @@ Description
    Calculates the mixing ratio or specific humidity given pressure, dew point temperature, and relative humidity. missing
    values are allowed but ignored.
 
+   Note: a bug was fixed in V6.2.1 in which this function wasn't properly recognizing negative "iswit" values.
+
 See Also
 
    mixhum_ptd
@@ -57,8 +59,11 @@ Examples
   tk =   18. + 273.15  ; K
   rh =   46.5          ; %
 
-  q = mixhum_ptrh (p, tk, rh, 2) ; q = 5.9e-3 (kg/kg)
-  q = mixhum_ptrh (p, tk, rh,-2) ; q = 5.9    ( g/kg)
+  q = mixhum_ptrh (p, tk, rh, 1) ; q = 0.006018462 (kg/kg)
+  q = mixhum_ptrh (p, tk, rh,-1) ; q = 6.018462    ( g/kg)
+
+  q = mixhum_ptrh (p, tk, rh, 2) ; q = 0.005982457 (kg/kg)
+  q = mixhum_ptrh (p, tk, rh,-2) ; q = 5.982456    ( g/kg)
 
    Example 2
 
@@ -93,4 +98,4 @@ Examples
 ; q(ntim,nlvl,nlat,mlon)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

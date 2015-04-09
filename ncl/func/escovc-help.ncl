@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/escovc.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/escovc.shtml
 THE_TITLE:escovc
    NCL Home > Documentation > Functions > General applied math
 
@@ -39,13 +39,13 @@ Description
 
    The dimension sizes(s) of c are a function of the dimension sizes of the x and y arrays. The following illustrates
    dimensioning:
-        x(N), y(N)          c(mxlag)
-        x(N), y(K,M,N)      c(K,M,mxlag)
-      x(I,N), y(K,M,N)      c(I,K,M,mxlag)
-    x(J,I,N), y(L,K,M,N)    c(J,I,L,K,M,mxlag)
+        x(N), y(N)          a scalar
+        x(N), y(K,M,N)      c(K,M)
+      x(I,N), y(K,M,N)      c(I,K,M)
+    x(J,I,N), y(L,K,M,N)    c(J,I,L,K,M)
 
    special case when dimensions of all x and y are identical:
-    x(J,I,N), y(J,I,N)      c(J,I,mxlag)
+    x(J,I,N), y(J,I,N)      c(J,I)
 
 See Also
 
@@ -60,8 +60,8 @@ Examples
 
    Example 2
 
-   The following will calculate the cross-covariance for one two-dimensional array y(lat,lon) and one one-dimensional array
-   x(time).
+   The following will calculate the cross-covariance for one two-dimensional array y(lat,lon,time) and one one-dimensional
+   array x(time).
      ccv = escovc(x,y)    ; ccv(lat,lon)
 
    Example 3
@@ -70,4 +70,4 @@ Examples
      ccv = escovc(x,y)    ; ccv(neval,lat,lon)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

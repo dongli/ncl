@@ -1,6 +1,6 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/dssetp.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/dssetp.shtml
 THE_TITLE:dssetp
-   NCL Home > Documentation > Functions > Interpolation
+   NCL Home > Documentation > Functions > Interpolation, Ngmath routines
 
 dssetp
 
@@ -64,9 +64,9 @@ begin
 ; Exponent equals 0.5
 ;
   dssetp("exp", 0.5)
-  output = dsgrid2s(xi, yi, zi, xo, yo)
+  output = dsgrid2(xi, yi, zi, xo, yo)
 end
 
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

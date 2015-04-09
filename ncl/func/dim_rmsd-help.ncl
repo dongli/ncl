@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/dim_rmsd.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/dim_rmsd.shtml
 THE_TITLE:dim_rmsd
    NCL Home > Documentation > Functions > General applied math
 
@@ -62,7 +62,7 @@ Examples
     rmsdLon= dim_rmsd( x,y )    ; ==> rmsdLon(ntim,nlat)
 
    Generally, users prefer that the returned variable have metadata associated with it. This can be accomplished via the
-   dim_rmsd_Wrap function
+   dim_rmsd_Wrap function:
     rmsdLon = dim_rmsd_Wrap( x,y )    ; ==> rmsdLon(time,lat)
 
    Example 3
@@ -81,4 +81,4 @@ Examples
     rmsdTime = dim_rmsd_n_Wrap( x, y, 0 )                                      ; no reordering needed
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

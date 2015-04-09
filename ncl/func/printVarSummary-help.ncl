@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/printVarSummary.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/printVarSummary.shtml
 THE_TITLE:printVarSummary
    NCL Home > Documentation > Functions > Printing
 
@@ -81,4 +81,4 @@ Number of variables: 5
    variable, use the print procedure.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

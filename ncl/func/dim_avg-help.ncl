@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/dim_avg.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/dim_avg.shtml
 THE_TITLE:dim_avg
    NCL Home > Documentation > Functions > General applied math
 
@@ -57,7 +57,7 @@ Examples
 
    Generally, users prefer that the returned variable have metadata associated with it. This can be accomplished via the
    dim_avg_Wrap function:
-    zAvgLon = dim_avg_Wrap( x )    ; ==> zAvgLon(time,lat)
+    zAvgLon = dim_avg_Wrap( z )    ; ==> zAvgLon(time,lat)
 
    Example 3
 
@@ -76,4 +76,4 @@ Examples
     zAvgTime = dim_avg_n_Wrap( z, 0 )                     ; no reordering needed
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

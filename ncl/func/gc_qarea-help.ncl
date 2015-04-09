@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/gc_qarea.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/gc_qarea.shtml
 THE_TITLE:gc_qarea
    NCL Home > Documentation > Functions > Lat/Lon functions
 
@@ -67,4 +67,4 @@ Examples
 (0)     The area of a hemisphere = 6.28319 (2*pi)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/yyyyddd_to_yyyymmdd.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/yyyyddd_to_yyyymmdd.shtml
 THE_TITLE:yyyyddd_to_yyyymmdd
    NCL Home > Documentation > Functions > Date routines
 
@@ -55,4 +55,4 @@ Examples
 
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

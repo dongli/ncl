@@ -1,10 +1,10 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/bin_avg.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/bin_avg.shtml
 THE_TITLE:bin_avg
    NCL Home > Documentation > Functions > Regridding, Interpolation, Lat/Lon functions
 
 bin_avg
 
-   Calculates gridded binned averages and counts using randomly spaced data.
+   Calculates gridded binned averages and counts on a rectilinear grid using randomly spaced data.
 
 Prototype
 
@@ -40,9 +40,9 @@ Arguments
 
 Return value
 
-   A grid of the size defined by glon and glat. The leftmost dimension will be size two (2). (See Example 1). The grid
-   spacing must be equally spaced: eg: 1x1, 2x4, etc. The output array will be of type double if any of the input is double,
-   and of type float otherwise.
+   A rectilinear grid of the size defined by glon and glat. The leftmost dimension will be size two (2). (See Example 1).
+   The grid spacing must be equally spaced: eg: 1x1, 2x4, etc. The output array will be of type double if any of the input
+   is double, and of type float otherwise.
 
 Description
 
@@ -50,6 +50,10 @@ Description
    advantage of the fact the latitude and longitude grid spacing is required to be constant. As noted in the argument
    description, the spacing in the latitude and longitude directions need not be equal. The appropriate grid point
    subscripts are determined via a simple algorithm.
+
+   Note: There was a bug in this routine in NCL versions 6.2.1 and earlier where the binning was done incorrectly if the
+   observation locations were outside the region spanned by the user provided grid. This function wasn't explicitly checking
+   for this situation.
 
 See Also
 
@@ -69,4 +73,4 @@ Examples
    Sometimes there are gaps in the returned array. If none are desired, then one approach would be to use poisson_grid_fill.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

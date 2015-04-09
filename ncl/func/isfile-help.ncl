@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/isfile.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/isfile.shtml
 THE_TITLE:isfile
    NCL Home > Documentation > Functions > File IO
 
@@ -28,8 +28,8 @@ Description
 See Also
 
    Logical functions:
-   isbyte, ischar, isdouble, isenumeric, isfile, isfloat, isgraphic, isint, isint64, isinteger, islogical, islong,
-   isnumeric, isshort, issnumeric, isstring, isubyte, isuint, isuint64, isulong, isushort, isunsigned
+   fileexists, isbyte, ischar, isdouble, isenumeric, isfile, isfloat, isgraphic, isint, isint64, isinteger, islogical,
+   islong, isnumeric, isshort, issnumeric, isstring, isubyte, isuint, isuint64, isulong, isushort, isunsigned
 
    Conversion functions:
    tobyte, tochar, todouble, tofloat, toint, toint64, tointeger, tolong, toshort, tosigned, tostring, toubyte, touint,
@@ -177,4 +177,4 @@ Examples
   print(issnumeric(ui64))
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

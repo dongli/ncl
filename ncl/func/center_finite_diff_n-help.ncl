@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/center_finite_diff_n.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/center_finite_diff_n.shtml
 THE_TITLE:center_finite_diff_n
    NCL Home > Documentation > Functions > General applied math
 
@@ -139,4 +139,4 @@ Examples
    The arrays are 'temporarily' reduced to 3D and the longitude dimension number is 2, not 3.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

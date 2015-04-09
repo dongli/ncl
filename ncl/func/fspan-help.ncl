@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/fspan.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/fspan.shtml
 THE_TITLE:fspan
    NCL Home > Documentation > Functions > Array creators
 
@@ -26,7 +26,9 @@ Arguments
    Value at which to end.
    npts
 
-   Number of equally-spaced points desired between start and finish.
+   Number of equally-spaced points desired between start and finish. This value must be >= 2.
+
+   See note below about a bug if npts=1.
 
    In version 6.0.0, this function will be upgraded to allow npts to be of any signed integral type (byte, short, int, long,
    int64).
@@ -37,6 +39,9 @@ Description
 
    If start or finish are of type double, both start and finish are promoted to type double. If start or finish are of any
    other numeric type, both start and finish are promoted to type float.
+
+   Bug note: In NCL V6.2.0 and earlier, if you set npts = 1, you will get back a value of zero and no warning or error. This
+   is considered a bug, and in V6.2.1 this will produce an appropriate error.
 
 See Also
 
@@ -71,4 +76,4 @@ Examples
   x = fspan (start, finish, npts)  ; array with 2^32 elements
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

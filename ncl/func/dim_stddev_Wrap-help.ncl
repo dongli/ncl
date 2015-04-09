@@ -1,11 +1,10 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/dim_stddev_Wrap.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/dim_stddev_Wrap.shtml
 THE_TITLE:dim_stddev_Wrap
    NCL Home > Documentation > Functions > General applied math
 
 dim_stddev_Wrap
 
-   Computes the population standard deviation of a variable's rightmost dimension at all other dimensions and retains
-   metadata.
+   Computes the sample standard deviation of a variable's rightmost dimension at all other dimensions and retains metadata.
 
 Prototype
 
@@ -32,11 +31,11 @@ Return value
 
 Description
 
-   The dim_stddev_Wrap function computes the population standard deviation of all elements of the n-1 dimension for each
-   index of the dimensions 0...n-2 and retains metadata. A wrapper function. Missing values are ignored.
+   The dim_stddev_Wrap function computes the sample standard deviation of all elements of the n-1 dimension for each index
+   of the dimensions 0...n-2 and retains metadata. A wrapper function. Missing values are ignored.
 
-   Technically, this function calculates the population standard deviation. This means that it divides by by one less than
-   the total number of non-missing values (1/(N-1)).
+   Technically, this function calculates the sample standard deviation. This means that it divides by by one less than the
+   total number of non-missing values (1/(N-1)).
 
    Use dim_stddev_n_Wrap if you want to specify which dimensions to do the calculation across.
 
@@ -49,7 +48,7 @@ Examples
 
    Example 1
 
-   Create a variable q of size (3,5,10) array. Then calculate the population standard deviation of the rightmost dimension.
+   Create a variable q of size (3,5,10) array. Then calculate the sample standard deviation of the rightmost dimension.
     q   = random_uniform(-20,100,(/3,5,10/))
     qStd= dim_stddev(q)   ;==>  qStd(3,5)
 
@@ -80,4 +79,4 @@ Examples
     xStdTime = dim_stddev_n_Wrap( x, 0 )                     ; no reordering needed
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

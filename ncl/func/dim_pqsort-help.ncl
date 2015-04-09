@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/dim_pqsort.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/dim_pqsort.shtml
 THE_TITLE:dim_pqsort
    NCL Home > Documentation > Functions > General applied math
 
@@ -67,8 +67,8 @@ ip = dim_pqsort(x, -2)
    Define ip = dim_pqsort(x, 1) (ascending order, do not sort x) and it is desired to reorder a different array (say, y)
    using the permutation vector associated with x. Assume y(ntim, nlat, mlon) with named dimensions and coordinate variables
    "time", "lat" and "lon". Then:
-  y2 = y                ; create yNew with attribute, coordinate values
-  y2 = y(ip, :, :)      ; yNew will contain the values of "y"
+  y2 = y                ; create y2 with attribute, coordinate values
+  y2 = y(ip, :, :)      ; y2 will contain the values of "y"
                         ; rearranged according to the permutation
                         ; vector associated with x.
   y2&time = y&time(ip)  ; reorder the time coordinate variable
@@ -90,7 +90,7 @@ ip = dim_pqsort(x, -2)
   ip   = dim_pqsort(xtmp, 2) ; ===> ip(nlat, mlon, ntim)
   x    = xtmp(time|:, lat|:, lon|:)
 
-   Or, preferrably, just use dim_pqsort_n:
+   Or, preferably, just use dim_pqsort_n:
 
   ip = dim_pqsort_n(x, 2, 0)                  ; no reordering needed
 
@@ -130,4 +130,4 @@ ip = dim_pqsort(x, -2)
 [SNIP]
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

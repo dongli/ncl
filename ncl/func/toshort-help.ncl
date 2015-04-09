@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/toshort.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/toshort.shtml
 THE_TITLE:toshort
    NCL Home > Documentation > Functions > Type converters
 
@@ -46,7 +46,7 @@ Description
 
 See Also
 
-   tochar tobyte toshort toushort toint touint tolong toulong toint64 touint64 tostring
+   tochar tobyte toshort toushort toint touint tolong toulong toint64 touint64 tostring totype
 
 Examples
 
@@ -129,4 +129,4 @@ warning:There are 2 unsigned int larger than SHRT_MAX, which has been flagged mi
 (1,1)   -99
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

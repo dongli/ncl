@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/NhlName.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/NhlName.shtml
 THE_TITLE:NhlName
    NCL Home > Documentation > Functions > NCL object routines
 
@@ -70,4 +70,4 @@ begin
   print(NhlName(text))   ; Should be "text1".
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

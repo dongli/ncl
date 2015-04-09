@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/dim_rmvmean_n.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/dim_rmvmean_n.shtml
 THE_TITLE:dim_rmvmean_n
    NCL Home > Documentation > Functions > General applied math
 
@@ -70,7 +70,7 @@ Examples
 
    Example 4:
 
-   Let x be a 3-dimensional array with named dimensions (time, lev, lat, lon) and dimension sizes (ntim, nlev, nlat, nlon).
+   Let x be a 4-dimensional array with named dimensions (time, lev, lat, lon) and dimension sizes (ntim, nlev, nlat, nlon).
    To remove the mean of the time/level dimensions from all lat/lon indices:
    xRmv = dim_rmvmean_n(x,(/0,1/))
    xRmv = dim_rmvmean_n_Wrap(x,(/0,1/))
@@ -83,4 +83,4 @@ Examples
    xRmvJuly = dim_rmvmean_n_Wrap(x(6:ntim-1:12,:,:),0)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

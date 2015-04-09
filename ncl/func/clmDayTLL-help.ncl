@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/clmDayTLL.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/clmDayTLL.shtml
 THE_TITLE:clmDayTLL
    NCL Home > Documentation > Functions > Climatology
 
@@ -77,10 +77,10 @@ load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/contributed.ncl"
 ; Read time and create required yyyyddd
 ;***********************************************************
    time    = f->time                          ; time:units = "hours since 1-1-1 00:00:0.0"
-   TIME    = ut_calendar(time, 0)          ; type float
-   year    = floattointeger( TIME(:,0) )
-   month   = floattointeger( TIME(:,1) )
-   day     = floattointeger( TIME(:,2) )
+   TIME    = cd_calendar(time, 0)          ; type float
+   year    = toint( TIME(:,0) )
+   month   = toint( TIME(:,1) )
+   day     = toint( TIME(:,2) )
    ddd     = day_of_year(year, month, day)
    yyyyddd = year*1000 + ddd                                  ; needed for input
 ;***********************************************************
@@ -125,4 +125,4 @@ Number Of Attributes: 4
   smoothing :   None
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

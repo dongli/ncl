@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/lclvl.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/lclvl.shtml
 THE_TITLE:lclvl
    NCL Home > Documentation > Functions > Meteorology
 
@@ -60,4 +60,4 @@ Examples
   plcl = lclvl(p,tk,tdk)   ; plcl(time,lat,lon)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

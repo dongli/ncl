@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Diagnostics/mjo_xcor_lag_ovly_panel.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Diagnostics/mjo_xcor_lag_ovly_panel.shtml
 THE_TITLE:mjo_xcor_lag_ovly_panel
    NCL Home > Documentation > Functions > CESM
 
@@ -79,4 +79,4 @@ Examples
    See Example 9 of the Madden-Julian Oscillation web page.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

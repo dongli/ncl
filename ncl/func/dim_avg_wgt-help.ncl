@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/dim_avg_wgt.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/dim_avg_wgt.shtml
 THE_TITLE:dim_avg_wgt
    NCL Home > Documentation > Functions > General applied math
 
@@ -82,11 +82,11 @@ Examples
 
    Let T(time,lev,lat,lon). Compute the weighted vertical average total at each time/lat/lon point. Use dimension reordering
    to make level the rightmost dimension.
-    delp = (/50,50,100,100,100,50,25,10/)  ; same size as dimension "lev"
+    wgt  = (/50,50,100,100,100,50,25,10/)  ; same size as dimension "lev"
 
     Tavg = dim_avg_wgt( T(time|:,lat|:,lon|:,lev|:), wgt, 0 )   ; ==> Tavg(time,lat,lon)
 
     Tavg = dim_avg_wgt_n( T, wgt, 0, 1 )   ; no reordering needed
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

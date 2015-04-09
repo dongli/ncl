@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Graphics/Interfaces/gsn_draw_named_colors.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Graphics/Interfaces/gsn_draw_named_colors.shtml
 THE_TITLE:gsn_draw_named_colors
    NCL Home > Documentation > Graphics > Graphical Interfaces
 
@@ -38,31 +38,46 @@ Description
 
 See Also
 
-   gsn_draw_colormap, gsn_define_colormap, gsn_reverse_colormap, gsn_retrieve_colormap, gsn_merge_colormaps,
-   span_named_colors, namedcolor2rgb
+   draw_color_palette, gsn_draw_colormap, gsn_define_colormap, gsn_reverse_colormap, gsn_retrieve_colormap,
+   gsn_merge_colormaps, span_named_colors, namedcolor2rgb
 
 Examples
 
+   Example 1
+
+   This example draws the a set of named colors.
+
 load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/gsn_code.ncl"
 
-begin
-  wks = gsn_open_wks("ncgm","gsn_draw_named_colors")
+wks = gsn_open_wks("x11","named_colors")
 
-  colors = (/"white", "black", "PeachPuff", "MintCream", "SlateBlue",  \
-             "Khaki", "OliveDrab","BurlyWood", "LightSalmon", "Coral", \
-             "HotPink", "LemonChiffon", "AliceBlue", "LightGrey",      \
-             "MediumTurquoise", "DarkSeaGreen", "Peru", "Tomato",      \
-             "Orchid","PapayaWhip"/)
+colors = (/"white", "black", "PeachPuff", "MintCream", "SlateBlue",  \
+           "Khaki", "OliveDrab","BurlyWood", "LightSalmon", "Coral", \
+           "HotPink", "LemonChiffon", "AliceBlue", "LightGrey",      \
+           "MediumTurquoise", "DarkSeaGreen", "Peru", "Tomato",      \
+           "Orchid","PapayaWhip"/)
 
-  rows = 4
-  cols = 5
-  gsn_draw_named_colors(wks,colors,(/rows,cols/))  ; Draw the named colors.
-end
+rows = 4
+cols = 5
+gsn_draw_named_colors(wks,colors,(/rows,cols/))  ; Draw the named colors.
 
-   For some application examples, see:
-     * "color_17.ncl" (view example)
+   Example 2
 
-   See also the suite of color examples.
+   This draws the same set of named colors using draw_color_palette, which was added in NCL V6.3.0:
+
+load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/gsn_code.ncl"
+
+wks = gsn_open_wks("x11","named_colors")
+
+colors = (/"white", "black", "PeachPuff", "MintCream", "SlateBlue",  \
+           "Khaki", "OliveDrab","BurlyWood", "LightSalmon", "Coral", \
+           "HotPink", "LemonChiffon", "AliceBlue", "LightGrey",      \
+           "MediumTurquoise", "DarkSeaGreen", "Peru", "Tomato",      \
+           "Orchid","PapayaWhip"/)
+
+draw_color_palette(wks,colors,False)  ; Draw the named colors.
+
+   See also the suite of color and color map examples.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

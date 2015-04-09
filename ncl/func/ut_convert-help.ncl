@@ -1,10 +1,10 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/ut_convert.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/ut_convert.shtml
 THE_TITLE:ut_convert
    NCL Home > Documentation > Functions > Date routines
 
 ut_convert
 
-   Converts a time variable from one set of units to another.
+   Converts a time variable from one set of units to another (deprecated; use cd_convert).
 
 Prototype
 
@@ -43,10 +43,11 @@ Return value
 
 Description
 
+   Unidata no longers supports the internal code that ut_convert is based on. We therefore strongly recommend that you use
+   the cd_convert function instead.
+
    This function converts dateFrom from its original Julian/Gregorian units to the new specified units, using the built-in
    functions ut_calendar and ut_inv_calendar.
-
-   For support for more calendaring systems, use cd_convert.
 
    If the input data does not contain a units attribute, then an error message will be printed and all missing values will
    be returned.
@@ -83,7 +84,7 @@ Description
 
 See Also
 
-   cd_convert, ut_calendar, ut_inv_calendar
+   cd_convert, cd_string, cd_calendar, cd_inv_calendar
 
 Examples
 
@@ -130,4 +131,4 @@ Number Of Attributes: 1
   overlay( contour1, contour2 )
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

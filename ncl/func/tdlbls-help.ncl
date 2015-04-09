@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/tdlbls.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/tdlbls.shtml
 THE_TITLE:tdlbls
    NCL Home > Documentation > Functions > Graphics routines
 
@@ -75,4 +75,4 @@ Examples
    See examples 4 and 6 in the "three-dimensional graphics applications page.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

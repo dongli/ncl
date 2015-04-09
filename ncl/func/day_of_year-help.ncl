@@ -1,10 +1,11 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/day_of_year.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/day_of_year.shtml
 THE_TITLE:day_of_year
    NCL Home > Documentation > Functions > Date routines
 
 day_of_year
 
-   Calculates the day of the year given month, day, and year.
+   Calculates the day of the year (sometimes erroneously referred to as 'julian day') given Gregorian calendar month, day,
+   and year.
 
 Prototype
 
@@ -30,11 +31,20 @@ Arguments
 
 Return value
 
-   A integer array of the same size as year where each value represents the day of the year.
+   A integer array of the same size as year where each value represents the day of the year. NOTE: This is not the same as
+   the classic Julian day as returned by greg2jul.
 
 Description
 
-   This function calculates the day of the year given month, day, and year.
+   This function calculates the day of the year given month, day, and year (Gregorian calendar).
+
+   The following is from here:
+     * The day of year is often but erroneously called Julian Date, when in fact it is a Gregorian Date expressed as number
+       of days in the year. This is a grossly misleading practice that was introduced by some who were simply ignorant and
+       too careless to learn the proper terminology. It creates a confusion which should not be taken lightly. Moreover, a
+       continuation of the use of expressions "Julian" or "J" day in the sense of a Gregorian Date will make matters even
+       worse. It will inevitably lead to dangerous mistakes, increased confusion, and it will eventually destroy whatever
+       standard practices exist.
 
    In V6.1.0, this function was upgraded to look for a "calendar" attribute attached to the "year" variable. Valid calendars
    include:
@@ -87,4 +97,4 @@ year@calendar = "360"
 doy = day_of_year(year,month,day)  ; doy = (/61,61,61/)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

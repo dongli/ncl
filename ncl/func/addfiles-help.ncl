@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/addfiles.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/addfiles.shtml
 THE_TITLE:addfiles
    NCL Home > Documentation > Functions > File IO
 
@@ -103,7 +103,7 @@ Description
   T = f->T(:,0:5,:,:)
 
        In contrast, variables aggregated across multiple files opened using the addfiles function are accessed using square
-       brackets to reference the file list elements. The syntax look like this:
+       brackets to reference the file list elements. The syntax looks like this:
   T_agg = f[:]->T(:,0:5,:,:)
 
        Note that integer subscripting can be applied inside the square brackets to define a subset of the file list:
@@ -293,4 +293,4 @@ Examples
      long_name :   temperature
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

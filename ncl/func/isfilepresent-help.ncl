@@ -1,10 +1,10 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/isfilepresent.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/isfilepresent.shtml
 THE_TITLE:isfilepresent
-   NCL Home > Documentation > Functions > File IO
+   NCL Home > Documentation > Functions > File IO, System tools
 
 isfilepresent
 
-   Checks if a file exists.
+   Checks if a supported file exists.
 
 Prototype
 
@@ -18,8 +18,8 @@ Arguments
 
    file_path
 
-   A scalar string or a multi-dimensional array of strings containing the full or relative path to data files (Unix pathname
-   string) for which to check presence on the filesystem.
+   A scalar string or a multi-dimensional array of strings containing the full or relative path to supported data files
+   (Unix pathname string) for which to check presence on the filesystem.
 
 Return value
 
@@ -27,12 +27,16 @@ Return value
 
 Description
 
-   The function isfilepresent returns True for every element of file_path that is present on the filesystem, and False if
-   not.
+   The function isfilepresent returns True for every element of file_path that is present and a supported file format, and
+   False if not.
+
+   Note about backwards-incompatible change: as of NCL V6.2.1, this function will only return True if the file is present
+   and it is a supported format recognized by addfile. To check for the existence of any other kind of file, use the new
+   fileexists function.
 
 See Also
 
-   isfile
+   fileexists isfile
 
 Examples
 
@@ -93,4 +97,4 @@ begin
 end
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/str_match_ic.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/str_match_ic.shtml
 THE_TITLE:str_match_ic
    NCL Home > Documentation > Functions > String manipulation
 
@@ -11,32 +11,33 @@ str_match_ic
 Prototype
 
         function str_match_ic (
-                string_val [*] : string,
-                expression [1] : string
+                string_array [*] : string,
+                sub_string   [1] : string
         )
 
         return_val [*] :  string
 
 Arguments
 
-   string_val
+   string_array
 
    A string array of any dimensionality.
-   expression
+   sub_string
 
-   The string expression to be matched.
+   The substring to be matched.
 
 Description
 
-   This function returns an array of strings with every occurrence of expression matched in string_val.
+   This function returns an array of strings with every occurrence of sub_string matched in string_array.
 
-   If there is no expression matched in string_val, the default string missing value ("missing") will be returned.
+   If there is no sub_string matched in string_array, the default string missing value ("missing") will be returned.
 
-   Please note that str_match_ic is case INSENSITIVE. If you need case sensitivity, use str_match.
+   Note that str_match_ic is case INSENSITIVE. Use str_match if you need case sensitivity.
 
 See Also
 
-   str_index_of_substr, str_sub_str, str_match, str_match_ind, str_match_ind_ic
+   str_index_of_substr, str_sub_str, str_match, str_match_regex, str_match_ic_regex, str_match_ind_regex,
+   str_match_ind_ic_regex str_match_ind, str_match_ind_ic
 
 Examples
 
@@ -59,4 +60,4 @@ Examples
 ;(2)     str_match_ic(s,"linux") = linux
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

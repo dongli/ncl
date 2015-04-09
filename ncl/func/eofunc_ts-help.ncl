@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/eofunc_ts.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/eofunc_ts.shtml
 THE_TITLE:eofunc_ts
    NCL Home > Documentation > Functions > Empirical orthogonal functions
 
@@ -58,7 +58,7 @@ Description
   r01 = escorc(eof_ts(0,:), eof_ts(1,:))
   r12 = escorc(eof_ts(1,:), eof_ts(2,:))
   r02 = escorc(eof_ts(0,:), eof_ts(2,:))
-  print("r01="+r01+"  r12="+r12+"  r02="+r02)   ; numbers me be +/- 1e-8
+  print("r01="+r01+"  r12="+r12+"  r02="+r02)   ; numbers may be +/- 1e-8
 
 
 See Also
@@ -151,4 +151,4 @@ Examples
   evec_ts = eofunc_ts(ptw,evec,False)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

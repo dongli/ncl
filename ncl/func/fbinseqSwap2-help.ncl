@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/fbinseqSwap2.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/fbinseqSwap2.shtml
 THE_TITLE:fbinseqSwap2
    NCL Home > Documentation > Functions > File IO
 
@@ -57,4 +57,4 @@ Examples
    fbinseqSwap2("foo.input", "foo.output", "float",  N)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/rmInsufData.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/rmInsufData.shtml
 THE_TITLE:rmInsufData
    NCL Home > Documentation > Functions > General applied math
 
@@ -48,4 +48,4 @@ Description
    y = rmInsufData(y,0.75)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

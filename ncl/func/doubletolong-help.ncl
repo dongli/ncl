@@ -1,10 +1,10 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/doubletolong.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/doubletolong.shtml
 THE_TITLE:doubletolong
    NCL Home > Documentation > Functions > Type converters
 
 doubletolong
 
-   Coerces values of type double to values of type long.
+   Coerces values of type double to values of type long (deprecated; use tolong).
 
 Prototype
 
@@ -35,7 +35,9 @@ Description
        -1.9 is truncated to -1
        -1.1 is truncated to -1
         2.1 is truncated to 2
-       2.9 is truncated to 2.
+        2.9 is truncated to 2.
+
+   Note: this function and other xxxtolong functions have been superceded by tolong.
 
    On most machines longs are 32-bit quantities, the same as integers. On 64-bit machines, longs are sometimes 64-bit
    quantities.
@@ -56,7 +58,7 @@ Description
 
 See Also
 
-   doubletofloat, doubletointeger, doubletoshort, doubletobyte
+   totype, tolong, toulong, toint64
 
 Examples
 
@@ -95,7 +97,7 @@ begin
 ;  in the target variable.  For example, if -444.d were a
 ;  value in "a" below, it would become a missing value in "b".
 ;
-  a = (/ -1d, -2.d, 3.d/)
+  a = (/ -1.d, -2.d, 3.d/)
   a@_FillValue = 1.d40
   b = new(3,long)
   b@_FillValue = -444
@@ -109,7 +111,7 @@ begin
 ;  of the target variable if neither the original variable nor
 ;  the target variable has a missing value specified.
 ;
-  a = (/ -1d, 2.d, 3.d20/)
+  a = (/ -1.d, 2.d, 3.d20/)
   b = doubletolong(a)
   print (b)
   delete(a)
@@ -121,7 +123,7 @@ begin
 ;  the range of the target variable and the target variable
 ;  has no missing value specified.
 ;
-  a = (/ -1d, 2.d, 3.d20/)
+  a = (/ -1.d, 2.d, 3.d20/)
   a@_FillValue = -444.d
   b = doubletolong(a)
   print (b)
@@ -134,7 +136,7 @@ begin
 ;  original variable is out of the range of the target variable
 ;  and the target variable has no missing value specified.
 ;
-  a = (/ -1d, 2.d, 3.d20/)
+  a = (/ -1.d, 2.d, 3.d20/)
   a@_FillValue = 1.d50
   b = doubletolong(a)
   print (b)
@@ -148,7 +150,7 @@ begin
 ;  of the original variable are retained in
 ;  the target variable.
 ;
-  a = (/ -1d, 2.d, -444.d/)
+  a = (/ -1.d, 2.d, -444.d/)
   a@_FillValue = -444.d
   b = doubletolong(a)
   print (b)
@@ -165,7 +167,7 @@ begin
 ;  original variable are converted to the
 ;  missing value of the target variable.
 ;
-  a = (/ -1d, 2.d, -444.d/)
+  a = (/ -1.d, 2.d, -444.d/)
   a@_FillValue = -444.d
   b = new(3,long,-666)
   b = doubletolong(a)
@@ -176,4 +178,4 @@ end
 
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

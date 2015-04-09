@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/isStrSubset.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/isStrSubset.shtml
 THE_TITLE:isStrSubset
    NCL Home > Documentation > Functions > String manipulation
 
@@ -83,4 +83,4 @@ Examples
    end do
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

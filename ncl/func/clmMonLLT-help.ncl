@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/clmMonLLT.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/clmMonLLT.shtml
 THE_TITLE:clmMonLLT
    NCL Home > Documentation > Functions > Climatology
 
@@ -71,4 +71,4 @@ Number Of Attributes: 7
   _FillValue :  -999
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

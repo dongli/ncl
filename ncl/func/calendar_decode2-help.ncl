@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/User_contributed/calendar_decode2.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/User_contributed/calendar_decode2.shtml
 THE_TITLE:calendar_decode2
    NCL Home > Documentation > Functions > Date routines
 
@@ -152,4 +152,4 @@ See Also
    cd_calendar, cd_inv_calendar, ut_calendar, ut_inv_calendar
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

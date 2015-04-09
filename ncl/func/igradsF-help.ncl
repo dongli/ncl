@@ -1,19 +1,18 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/igradsF-1.shtml
-THE_TITLE:igradsF
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/igradsf.shtml
+THE_TITLE:igradsf
    NCL Home > Documentation > Functions > Spherical harmonic routines
 
-igradsF
+igradsf
 
    Computes a scalar array from its gradient components on a fixed grid using spherical harmonics.
 
 Prototype
 
-        function igradsF (
+        procedure igradsf (
                 gzx  : numeric,
-                gzy  : numeric
+                gzy  : numeric,
+                z    : float     ; or double
         )
-
-        return_val [dimsizes(gzx)] :  float or double
 
 Arguments
 
@@ -24,20 +23,20 @@ Arguments
      * input values must be in ascending latitude order
      * input arrays must be on a global grid
 
-Return value
+   z
 
-   Returns an array of size dimsizes (gzx). The return type will be double if gzx or gzy is double, and float otherwise.
+   scalar array (output, same dimensions as gzx, gzy, values will be in ascending latitude order)
 
 Description
 
-   igradsF computes a scalar array given gradient gzx and gzy, and returns it as an array with the same dimensions as gzy,
-   gzy. igradsF operates on a fixed grid.
+   igradsf computes a scalar array given gradient gzx and gzy and returns it in the array z. igradsf operates on a fixed
+   grid.
 
-   This function does not handle missing values (defined by the _FillValue attribute). If any missing values are encountered
-   in a particular 2D input grid, then all of the values in the corresponding output grid will be set to the default missing
-   value appropriate to the type of the output.
+   This procedure does not handle missing values (defined by the _FillValue attribute). If any missing values are
+   encountered in a particular 2D input grid, then all of the values in the corresponding output grid will be set to the
+   default missing value appropriate to the type of the output.
 
-   This function computes a scalar function whose gradient is the irrotational component of the input vector. The gradient
+   This procedure computes a scalar function whose gradient is the irrotational component of the input vector. The gradient
    is equal to the input vector only if its rotational component is zero.
 
    Note: For the arrays whose last two dimensions are nlat x nlon, the rest of the dimensions (if any) are collectively
@@ -51,12 +50,12 @@ Description
    the user should pass the data to the procedure/function via:
     z = sample ( x([...],:,0:nlon-2) )  ; does not include cyclic points
 
-   If the input arrays gzx and gzy are on a gaussian grid, igradsG should be used. Also, note that igradsF is the function
-   version of igradsf.
+   If the input arrays gzx and gzy are on a gaussian grid, igradsg should be used. Also, note that igradsf is the procedural
+   version of igradsF.
 
 See Also
 
-   igradsf, igradsG, igradsg, gradsf, gradsg, lderuvf, lderuvg
+   igradsF, igradsg, igradsG, gradsf, gradsg, lderuvf, lderuvg
 
 Examples
 
@@ -65,7 +64,8 @@ Examples
    Given arrays T_grad_lat(time,lev,lat,lon) and T_grad_lon(time,lev,lat,lon) containing the gradient (latitudinal and
    longitudinal derivatives), compute the scalar array. The gradient arrays are on a fixed grid.
 
-  T = igradsF (T_grad_lon, T_grad_lat)
+  T = T_grad_lat                ; create array to hold output, same type and size as input
+  igradsf (T_grad_lon, T_grad_lat, T)
 
    Example 2
 
@@ -78,7 +78,7 @@ Examples
   gradsf (T, T_grad_lon, T_grad_lat)
   T_grad_lon@long_name = "longitudinal gradient (derivative)"
   T_grad_lat@long_name = "latitudinal gradient (derivative)"
-  T = igradsF (T_grad_lon, T_grad_lat)
+  igradsf (T_grad_lon, T_grad_lat, T)
 
 Errors
 
@@ -89,4 +89,4 @@ Errors
      4 : error in the specification of N (jer only)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

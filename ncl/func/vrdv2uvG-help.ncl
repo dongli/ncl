@@ -1,19 +1,19 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/vrdv2uvG-1.shtml
-THE_TITLE:vrdv2uvG
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/vrdv2uvg.shtml
+THE_TITLE:vrdv2uvg
    NCL Home > Documentation > Functions > Spherical harmonic routines
 
-vrdv2uvG
+vrdv2uvg
 
    Computes the wind components via spherical harmonics, given vorticity and divergence on a gaussian grid.
 
 Prototype
 
-        function vrdv2uvG (
+        procedure vrdv2uvg (
                 vr  : numeric,
-                dv  : numeric
+                dv  : numeric,
+                u   : float,    ; or double
+                v   : float     ; or double
         )
-
-        return_val [2,dimsizes(vr)] :  float or double
 
 Arguments
 
@@ -29,30 +29,29 @@ Arguments
      * values will be in ascending latitude order
      * input array must be on a global grid
 
-Return value
+   u
+   v
 
-   The returned array will be dimensioned 2 x dimsizes (vr), where the leftmost 0-th dimension contains the u component and
-   the leftmost 1-th dimension contains the v component (both in ascending latitude order). The returned array will be of
-   type double if the input is double, and float otherwise.
+   wind components (output, same dimensions as vr and dv, values will be in ascending latitude order)
 
 Description
 
-   vrdv2uvG computes the wind components given the vorticity and divergent arrays vr and dv. vrdv2uvG operates on a gaussian
-   grid.
+   vrdv2uvg computes the wind components given vorticity and divergent arrays vr and dv and store the results in the arrays
+   u and v. vrdv2uvg operates on a gaussian grid.
 
-   This function does not handle missing values (defined by the _FillValue attribute). If any missing values are encountered
-   in a particular 2D input grid, then all of the values in the corresponding output grids will be set to the missing value
-   defined by the output grids' _FillValue attributes.
+   This procedure does not handle missing values (defined by the _FillValue attribute). If any missing values are
+   encountered in a particular 2D input grid, then all of the values in the corresponding output grids will be set to the
+   missing value defined by the output grids' _FillValue attributes.
 
-   Input arrays should not include the cyclic (wraparound) points when invoking this function, or any procedure or function
+   Input arrays should not include the cyclic (wraparound) points when invoking this procedure, or any procedure or function
    which uses spherical harmonics (Spherepack).
 
-   If the input arrays vr and dv are on a fixed grid, vrdv2uvF should be used. Also, note that vrdv2uvG is the function
-   version of vrdv2uvg.
+   If the input arrays vr and dv are on a fixed grid, vrdv2uvf should be used. Also, note that vrdv2uvg is the procedural
+   version of vrdv2uvG.
 
 See Also
 
-   vrdv2uvg, vrdv2uvF, vrdv2uvf, uv2vrdvf, uv2vrdvg, uv2dvG, uv2dvg, uv2vrf, uv2vrF, uv2vr_cfd
+   vrdv2uvf, vrdv2uvG, vrdv2uvF, uv2vrdvg, uv2vrdvf, uv2dvg, uv2dvf, uv2vrg, uv2vrf, uv2vr_cfd
 
 Examples
 
@@ -66,15 +65,16 @@ begin
   mlon  = 256
   mlon1 = mlon+1
   fbfile = "uv300.hs"
-
-  nrec  = fbinnumrec(fbfile)       ; total number of records in the file
+                                       ; Generic Workstation setup
+  nrec  = fbinnumrec(fbfile)           ; total number of records in the file
   ntim  = nrec/2                       ; number of time steps in dataset
 
   uvmsg = 1e+36
 
-  work  = new ( (/nlat,mlon1/), float, uvmsg )
-  u     = new ( (/nlat,mlon /), float, uvmsg )  ; source u
-  v     = new ( (/nlat,mlon /), float, uvmsg )  ; source v
+  dv    = new ( (/nlat,mlon /), float, uvmsg )  ; divergence
+  vort  = new ( (/nlat,mlon /), float, uvmsg )  ; vorticity  (relative)
+  ur    = new ( (/nlat,mlon /), float, uvmsg )
+  vr    = new ( (/nlat,mlon /), float, uvmsg )
 
   do i = 0,nrec-1,2
    month = 1                         ; january
@@ -87,11 +87,38 @@ begin
    work = fbinrecread(fbfile,i+1,(/nlat,mlon1/),"float")
    v    = work(:,0:mlon-1)
 
-   vrdvx = uv2vrdvG (u,v)              ; u,v ==> div and vort
-   uvx   = vrdv2uvG (vrdvx(0,:,:), \   ; vr,dv > reconstruct original wind
-                     vrdvx(1,:,:))
+   uv2vrdvg (u,v, vort,dv)           ; u,v ==> div and vort
+   vrdv2uvg (vort,dv, uu,vv)         ; vr,dv > reconstruct original wind
   end do
 end
+
+   Example 2
+
+   Read ECMWF complex coefficients associated with vorticity and divergence. Compute the wind components.
+
+   Note: the procedure vrdv2uvg can handle all times, levels with one call. However, it will use lots of temporary memory.
+   This example illustrates processing one time and level at a time. It is abit less efficient but it reduces memory
+   considerable.
+
+;***************************************************
+; read DIV and VORT; complex
+; ( initial_time0, lv_HYBL4,real_imaginary, g50_lat_2, g50_lon_3)
+; calculate wind components
+;***************************************************
+  U  = new ( (/ntim,klev,nlat,mlon/), "float", "No_FillValue")
+  V  = new ( (/ntim,klev,nlat,mlon/), "float", "No_FillValue")
+
+  do nt=0,ntim-1
+    do kl=0,klev-1
+       ab     = f->D_GDS50_HYBL(nt,kl,:,:,:)
+       DIV    = shsgC(ab, mlon)
+       ab     = f->VO_GDS50_HYBL(nt,kl,:,:,:)
+       VORT   = shsgC(ab, mlon)
+
+       vrdv2uvg(VORT,DIV,U(nt,kl,:,:),V(nt,kl,:,:))
+    end do
+  end do
+
 
 Errors
 
@@ -102,4 +129,4 @@ Errors
      4 : error in the specification of N (jer only)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

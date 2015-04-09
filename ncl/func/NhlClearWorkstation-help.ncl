@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/NhlClearWorkstation.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/NhlClearWorkstation.shtml
 THE_TITLE:NhlClearWorkstation
    NCL Home > Documentation > Functions > Workstation routines
 
@@ -33,4 +33,4 @@ See Also
    clear, frame, update
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

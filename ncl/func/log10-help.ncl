@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/log10.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/log10.shtml
 THE_TITLE:log10
    NCL Home > Documentation > Functions > General applied math
 
@@ -49,4 +49,4 @@ Errors
    If value &eq 0.0, -inf is returned.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

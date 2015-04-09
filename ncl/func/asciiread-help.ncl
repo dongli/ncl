@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/asciiread.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/asciiread.shtml
 THE_TITLE:asciiread
    NCL Home > Documentation > Functions > File IO
 
@@ -23,7 +23,7 @@ Arguments
    Full or relative path needed to locate ASCII file.
    dimensions
 
-   A scalar or one dimensional array specifying the dimension sizes of the data to be read.
+   A scalar or one-dimensional array specifying the dimension sizes of the data to be read.
 
    As of version 6.0.0, dimensions can be of type int or long.
    datatype
@@ -32,11 +32,11 @@ Arguments
 
 Description
 
-   The asciiread function is reads ascii data. If datatype is a numeric type, then non-numeric characters are ignored and
-   the numbers are read in the order they appear in the input file. However, note that for the float and double types, the
-   string 'nan' (any case) is read as a valid numerical value. For all the integer types, the prefix '0x' or '0X' signifies
-   a value represented in hexadecimal (base 16). For the 'byte' type only, the prefix '0', not followed by 'x' or 'X',
-   signifies a value represented in octal (base 8).
+   The asciiread function is used to read ASCII data. If datatype is a numeric type, then non-numeric characters are ignored
+   and the numbers are read in the order they appear in the input file. However, note that for the float and double types,
+   the string 'nan' (any case) is read as a valid numerical value. For all the integer types, the prefix '0x' or '0X'
+   signifies a value represented in hexadecimal (base 16). For the 'byte' type only, the prefix '0', not followed by 'x' or
+   'X', signifies a value represented in octal (base 8).
 
    All numeric types require require a separator. A separator is a non-numeric character [eg, space, comma, alphabetic
    character].
@@ -48,7 +48,7 @@ Description
    An error message is generated whenever the number of elements read is less than the number implied by the dimensions
    parameter.
 
-   If -1 is given for the dimensions parameter, all values in the file will be read into a one dimensional variable. The
+   If -1 is given for the dimensions parameter, all values in the file will be read into a one-dimensional variable. The
    dimension size of this variable will be equal to the number of elements in the file.
 
    In version 6.0.0, we fixed a notable quirk in this function: if dimensions was set to explicit dimension sizes, then a
@@ -204,8 +204,7 @@ but this 2nd line has 3 numbers: 10, 30, 50. and a blank line.
 
    xc   = asciiread("numericByte_ascii.file", (/nrow,ncol+1/), "character")
    xs   = charactertoshort(xc(:,:ncol-1)) - zero_offset(0)
-   delete(xs@_FillValue)
-   print(xs)
+   delete([/xs@_FillValue,xs/])
 
    xb   = shorttobyte( xs )
    print(xb)
@@ -272,4 +271,4 @@ Coordinates:
 (2,29)  0x09
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

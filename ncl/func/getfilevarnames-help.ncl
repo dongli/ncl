@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/getfilevarnames.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/getfilevarnames.shtml
 THE_TITLE:getfilevarnames
    NCL Home > Documentation > Functions > File IO
 
@@ -93,4 +93,4 @@ Coordinates:
    Here, one can see that there are T, U, V, and other variables under root (group) and group "grp1".
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

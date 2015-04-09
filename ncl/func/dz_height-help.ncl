@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/dz_height.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/dz_height.shtml
 THE_TITLE:dz_height
    NCL Home > Documentation > Functions > CESM
 
@@ -100,4 +100,4 @@ Examples
 (25)      25339.8     2660.2     2660.2        0.0
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

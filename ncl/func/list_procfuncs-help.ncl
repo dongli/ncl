@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/list_procfuncs.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/list_procfuncs.shtml
 THE_TITLE:list_procfuncs
    NCL Home > Documentation > Functions > Variable query
 
@@ -33,4 +33,4 @@ end
    It may be useful to pipe this output to a file that you can then search.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

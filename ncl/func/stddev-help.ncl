@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/stddev.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/stddev.shtml
 THE_TITLE:stddev
    NCL Home > Documentation > Functions > General applied math
 
@@ -29,8 +29,6 @@ Description
    This function returns the sample standard deviation of the input data, regardless of dimensionality. Missing values
    (data@_FillValue) are ignored. To determine the number of data points used to calculate the standard deviation, use:
    N = num(.not.ismissing(data))
-
-   Technically, this function calculates the population standard deviation.
 
 See Also
 
@@ -72,4 +70,4 @@ Coordinates:
 
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/hsvrgb.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/hsvrgb.shtml
 THE_TITLE:hsvrgb
    NCL Home > Documentation > Functions > Color routines
 
@@ -121,4 +121,4 @@ Coordinates:
    The NCL code gsn_color.ncl allows you to change HSV values to generate color maps.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

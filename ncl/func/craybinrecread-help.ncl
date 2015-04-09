@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/craybinrecread.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/craybinrecread.shtml
 THE_TITLE:craybinrecread
    NCL Home > Documentation > Functions > File IO
 
@@ -41,9 +41,9 @@ Return value
 Description
 
    craybinrecread reads the rec_num record of the file path and shapes it according to the dimension sizes in parameter
-   dims. The data type of the record is specified by the parameter type. If the size and dimensionality of the record are
-   unknown the value -1 can be used for parameter rec_dims. In this case craybinrecread will read in the entire record as a
-   singly dimensioned array. The file must be COS blocked.
+   rec_dims. The data type of the record is specified by the parameter rec_type. If the size and dimensionality of the
+   record are unknown the value -1 can be used for parameter rec_dims. In this case craybinrecread will read in the entire
+   record as a singly dimensioned array. The file must be COS blocked.
 
 See Also
 
@@ -79,4 +79,4 @@ Examples
   data = craybinrecread (fili, 1, -1, "float")           ; read x, y, z as 1D
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

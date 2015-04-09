@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/eofcov.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/eofcov.shtml
 THE_TITLE:eofcov
    NCL Home > Documentation > Functions > Empirical orthogonal functions
 
@@ -162,4 +162,4 @@ print(return_val@eval)
   evec= eofcov(ptw,neval)
 
 
-       ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+       ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

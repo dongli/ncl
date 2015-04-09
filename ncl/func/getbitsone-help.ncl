@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/getbitsone.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/getbitsone.shtml
 THE_TITLE:getbitsone
    NCL Home > Documentation > Functions > Array manipulators
 
@@ -9,7 +9,7 @@ getbitsone
 Prototype
 
         function getbitsone (
-                npack  : numeric   ; byte, int8, uint8, short, ushort, integer
+                npack  : numeric   ; byte, ubyte, short, ushort, integer
         )
 
         return_val  :  typeof(npack)
@@ -18,14 +18,14 @@ Arguments
 
    npack
 
-   A byte, int8, uint8, short, ushort, or integer array of any dimensionality. (The recognition of int8, uint8, and ushort
-   types was added in NCL V6.0.0)
+   A byte, ubyte, short, ushort, or integer array of any dimensionality. (The recognition of ubyte and ushort types was
+   added in NCL V6.0.0)
 
 Description
 
    getbitsone unpacks one-bit chunks from the input array npack into the return array. The leftmost dimensions of the return
    array will be the same as the dimensions of npack, and there will be an additional rightmost dimension added, where if
-   npack is of type byte/(u)int8/(u)short/integer, the size of the added dimension will be 8/8/16/32.
+   npack is of type (u)byte/(u)short/integer, the size of the added dimension will be 8/16/32.
 
 See Also
 
@@ -81,4 +81,4 @@ Coordinates:
 (7)     1
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

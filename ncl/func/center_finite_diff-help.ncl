@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/center_finite_diff.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/center_finite_diff.shtml
 THE_TITLE:center_finite_diff
    NCL Home > Documentation > Functions > General applied math
 
@@ -140,4 +140,4 @@ Examples
 ; result: dTdX(time,lev,lat,lon)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

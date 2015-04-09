@@ -1,10 +1,10 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/int2p_n.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/int2p_n.shtml
 THE_TITLE:int2p_n
    NCL Home > Documentation > Functions > Interpolation
 
 int2p_n
 
-   Interpolates pressure levels to a different set of pressure levels.
+   Interpolates pressure levels to a different set of pressure levels on the given dimension.
 
    [new.gif] Available in version 5.2.0 and later.
 
@@ -109,4 +109,4 @@ end
 ; t_out is dimensioned pout_level, time, lat, lon
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

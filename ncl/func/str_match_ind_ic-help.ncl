@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/str_match_ind_ic.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/str_match_ind_ic.shtml
 THE_TITLE:str_match_ind_ic
    NCL Home > Documentation > Functions > String manipulation
 
@@ -11,33 +11,34 @@ str_match_ind_ic
 Prototype
 
         function str_match_ind_ic (
-                string_arr [*] : string,
-                expression [1] : string
+                string_array [*] : string,
+                sub_string   [1] : string
         )
 
         return_val [*] :  integer
 
 Arguments
 
-   string_arr
+   string_array
 
    A string array of any dimensionality.
-   expression
+   sub_string
 
-   The string expression to be matched.
+   The substring to be matched.
 
 Description
 
-   This function returns an array of indexes where every occurrence of expression is matched in string_arr. The matching is
-   case insensitive.
+   This function returns an array of indexes where every occurrence of sub_string is matched in string_array. The matching
+   is case insensitive.
 
-   If there is no expression matched in string_arr, the default missing value for an integer will be returned.
+   If there is no sub_string matched in string_array, the default missing value for an integer will be returned.
 
    Please note, str_match_ind_ic is case insensitive. Use str_match_ind if you need case sensitivity.
 
 See Also
 
-   str_match, str_match_ic, str_match_ind, str_index_of_substr, str_sub_str
+   str_match, str_match_ic, str_match_regex, str_match_ic_regex, str_match_ind_regex, str_match_ind_ic_regex, str_match_ind,
+   str_index_of_substr, str_sub_str
 
 Examples
 
@@ -76,4 +77,4 @@ Coordinates:
 (2)     polyline
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

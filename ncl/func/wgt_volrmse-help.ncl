@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/wgt_volrmse.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/wgt_volrmse.shtml
 THE_TITLE:wgt_volrmse
    NCL Home > Documentation > Functions > General applied math
 
@@ -92,4 +92,4 @@ Examples
    standard subscripting are used to subset the input global array. shRmse will have dimensions (ktime).
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/cshstringtolist.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/cshstringtolist.shtml
 THE_TITLE:cshstringtolist
    NCL Home > Documentation > Functions > Type converters
 
@@ -31,4 +31,4 @@ Description
    Converts a comma delimited string from csh and breaks it up into separate strings.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

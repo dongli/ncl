@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/dim_sum_n.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/dim_sum_n.shtml
 THE_TITLE:dim_sum_n
    NCL Home > Documentation > Functions > General applied math
 
@@ -54,11 +54,11 @@ Examples
    Example 2
 
    Let x be of size (ntim,nlat,mlon) and with named dimensions "time", "lat" and "lon", respectively. Then, for each time
-   and latitude, the the zonal sum (ie, sum of all non-missing longitudes) is:
+   and latitude, the zonal sum (i.e., sum of all non-missing longitudes) is:
     xSumLon = dim_sum_n(x,2)    ; ==> xSumLon(ntim,nlat)
 
    Generally, users prefer that the returned variable have metadata associated with it. This can be accomplished via the
-   dim_sum_n_Wrap function
+   dim_sum_n_Wrap function:
     xSumLon = dim_sum_n_Wrap(x,2)    ; ==> xSumLon(time,lat)
 
    Example 3
@@ -71,7 +71,7 @@ Examples
 
    Example 4
 
-   Let x be defined x(time,lev,lat,lon). Compute the sum over time and level at each latitude/longitude grid point.
+   Let x be defined as x(time,lev,lat,lon). Compute the sum over time and level at each latitude/longitude grid point.
     xSum = dim_sum_n(x, (/0,1/))    ; ==> xSum(nlat,nlon)
 
    To compute the sum over lat and lon at each time/lev grid point:
@@ -112,4 +112,4 @@ load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/contributed.ncl"
    printMinMax( ptot, True )
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

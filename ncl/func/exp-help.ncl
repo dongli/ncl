@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/exp.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/exp.shtml
 THE_TITLE:exp
    NCL Home > Documentation > Functions > General applied math
 
@@ -53,4 +53,4 @@ Examples
    x = exp( log(0.729-((y+1.8)/9.328))/3.0 )  ; = 0.685
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

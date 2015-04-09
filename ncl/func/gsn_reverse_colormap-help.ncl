@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Graphics/Interfaces/gsn_reverse_colormap.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Graphics/Interfaces/gsn_reverse_colormap.shtml
 THE_TITLE:gsn_reverse_colormap
    NCL Home > Documentation > Graphics > Graphical Interfaces
 
@@ -25,29 +25,42 @@ Description
 
    This procedure reverse the color map for the given workstation, keeping the foreground and background colors the same.
 
+   Note: reversing color maps using this function is considered the older (pre NCL V6.1.0) way of dealing with color maps in
+   NCL. It is better to use read_colormap_file to read a predefined color map and then the "::-1" syntax to reverse it. See
+   the examples below.
+
 See Also
 
-   gsn_define_colormap, gsn_retrieve_colormap, gsn_merge_colormaps, gsn_draw_colormap, gsn_draw_named_colors,
-   read_colormap_file
+   read_colormap_file, draw_color_palette, gsn_define_colormap, gsn_retrieve_colormap, gsn_merge_colormaps,
+   gsn_draw_colormap, gsn_draw_named_colors
 
 Examples
 
-   To see how to use several of the color functions, trying running the following example:
+   Example 1 (newer way)
+
+   Draw the BlueRed color map, and then reverse it and draw it again.
+
 load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/gsn_code.ncl"
 
-begin
+  wks = gsn_open_wks("x11","color")
+
+  draw_color_palette(wks,"BlueRed",False)
+
+  cmap = read_colormap_file("BlueRed")   ; read the color map
+  draw_color_palette(wks,cmap(::-1,:),False)      ; draw the reversed color map
+
+   Example 1 (older way)
+
+load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/gsn_code.ncl"
+
   wks = gsn_open_wks("x11","color")
 
   gsn_define_colormap(wks,"BlueRed")
   gsn_draw_colormap(wks)              ; Draw the color map.
   gsn_reverse_colormap(wks)           ; Reverse the color map.
   gsn_draw_colormap(wks)              ; Draw the new color map.
-end
 
-   For some application examples, see:
-     * "color_8.ncl" (view before and after)
-
-   See also the suite of color examples.
+   See also the suite of color and color map examples.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

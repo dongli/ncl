@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/loadscript.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/loadscript.shtml
 THE_TITLE:loadscript
    NCL Home > Documentation > Functions > System tools
 
@@ -127,4 +127,4 @@ end
    and function and procedure scope.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

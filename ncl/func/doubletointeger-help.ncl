@@ -1,10 +1,10 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/doubletointeger.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/doubletointeger.shtml
 THE_TITLE:doubletointeger
    NCL Home > Documentation > Functions > Type converters
 
 doubletointeger
 
-   Coerces values of type double to values of type integer.
+   Coerces values of type double to values of type integer (deprecated; use tointeger).
 
 Prototype
 
@@ -35,7 +35,9 @@ Description
        -1.9 is truncated to -1
        -1.1 is truncated to -1
         2.1 is truncated to 2
-       2.9 is truncated to 2.
+        2.9 is truncated to 2.
+
+   Note: this function and other xxxtointeger functions have been superceded by tointeger.
 
    The function doubletoint is identical to this function, and can be used if you don't want to use the full doubletointeger
    name. This alias name is included just for people who don't like to type (or like the shorter names).
@@ -56,7 +58,7 @@ Description
 
 See Also
 
-   doubletofloat, doubletolong, doubletoshort, doubletobyte
+   totype, tointeger, toint64, touint
 
 Examples
 
@@ -95,7 +97,7 @@ begin
 ;  in the target variable.  For example, if -444.d were a
 ;  value in "a" below, it would become a missing value in "b".
 ;
-  a = (/ -1d, -2.d, 3.d/)
+  a = (/ -1.d, -2.d, 3.d/)
   a@_FillValue = 1.e40
   b = new(3,integer)
   b@_FillValue = -444
@@ -109,7 +111,7 @@ begin
 ;  of the target variable if neither the original variable nor
 ;  the target variable has a missing value specified.
 ;
-  a = (/ -1d, 2.d, 3.d20/)
+  a = (/ -1.d, 2.d, 3.d20/)
   b = doubletointeger(a)
   print (b)
   delete(a)
@@ -121,7 +123,7 @@ begin
 ;  the range of the target variable and the target variable
 ;  has no missing value specified.
 ;
-  a = (/ -1d, 2.d, 3.d20/)
+  a = (/ -1.d, 2.d, 3.d20/)
   a@_FillValue = -444.d
   b = doubletointeger(a)
   print (b)
@@ -134,7 +136,7 @@ begin
 ;  original variable is out of the range of the target variable
 ;  and the target variable has no missing value specified.
 ;
-  a = (/ -1d, 2.d, 3.d20/)
+  a = (/ -1.d, 2.d, 3.d20/)
   a@_FillValue = 1.d50
   b = doubletointeger(a)
   print (b)
@@ -148,7 +150,7 @@ begin
 ;  of the original variable are retained in
 ;  the target variable.
 ;
-  a = (/ -1d, 2.d, -444.d/)
+  a = (/ -1.d, 2.d, -444.d/)
   a@_FillValue = -444.d
   b = doubletointeger(a)
   print (b)
@@ -165,7 +167,7 @@ begin
 ;  original variable are converted to the
 ;  missing value of the target variable.
 ;
-  a = (/ -1d, 2.d, -444.d/)
+  a = (/ -1.d, 2.d, -444.d/)
   a@_FillValue = -444.d
   b = new(3,integer,-666)
   b = doubletointeger(a)
@@ -175,4 +177,4 @@ begin
 end
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

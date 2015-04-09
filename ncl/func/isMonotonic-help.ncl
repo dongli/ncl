@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/isMonotonic.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/isMonotonic.shtml
 THE_TITLE:isMonotonic
    NCL Home > Documentation > Functions > Array query
 
@@ -46,4 +46,4 @@ Examples
       i = isMonotonic(z)     ; i= 0
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

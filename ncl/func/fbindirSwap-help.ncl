@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/fbindirSwap.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/fbindirSwap.shtml
 THE_TITLE:fbindirSwap
    NCL Home > Documentation > Functions > File IO
 
@@ -44,4 +44,4 @@ See Also
    setfileoption, fbindirread, cbinread, fbinseqSwap1, fbinseqSwap2
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

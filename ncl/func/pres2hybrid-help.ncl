@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/pres2hybrid.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/pres2hybrid.shtml
 THE_TITLE:pres2hybrid
    NCL Home > Documentation > Functions > Meteorology
 
@@ -24,16 +24,16 @@ Arguments
 
    p
 
-   A one dimensional array specifying the pressure levels. Must be top-to-bottom order and must have the same units as ps
-   and p0.
+   A one dimensional array specifying the pressure levels of the source (input) variable. Must be top-to-bottom order and
+   must have the same units as ps and p0.
    ps
 
-   A multi-dimensional array containing pressures. Must be at least two dimensions and one dimension smaller than xi. The
-   level dimension is ordered top-to-bottom. Must have the same units as p0.
+   A multi-dimensional array containing surface pressures. Must be at least two dimensions with the rightmost dimensions
+   referring to latitude and longitude. Must have the same units as p0.
    p0
 
-   A scalar value equal to the surface reference pressure. Must have the same units as ps and p. Typically p0=100000 [Pa] or
-   1000 [hPa].
+   A scalar value equal to the surface reference pressure. Must have the same units as ps. Typically p0=100000 [Pa] or 1000
+   [hPa].
    xi
 
    A multi-dimensional array containing the variable to be interpolated. The three rightmost dimensions must be (pressure)
@@ -48,8 +48,7 @@ Arguments
    top-to-bottom. Must be unitless.
    intflg
 
-   A scalar integer which specifies the type of extrapolation to be used. As of version 4.3.0, this variable was updated to
-   recognize the following options:
+   A scalar integer which specifies the type of extrapolation to be used.
     =0   no extrapolation. Values set to _FillValue
     =1   values set to nearest valid value
     =2   values less than min(p) set to nearest value
@@ -148,4 +147,4 @@ Examples
    Note that no meta data is preserved by the built-in function. To preserve meta data use pres2hybrid_Wrap .
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

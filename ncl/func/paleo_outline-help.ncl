@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/paleo_outline.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/paleo_outline.shtml
 THE_TITLE:paleo_outline
    NCL Home > Documentation > Functions > Graphics routines
 
@@ -69,4 +69,4 @@ Examples
   plot = gsn_csm_contour_map_ce (wks,data,res)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

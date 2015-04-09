@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/esccv.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/esccv.shtml
 THE_TITLE:esccv
    NCL Home > Documentation > Functions > General applied math
 
@@ -92,13 +92,13 @@ Examples
      x_Lead_y = esccv(x,y,mxlag)
      y_Lead_x = esccv(y,x,mxlag)    ; switch the order of the series
 
-     ccr = new ( 2*mxlag+1, float)
-     ccr(0:mxlag-1) = x_Lead_y(1:mxlag:-1)  ; "negative lag", -1 reverses order
-     ccr(mxlag:)    = y_Lead_x(0:mxlag)     ; "positive lag"
+     ccv = new ( 2*mxlag+1, float)
+     ccv(0:mxlag-1) = x_Lead_y(1:mxlag:-1)  ; "negative lag", -1 reverses order
+     ccv(mxlag:)    = y_Lead_x(0:mxlag)     ; "positive lag"
 
    Remember that NCL is C based and does not allow negative subscripts like Fortran does (in Fortran, ccr(-mxlag:mxlag)).
    Thus in the above example ccr(0:mxlag-1) corresponds to lags -9,-8,...,-2,-1 and ccr(mxlag:2*mxlag) corresponds to lags
    0,1,2,...,8,9.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

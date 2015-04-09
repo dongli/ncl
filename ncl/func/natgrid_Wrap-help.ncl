@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/natgrid_Wrap.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/natgrid_Wrap.shtml
 THE_TITLE:natgrid_Wrap
    NCL Home > Documentation > Functions > Interpolation
 
@@ -100,4 +100,4 @@ Errors
    If an error code is returned by natgrid_Wrap, you can look up the meaning of the code in the Natgrid error table.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

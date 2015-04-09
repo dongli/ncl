@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/changeCaseChar.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/changeCaseChar.shtml
 THE_TITLE:changeCaseChar
    NCL Home > Documentation > Functions > String manipulation
 
@@ -34,4 +34,4 @@ Description
    apple => APPLE, aPPle => AppLE)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/User_contributed/kf_filter.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/User_contributed/kf_filter.shtml
 THE_TITLE:kf_filter
    NCL Home > Documentation > Functions > General applied math, CESM, Meteorology
 
@@ -90,4 +90,4 @@ Examples
    See Space-Time Example 4
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

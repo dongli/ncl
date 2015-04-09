@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/cfftf.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/cfftf.shtml
 THE_TITLE:cfftf
    NCL Home > Documentation > Functions > General applied math
 
@@ -115,7 +115,7 @@ Examples
    Example 1
 
    Perform a forward complex fft on a sin or cos. Compare with ezfftf. To save space, users should copy and execute the
-   following script. wave.
+   following script.
    N  = 24
    pi = 4.0*atan(1.0)
    AMP= 10.
@@ -382,9 +382,9 @@ Number Of Attributes: 2
      print("---")
      print("       variance="+xVar)     ; biased estimate
      print("cfftf: variance="+cf2sum  )
-     print("zfftf: variance="+cfez_var)
+     print("ezfftf: variance="+cfez_var)
 
 
        All results were 193.207
 
-       ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+       ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

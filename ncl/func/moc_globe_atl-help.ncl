@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/moc_globe_atl.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/moc_globe_atl.shtml
 THE_TITLE:moc_globe_atl
    NCL Home > Documentation > Functions > CESM
 
@@ -275,4 +275,4 @@ begin
 end
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

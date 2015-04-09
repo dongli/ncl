@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/taper_n.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/taper_n.shtml
 THE_TITLE:taper_n
    NCL Home > Documentation > Functions > General applied math
 
@@ -32,7 +32,15 @@ Arguments
 
    option
 
-   Reserved for future use (not currently used).
+   As of NCL V6.2.1, option can be set to:
+     * option = 0
+       Results in the series being tapered to the series mean
+       (this is the default behavior in older versions of this function)
+     * option = 1
+       Forces the function to taper to 0.0
+     * option not equal to 0 or 1
+       Acts like option = 0
+
    dim
 
    A scalar integer indicating which dimension of x to do the calculation on. Dimension numbering starts at 0.
@@ -75,4 +83,4 @@ Examples
   xCoef  = ezfftf(xTaper)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

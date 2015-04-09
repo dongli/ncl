@@ -1,6 +1,6 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/ftsurf.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/ftsurf.shtml
 THE_TITLE:ftsurf
-   NCL Home > Documentation > Functions > Regridding
+   NCL Home > Documentation > Functions > Interpolation, Ngmath routines
 
 ftsurf
 
@@ -170,4 +170,4 @@ Errors
           = 2 if the xi or yi values are not strictly increasing.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

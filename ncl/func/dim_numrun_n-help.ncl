@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/dim_numrun_n.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/dim_numrun_n.shtml
 THE_TITLE:dim_numrun_n
    NCL Home > Documentation > Functions > General applied math
 
@@ -130,7 +130,7 @@ Examples
    copy_VarCoords(p, dryrun)          ; contributed.ncl
 
    wetrun@long_name = "unique wet runs"
-   dryrun@wet_dry_crit_value = wdval
+   wetrun@wet_dry_crit_value = wdval
    copy_VarCoords(p, wetrun)
 
    Example 4
@@ -148,7 +148,7 @@ Examples
 ; optional ... add meta data
 
    hot0@long_name = "total hot runs"
-   hor0@hot_crit_value = tcrit
+   hot0@hot_crit_value = tcrit
    copy_VarCoords(tmx, dryrun)          ; contributed.ncl
 
    hot1@long_name = "unique hot runs"
@@ -158,7 +158,7 @@ Examples
    Example 5
 
    Calculate the maximum run length of x[*] greater than 5.85 and less than 9.1
-   xband     = where( x.gt.5.85 .and. x.lt.9.1 .and. , 1, 0)  ; (/1,0,1,0,1,1,1,0,1,1,0,1,1,0/)
+   xband     = where( x.gt.5.85 .and. x.lt.9.1, 1, 0)  ; (/1,0,1,0,1,1,1,0,1,1,0,1,1,0/)
    xband_run = dim_numrun_n(xband, 0, 0)                       ; (/9,4,1,0,0,0,0,0,0,0,0,0,0,0/)
    indmx     = ind(xband_run.ne.0)                             ; (/0, 1, 2/) ==> subscripts (index)
    if (.not.indmx(0)) then
@@ -174,7 +174,7 @@ undef("maxrunlen")
 function maxrunlen( runs )
 ; find max run length
 ; Example:
-; runs = dim_runnum_n(p.gt.5, 0, 0) ; where p(ntim) or p(ntim,jlat,ilon)
+; runs = dim_numrun_n(p.gt.5, 0, 0) ; where p(ntim) or p(ntim,jlat,ilon)
 ;                                   ; runs(ntim) or runs(ntim,jlat,ilon)
 ; maxrun = maxrunlen( runs )
 
@@ -218,10 +218,10 @@ end
 
 [SNIP]
 
-  xband     = where( x.gt.5.85 .and. xband.lt.9.1, 1, 0)   ; xband(ntime,nlat,mlon)
-  xband_run = dim_numrun_n(xband, 0, 0)                    ; xband(ntime,nlat,mlon)
+  xband     = where( x.gt.5.85 .and. x.lt.9.1, 1, 0)       ; xband(ntime,nlat,mlon)
+  xband_run = dim_numrun_n(xband, 0, 0)                    ; xband_run(ntime,nlat,mlon)
 
   xband_maxrun = maxrunlen( xband_run )
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

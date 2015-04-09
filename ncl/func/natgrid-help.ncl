@@ -1,6 +1,6 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/natgrid.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/natgrid.shtml
 THE_TITLE:natgrid
-   NCL Home > Documentation > Functions > Interpolation
+   NCL Home > Documentation > Functions > Interpolation, Ngmath routines
 
 natgrid
 
@@ -106,4 +106,4 @@ Errors
    If an error code is returned by natgrid, you can look up the meaning of the code in the Natgrid error table.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

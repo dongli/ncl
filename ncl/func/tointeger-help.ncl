@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/tointeger.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/tointeger.shtml
 THE_TITLE:tointeger
    NCL Home > Documentation > Functions > Type converters
 
@@ -48,7 +48,7 @@ Description
 
 See Also
 
-   tochar tobyte toshort toushort toint touint tolong toulong toint64 touint64 tostring
+   tochar tobyte toshort toushort toint touint tolong toulong toint64 touint64 tostring totype
 
 Examples
 
@@ -147,4 +147,4 @@ Examples
 
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

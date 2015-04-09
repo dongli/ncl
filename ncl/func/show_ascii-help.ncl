@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/show_ascii.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/show_ascii.shtml
 THE_TITLE:show_ascii
    NCL Home > Documentation > Functions > Printing
 
@@ -46,4 +46,4 @@ show_ascii()
      120  x   121  y   122  z   123  {   124  |   125  }   126  ~   127 del
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

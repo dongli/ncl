@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/getvaratts.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/getvaratts.shtml
 THE_TITLE:getvaratts
    NCL Home > Documentation > Functions > Metadata routines
 
@@ -81,4 +81,4 @@ NCAR-TN 414   1995
 http://www.cgd.ucar.edu/cas/ezplot/
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

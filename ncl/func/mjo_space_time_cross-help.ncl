@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Diagnostics/mjo_space_time_cross.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Diagnostics/mjo_space_time_cross.shtml
 THE_TITLE:mjo_space_time_cross
    NCL Home > Documentation > Functions > CESM
 
@@ -95,4 +95,4 @@ Examples
 See Example 11 of the Madden-Julian Oscillation web page.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

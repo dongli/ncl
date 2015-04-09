@@ -1,10 +1,10 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/sparse_matrix_mult.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/sparse_matrix_mult.shtml
 THE_TITLE:sparse_matrix_mult
    NCL Home > Documentation > Functions > General applied math, Array manipulators
 
 sparse_matrix_mult
 
-   Multiples a sparse matrix with a dense matrix. Function under construction. Calling arguments may change.
+   Multiples a sparse matrix with a dense matrix.
 
    [new.gif] Available in version 6.1.0 and later.
 
@@ -127,4 +127,4 @@ Examples
 | 0  0  7 |                         | 49 -999 -999 |
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

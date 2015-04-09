@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Built-in/solve_linsys.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Built-in/solve_linsys.shtml
 THE_TITLE:solve_linsys
    NCL Home > Documentation > Functions > General applied math
 
@@ -94,4 +94,4 @@ Errors
           solution could not be computed.
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF

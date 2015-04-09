@@ -1,4 +1,4 @@
-THE_URL:file://localhost/Users/hubery/Public/Website/CISL/Document/Functions/Contributed/wgt_runave_n_Wrap.shtml
+THE_URL:file://localhost/Users/hubery/Public/ucar/Document/Functions/Contributed/wgt_runave_n_Wrap.shtml
 THE_TITLE:wgt_runave_n_Wrap
    NCL Home > Documentation > Functions > General applied math
 
@@ -211,4 +211,4 @@ Examples
      x    = wgt_runave_n_Wrap(x, wgt, opt, 3)
 
 
-   ©2014 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
+   ©2015 UCAR | Privacy Policy | Terms of Use | Contact the Webmaster | Sponsored by NSF
